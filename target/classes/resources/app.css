@@ -1,0 +1,88 @@
+.app {
+	max-width: 1140px;
+	margin: auto;
+}
+
+.app__header {
+	display: flex;
+	justify-content: space-around;
+	background-color: gray;
+	align-items: center;
+}
+
+.app__main {
+	background-color: green;
+}
+
+.app__footer {
+	background-color: blue;
+}
+
+.show {
+	visibility: visible;
+}
+
+.hide {
+	visibility: hidden;
+}
+
+.app__header--nav {
+	
+}
+
+.list {
+	display: inline;
+}
+
+.resource-wrapper {
+	display: flex;
+	justify-content: space-around;
+}
+
+.main-screen {
+	display: flex;
+	justify-content: space-around;
+	background-color: red;
+}
+
+.building-wrapper {
+	display: flex;
+	background-color: yellow;
+	flex-wrap: wrap;
+}
+
+.building {
+	width: 33.3333%;
+}
+
+.stats__group {
+	background-color: pink;
+}
+
+#view__home {
+	
+}
+
+#view__building {
+	
+}
+
+#view__map {
+	
+}
+
+#view__messages {
+	
+}
+
+#view__raports {
+	
+}
+
+#view__user {
+	
+}
+
+#logo {
+	
+}
