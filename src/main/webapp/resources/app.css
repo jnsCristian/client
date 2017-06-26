@@ -19,11 +19,11 @@
 }
 
 .show {
-	visibility: visible;
+	display: block;
 }
 
 .hide {
-	visibility: hidden;
+	display: none;
 }
 
 .app__header--nav {
@@ -59,12 +59,35 @@
 	background-color: pink;
 }
 
+.building__element {
+	padding-top: 2em;
+	padding-left: 1em;
+}
+
+.production-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 1em;
+}
+.building__element--production{
+	padding-top: 2em;
+	padding-left: 1em;
+	display: flex;
+}
+.production {
+	padding-right: 0.5em;
+}
+
+.button {
+	height: 1.5em;
+	weight: 3em;
+}
+
 #view__home {
 	
 }
 
 #view__building {
-	
 }
 
 #view__map {

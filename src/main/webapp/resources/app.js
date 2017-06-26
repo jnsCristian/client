@@ -23,30 +23,70 @@ $(document).ready(function() {
 	buildingWrap.addEventListener('click', function(event) {
 		console.log(event.target);
 	});
+/* main page call */
+/*	$.ajax({
 
-	$.ajax({
+
+		type : "GET",
+		url : "http://localhost:8085/atlantis/users/3",
+		data : "",
+		success : function(response) {
+			console.log('success', response);
+		},
+		error : function(response) {
+			console.log('error', response);
+		}
+	});*/
+	/* war building page call */	
+/*	$.ajax({
 		beforeSend : function(xhr) {
-			xhr.setRequestHeader("userid", 3);
+			xhr.setRequestHeader("userid", "3");
 
 			console.log(xhr, 'added header', xhr.getResponseHeader());
 		},
-		crossDomain : true,
-		jsonp : true,
 		type : "GET",
 		url : "http://localhost:8085/atlantis/buildings/1",
 		data : "",
 		success : function(response) {
-			/*
-			 * if (!localStorage.userId && ${body}:not...attr ) {
-			 * $('body).attr()...
-			 * 
-			 * atlantis.enitity.userId =... }
-			 */
-
 			console.log('success', response);
 		},
 		error : function(response) {
 			console.log('error', response);
 		}
 	});
+
+	$.ajax({
+		beforeSend : function(xhr) {
+			xhr.setRequestHeader("buildingId", "1");
+			xhr.setRequestHeader("buildingLevel", "2");
+			console.log(xhr, 'added header', xhr.getResponseHeader());
+		},
+		type : "GET",
+		url : "http://localhost:8085/atlantis/troops/building",
+		data : "",
+		success : function(response) {
+			console.log('success', response);
+		},
+		error : function(response) {
+			console.log('error', response);
+		}
+	});
+*/	
+	/* construction building page call */	
+/*		$.ajax({
+			beforeSend : function(xhr) {
+				xhr.setRequestHeader("userid", "3");
+
+				console.log(xhr, 'added header', xhr.getResponseHeader());
+			},
+			type : "GET",
+			url : "http://localhost:8085/atlantis/buildings/3",
+			data : "",
+			success : function(response) {
+				console.log('success', response);
+			},
+			error : function(response) {
+				console.log('error', response);
+			}
+		});*/
 })
