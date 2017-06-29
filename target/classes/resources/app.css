@@ -69,11 +69,13 @@
 	flex-wrap: wrap;
 	padding-bottom: 1em;
 }
-.building__element--production{
+
+.building__element--production {
 	padding-top: 2em;
 	padding-left: 1em;
 	display: flex;
 }
+
 .production {
 	padding-right: 0.5em;
 }
@@ -83,11 +85,22 @@
 	weight: 3em;
 }
 
+.button_wrapper {
+	display: flex;
+	justify-content: space-around;
+}
+
+.messages {
+	display: flex;
+	justify-content: space-around;
+}
+
 #view__home {
 	
 }
 
 #view__building {
+	
 }
 
 #view__map {
@@ -95,6 +108,14 @@
 }
 
 #view__messages {
+	
+}
+
+#view__messages__received {
+	
+}
+
+#view__messages__sent {
 	
 }
 
@@ -108,4 +129,99 @@
 
 #logo {
 	
+}
+/* Compose message view */
+#view__messages__compose {
+	width: 55%;
+	margin: auto;
+	/*margin: 10px 30% 0px 25%; */
+	border: 2px solid gray;
+	border-radius: 10px;
+}
+
+.form {
+	width: 70%;
+	margin: 4% 15%;
+}
+
+/* Makes responsive fields. Sets size and field alignment.*/
+.input__text {
+	margin-bottom: 20px;
+	margin-top: 10px;
+	width: 100%;
+	padding: 15px;
+	border-radius: 5px;
+	border: 1px solid #7ac9b7;
+}
+
+.input__submit {
+	margin-bottom: 20px;
+	width: 100%;
+	padding: 15px;
+	border-radius: 5px;
+	border: 1px solid #7ac9b7;
+	background-color: #4180C5;
+	color: aliceblue;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+#submit:hover {
+	background-color: black;
+}
+
+.textarea {
+	resize: none;
+}
+
+input[type=text]:focus, textarea:focus {
+	border-color: #4697e4;
+}
+/*Profile page*/
+#content {
+	display: block;
+	width: 100%;
+	background: #fff;
+	padding: 25px 20px;
+	padding-bottom: 35px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+#userphoto {
+	display: block;
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 8px;
+}
+
+#userphoto img {
+	display: block;
+	padding: 2px;
+	background: #fff;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.setting {
+	display: block;
+	font-weight: normal;
+	padding: 7px 3px;
+	border-top: 1px solid #d6d1af;
+	margin-bottom: 5px;
+}
+
+.setting span {
+	float: left;
+	width: 250px;
+	font-weight: bold;
+}
+#w {
+  display: block;
+  max-width: 750px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 45px;
 }

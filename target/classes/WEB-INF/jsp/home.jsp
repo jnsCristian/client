@@ -5,11 +5,13 @@
 <!Doctype html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; text/html;charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css"
 	href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 <link href="<c:url value="/resources/common.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/app.css" />" rel="stylesheet">
+
 <title>Home</title>
 </head>
 <body data-userId="3">
@@ -79,7 +81,8 @@
 				</div>
 			</div>
 		</div>
-		<div id="view__building" class="show">
+		
+		<div id="view__building" class="hide">
 			<div class="building__element">
 				<h1 class="reset--h">Building name</h1>
 			</div>
@@ -87,7 +90,8 @@
 				<h3 class="reset--h">Building description dsalkhdlashdlas
 					dashdkasd</h3>
 			</div>
-			<div class="show building__element " id="war-building">
+			
+			<div class="hide building__element " id="war-building">
 				<table border="1">
 
 					<!-- First row -->
@@ -134,7 +138,7 @@
 				</table>
 			</div>
 			<div class="show building__element" id="resource-building">
-				resource  150/H</div>
+				resource 150/H</div>
 			<div class="building__element--production">
 				<ul class="production-wrapper reset--list">
 					<li class="production">resource 1</li>
@@ -146,10 +150,92 @@
 				<button class="button">Button</button>
 			</div>
 		</div>
+		
 		<div id="view__map" class="hide">map</div>
-		<div id="view__messages" class="hide">messages</div>
-		<div id="view__raports" class="hide">raports</div>
-		<div id="view__user" class="hide">user</div>
+		
+		<div id="view__messages" class="show">
+			<div class="button_wrapper">
+				<button class="button">Received</button>
+				<button class="button">Sent</button>
+				<button class="button">Compose</button>
+			</div>
+			<div id="view__messages__received" class="  hide">
+				<div class="messages">
+					<table>
+						<tr>
+							<td>Joker</td>
+							<td>read me</td>
+							<td><button class="button">Compose</button></td>
+						</tr>
+
+
+					</table>
+				</div>
+			</div>
+
+			<div id="view__messages__sent" class="  hide">
+				<div class="messages">
+					<table>
+						<tr>
+							<td>Joker</td>
+							<td>read me</td>
+							<td><button class="button">Compose</button></td>
+						</tr>
+
+
+					</table>
+				</div>
+
+			</div>
+			<div id="view__messages__compose" class="show">
+				<form action="" method="post" class="form">
+					<header> </header>
+					<label>Your Name</label> <input class="input__text" name="name"
+						type="text"> <label>Subject</label> <input
+						class="input__text" name="website" type="text"> <label>Message</label>
+					<textarea class="input__text textarea" cols="15" name="message"
+						rows="10">
+</textarea>
+					<input class="input__submit" id="submit" type="submit"
+						value="Send Message">
+				</form>
+			</div>
+		</div>
+
+		<div id="view__raports" class="hide">
+			<div class="messages">
+				<table>
+					<tr>
+						<td>Joker</td>
+						<td><button class="button">Compose</button></td>
+					</tr>
+
+
+				</table>
+			</div>
+		</div>
+		<div id="view__user" class="hide">
+			<div id="w">
+				<div id="content" class="clearfix">
+					<div id="userphoto">
+						<img src="resources/avatar.png" alt="default avatar">
+					</div>
+
+					<section>
+
+						<p class="setting">
+							<span>Nickname </span> lolno@gmail.com
+						</p>
+						<p class="setting">
+							<span>Coordinates </span> lolno@gmail.com
+						</p>
+						<p class="setting">
+							<span>Alliance </span> lolno@gmail.com
+						</p>
+					</section>
+				</div>
+			</div>
+		</div>
 		</main>
 		<footer class="app__footer"> Footer </footer>
 	</div>
