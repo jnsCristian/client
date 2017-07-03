@@ -5,7 +5,7 @@
 
 .app__header {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	background-color: gray;
 	align-items: center;
 }
@@ -53,6 +53,7 @@
 
 .building {
 	width: 33.3333%;
+	
 }
 
 .stats__group {
@@ -127,8 +128,8 @@
 	
 }
 
-#logo {
-	
+.logo {
+	padding-left:20px;
 }
 /* Compose message view */
 #view__messages__compose {
@@ -224,4 +225,19 @@ input[type=text]:focus, textarea:focus {
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 45px;
+}
+.img{
+	max-width:100%; 
+	width:45%;
+}
+.innerimg{
+	width:20%;
+}
+.imgtroop{
+	max-width:100%; 
+	width:30%;
+}
+.imgarrow{
+	max-width:100%; 
+	width:45%;
 }

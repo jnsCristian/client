@@ -2,243 +2,174 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!Doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
+<meta http-equiv="Content-Type"
+	content="text/html; text/html;charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Load the common stuff first-->
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+	rel="stylesheet" type="text/css" />
+
+<!--Load more generic app stuff-->
+
+
+<!--Load specific stuff-->
 <link rel="stylesheet" type="text/css"
 	href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 <link href="<c:url value="/resources/common.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/app.css" />" rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="<c:url value="/resources/navBar.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/troops1.css" />" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Home</title>
 </head>
-<body data-userId="3">
+<body data-userID="3">
+
 	<div class="app">
-		<header class="app__header">
-			<div id="logo">
-				<p>Logo</p>
-			</div>
-			<nav class="app__header--nav">
-				<ul class=" reset--list">
-					<li class="list">Home</li>
-					<li class="list">Profile</li>
-					<li class="list">Map</li>
-					<li class="list">Message</li>
-					<li class="list">Raport</li>
-				</ul>
-			</nav>
-		</header>
-		<main class="app__main">
-		<div id="view__home" class="hide">
-			<div class="resource-wrapper">
-				<ul class=" reset--list">
-					<li class="list">Resource 1</li>
-					<li class="list">Resource 2</li>
-					<li class="list">Resource 3</li>
-					<li class="list">Resource 4</li>
-					<li class="list">Resource 5</li>
-				</ul>
-			</div>
-			<div class="main-screen">
-				<ul class="building-wrapper reset--list">
-					<li class="building" data-buildingId="1">Cladire 1</li>
-					<li class="building" data-buildingId="">Cladire 2</li>
-					<li class="building">Cladire 3</li>
-					<li class="building">Cladire 4</li>
-					<li class="building">Cladire 5</li>
-					<li class="building">Cladire 6</li>
-					<li class="building">Cladire 7</li>
-					<li class="building">Cladire 8</li>
-					<li class="building">Cladire 9</li>
-					<li class="building">Cladire 10</li>
-				</ul>
-				<div class="stats">
-					<ul class="stats__group reset--list">
-						<li class="stats__item">Resource 1</li>
-						<li class="stats__item">Resource 2</li>
-						<li class="stats__item">Resource 3</li>
-						<li class="stats__item">Resource 4</li>
-						<li class="stats__item">Resource 5</li>
+
+		<!--APP overlay control that appears on top over the screen-->
+		<section class="app__overlay">
+
+			<!--APP header: logo and navigation-->
+			<header class="app__header ">
+				<div class="logo">
+					<a href="#">Logo here</a>
+				</div>
+				<div class="nav">
+					<ul style="
+    position: relative;
+    top: -42px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;"
+>
+						<li class="home"><a href="#">Reports</a></li>
+						<li class="tutorials"><a href="#">Messages</a>
+							<ul>
+								<li><a href="#">Tutorial </a></li>
+								<li><a href="#">Tutorial #2</a></li>
+								<li><a href="#">Tutorial #3</a></li>
+							</ul></li>
+						<li class="about"><a class="active" href="#">Home</a></li>
+						<li class="news"><a href="#">Map</a>
+						</li>
 					</ul>
-					<ul class="stats__group reset--list"
-						style="background-color: brown;">
-						<li class="stats__item">Action 1</li>
-						<li class="stats__item">Action 2</li>
-						<li class="stats__item">Action 3</li>
-						<li class="stats__item">Action 4</li>
-						<li class="stats__item">Action 5</li>
-					</ul>
-					<ul class="stats__group reset--list"
-						style="background-color: white;">
-						<li class="stats__item">Troop 1</li>
-						<li class="stats__item">Troop 2</li>
-						<li class="stats__item">Troop 3</li>
-						<li class="stats__item">Troop 4</li>
-						<li class="stats__item">Troop 5</li>
+
+				</div>
+				<div class="nav">
+					<li class="dropdown" style="align: right"><a href="#"
+							class="dropdown-toggle" data-toggle="dropdown"> <img
+								src="img/3.png" style="allign:center;" class="profile-image img-circle">
+								</a>
+							<ul class="dropdown-menu">
+								<li><a href="#"><i class="fa fa-cog"></i> Account</a></li>
+								<li class="divider"></li>
+								<li><a href="#"><i class="fa fa-sign-out"></i> Sign-out</a></li>
+							</ul></li>
+				</div>
+			</header>
+
+			<!--RIGHT sidebar: resources area-->
+			<aside class="position--fixed">
+				<div class="resource-wrapper">
+					<ul class=" reset--list">
+						<li class="list" data-resourceId="" data-resourceIncrement="">
+							<div class="resource-header"></div>
+
+							<div class="resource--increment-status"></div>
+						</li>
+
 					</ul>
 				</div>
-			</div>
-		</div>
-		<div id="view__building" class="hide">
-			<div class="building__element">
-				<h1 class="reset--h">Building name</h1>
-			</div>
-			<div class="building__element">
-				<h3 class="reset--h">Building description dsalkhdlashdlas
-					dashdkasd</h3>
-			</div>
-			<div class="show building__element " id="war-building">
-				<table border="1">
-
-					<!-- First row -->
-
-					<tr>
-						<td></td>
-						<td colspan="5">Cost</td>
-						<td colspan="3">Skill</td>
-					</tr>
-
-					<!-- Second row -->
-
-					<tr>
-						<td>nume</td>
-						<td>resource 1</td>
-						<td>resource 2</td>
-						<td>resource 3</td>
-						<td>resource 4</td>
-						<td>resource 5</td>
-						<td>skill 1</td>
-						<td>skill 2</td>
-						<td>skill 3</td>
-						<td>quatity</td>
-						<td></td>
-					</tr>
-
-
-					<tr>
-						<td>nume</td>
-						<td>10</td>
-						<td>10</td>
-						<td>10</td>
-						<td>10</td>
-						<td>10</td>
-						<td>10</td>
-						<td>10</td>
-						<td>10</td>
-						<td>10</td>
-						<td><button>Button</button></td>
-					</tr>
-
-
-
-				</table>
-			</div>
-			<div class="show building__element" id="resource-building">
-				resource 150/H</div>
-			<div class="building__element--production">
-				<ul class="production-wrapper reset--list">
-					<li class="production">resource 1</li>
-					<li class="production">resource 2</li>
-					<li class="production">resource 3</li>
-					<li class="production">resource 4</li>
-					<li class="production">resource 5</li>
-				</ul>
-				<button class="button">Button</button>
-			</div>
-		</div>
-		<div id="view__map" class="hide">map</div>
-		<div id="view__messages" class="hide">
-			<div class="button_wrapper">
-				<button class="button">Received</button>
-				<button class="button">Sent</button>
-				<button class="button">Compose</button>
-			</div>
-			<div id="view__messages__received" class="  hide">
-				<div class="messages">
-					<table>
-						<tr>
-							<td>Joker</td>
-							<td>read me</td>
-							<td><button class="button">Compose</button></td>
-						</tr>
-
-
-					</table>
+			</aside>
+			<div style="padding-top: 50px;" class="main__wrapper">
+				<div>
+				<div class="icon-bar">
+				<a><img src="img/5.png" class="imgarrow"></br>2:30:45</a>
 				</div>
-			</div>
-
-			<div id="view__messages__sent" class="  hide">
-				<div class="messages">
-					<table>
-						<tr>
-							<td>Joker</td>
-							<td>read me</td>
-							<td><button class="button">Compose</button></td>
-						</tr>
-
-
-					</table>
+				<div class="icon-bar">
+				<a><img src="img/6.png" class="imgarrow"></br>2:30:45</a>
+				</div>
+						<div class="icon-bar tooltip">
+					<a><img src="img/2.png" class="imgtroop"></a>
+					<span class="tooltiptext"> <img src="img/2.png" class="innerimg"></br><img src="img/2.png" class="innerimg"></br>
+					<img src="img/2.png" class="innerimg"></span> 
+						</div>
+				<div class="icon-bar tooltip">
+					<a><img src="img/2.png" class="imgtroop"></a>
+					<span class="tooltiptext"> <img src="img/2.png" class="innerimg"></br><img src="img/2.png" class="innerimg"></br>
+					<img src="img/2.png" class="innerimg"></span> 
+						</div>
+										<div class="icon-bar tooltip">
+					<a><img src="img/2.png" class="imgtroop" ></a>
+					<span class="tooltiptext"> <img src="img/2.png" class="innerimg"></br><img src="img/2.png" class="innerimg"></br>
+					<img src="img/2.png" class="innerimg"></span> 
+						</div>
+					
 				</div>
 
-			</div>
-			<div id="view__messages__compose" class="hide">
-				<form action="" method="post" class="form">
-					<header> </header>
-					<label>Your Name</label> <input class="input__text" name="name"
-						type="text"> <label>Subject</label> <input
-						class="input__text" name="website" type="text"> <label>Message</label>
-					<textarea class="input__text textarea" cols="15" name="message"
-						rows="10">
-</textarea>
-					<input class="input__submit" id="submit" type="submit"
-						value="Send Message">
-				</form>
-			</div>
-		</div>
+				<!--Center side: buildings stuff area-->
+				<div style="" id="center__menu" class="building-wrapper home">
+					<a class="building"><img src="img/build3.png" height=100px
+						width=100px > </a> <a class="building"><img
+						src="img/build2.png" height=100px width=100px> </a> <a
+						class="building"><img src="img/build3.png" height=100px
+						width=100px> </a> <a class="building"><img
+						src="img/build4.png" height=100px width=100px> </a> <a
+						class="building"><img src="img/build3.png" height=100px
+						width=100px> </a> <a class="building"><img
+						src="img/build2.png" height=100px width=100px> </a> <a
+						class="building"><img src="img/build3.png" height=100px
+						width=100px> </a> <a class="building"><img
+						src="img/build4.png" height=100px width=100px> </a> <a
+						class="building"><img src="img/build2.png" height=100px
+						width=100px> </a>
 
-		<div id="view__raports" class="show">
-			<div class="messages">
-				<table>
-					<tr>
-						<td>Joker</td>
-						<td>read me</td>
-						<td><button class="button">Compose</button></td>
-					</tr>
-
-
-				</table>
-			</div>
-		</div>
-		<div id="view__user" class="hide">
-			<div id="w">
-				<div id="content" class="clearfix">
-					<div id="userphoto">
-						<img src="resources/avatar.png" alt="default avatar">
-					</div>
-
-					<section>
-
-						<p class="setting">
-							<span>Nickname </span> lolno@gmail.com
-						</p>
-						<p class="setting">
-							<span>Coordinates </span> lolno@gmail.com
-						</p>
-						<p class="setting">
-							<span>Alliance </span> lolno@gmail.com
-						</p>
-					</section>
 				</div>
-			</div>
-		</div>
-		</main>
-		<footer class="app__footer"> Footer </footer>
+
+				<!--LEFT sidebar: army stuff area-->
+
+
+				<div class="icon-bar" style="">
+					<a><img src="img/res1.png" class="img"> 500 <br>150/h</a> 
+					<a><img src="img/res2.png" class="img"> 500 <br>150/h</a> 
+					<a><img src="img/res3.png" class="img"> 500 <br>150/h</a> 
+					<a><img src="img/res4.png" class="img"> 500 <br>150/h</a> 
+					<a><img src="img/res2.png" class="img"> 500 <br>150/h</a> 
+				</div>
+		</section>
+		<!--END app overlay-->
 	</div>
+	<!--START app main-->
+	<footer class="app__footer">
+
+	<p align="center">
+
+		&copy; 2010 NttData Romania &nbsp;&nbsp;&nbsp;&nbsp; <br> Design
+		by <a href="">Atlantis</a> | <a
+			href="">Atlantis Portal </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</p>
+	</footer>
+	<!--END app main content-->
+
+	</div>
+
+	<!--Load the common stuff first-->
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="<c:url value="/resources/common.js" />"></script>
-	<script src="<c:url value="/resources/app.js" />"></script>
+
+	<!--Load more generic app stuff-->
+	<script src="app/config/app.config.js"></script>
+	<script src="app/config/app.entity.js"></script>
+
+	<!--Load specific stuff-->
+	<script src="app/views/home/home.view.js"></script>
 </body>
 </html>
