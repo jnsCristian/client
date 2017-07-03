@@ -1,0 +1,75 @@
+body {margin:0}
+
+
+
+.active {
+    background-color: #4CAF50 !important;
+}
+
+#right__menu{
+	float:right;
+}
+
+#center__menu{
+	float:center;
+}
+
+.main__wrapper{
+	display:flex;
+	justify-content:space-between;
+}
+
+.building-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #4CAF50 !important;
+}
+
+.building {
+	width: 33.3333%;
+	display:flex;
+	justify-content:space-around;
+	padding-top:50px;
+	
+}
+
+.navbar-nav>li>a.profile-image {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.icon-bar {
+    width: 90px;
+    background-color: #555;
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 1em;
+}
+
+	.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    padding: 5px 10px;
+    top: -5px;
+    left: 105%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+} 
