@@ -2,7 +2,7 @@
 	'user strict';
 
 	atlantis.entity = {
-		userId : "3"
+		userId :$("body").attr("data-userId")
 	};
 
 })();
