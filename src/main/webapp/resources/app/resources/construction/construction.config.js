@@ -8,7 +8,7 @@
 			ContructionCommand();
 		});
 		
-		
+
 		return;
 	}
 	
