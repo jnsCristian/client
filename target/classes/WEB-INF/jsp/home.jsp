@@ -21,7 +21,8 @@
 <link href="<c:url value="/resources/newCss.css" />" rel="stylesheet">
 
 </head>
-<body data-userId="3">
+<!--  data-userId="3" -->
+<body>
 	<header class="app__header ">
 		<div class="logo">Logo here</div>
 		<ul class="menu reset--list ">

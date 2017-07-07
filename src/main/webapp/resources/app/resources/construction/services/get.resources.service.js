@@ -8,7 +8,6 @@ function GetReourcesService () {
 		success : function(response) {
 
 			atlantis.entity.constructionResources = response;
-
 			atlantis.eventManger.fire('get.resources.success');
 		}
 	});
