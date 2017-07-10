@@ -91,11 +91,11 @@ $(document).ready(function() {
 		});*/
 	$.ajax({
 	type : "GET",
-	url : "http://localhost:8085/atlantis/users/test",
+	url : "http://localhost:8085/atlantis/resources?userId=3",
 	
 	success : function(response) {
-		console.log("success",response);
-		 $("#imgFromScript").attr("src",  response.avatar);
+		console.log("success",response );
+		 $("#imgFromScript").attr("src",  response.resources[0].image);
 	},
 	error : function(response) {
 		console.log('error', response);

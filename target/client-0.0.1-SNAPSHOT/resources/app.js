@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var atlantis = atlantis || {};
+/*	var atlantis = atlantis || {};
 
 	atlantis.enitity = {
 		userId : $('body').attr('data-userid') || localStorage.userId || null,
@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 	buildingWrap.addEventListener('click', function(event) {
 		console.log(event.target);
-	});
+	});*/
 /* main page call */
 /*	$.ajax({
 
@@ -89,4 +89,16 @@ $(document).ready(function() {
 				console.log('error', response);
 			}
 		});*/
+	$.ajax({
+	type : "GET",
+	url : "http://localhost:8085/atlantis/resources?userId=3",
+	
+	success : function(response) {
+		console.log("success",response );
+		 $("#imgFromScript").attr("src",  response.resources[0].image);
+	},
+	error : function(response) {
+		console.log('error', response);
+	}
+});
 })
