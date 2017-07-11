@@ -24,12 +24,39 @@
 <!--  data-userId="3" -->
 <body>
 	<header class="app__header ">
-		<div class="logo">Logo here</div>
+		<!--APP header: logo-->
+		<div class="logo">
+		  <img src="resources/logo.png" class="logo">
+		</div>
+		
+		<!--APP header: main menu-->
 		<ul class="menu reset--list ">
-			<li><button class="button">Reports</button></li>
-			<li><button class="button">Reports</button></li>
-			<li><button class="button">Reports</button></li>
-			<li><button class="button">Reports</button></li>
+			<li><button class="myButton">Home</button></li>
+			<li><button class="myButton" id="myBtn">Reports</button>
+			<!-- The Modal -->
+			<div id="myModal" class="modal">
+
+  			<!-- Modal content -->
+  			<div class="modal-content">
+  			<span class="close">&times;</span>
+   			 <p>Some text in the Modal..</p>
+  			</div>
+
+			</div>
+			</li>
+			<li><button class="myButton" id="myBtnMesg">Messages</button>
+			<!-- The Modal -->
+			<div id="myModalBtn" class="modal">
+
+  			<!-- Modal content -->
+  			<div class="modal-content">
+  			<span class="close">&times;</span>
+   			 <p>Some text in the Modal..</p>
+  			</div>
+
+			</div>
+			</li>
+			<li><button class="myButton">Map</button></li>
 		</ul>
 
 		<!--APP header: profile-->
@@ -46,10 +73,30 @@
 		<aside>
 			<ul class="resource-wrap reset--list">
 				<li class="resource-item">
-					<img src="resources/img/arrowLeft.png" class="img"><br/>2:30:45
+					<button class="transparent" id="myBtnT1"><img src="resources/img/arrowLeft.png" class="img"></button><br/>2:30:45
+					<!-- The Modal -->
+			<div id="myModalBtnT1" class="modal">
+
+  			<!-- Modal content -->
+  			<div class="modal-content">
+  			<span class="close">&times;</span>
+   			 <p>Some text in the Modal..</p>
+  			</div>
+
+			</div>
 				</li>
 				<li class="resource-item">
-					<img src="resources/img/arrowRight.png" class="img"><br/>2:30:45
+					<button class="transparent" id="myBtnT2"><img src="resources/img/arrowRight.png" class="img"></button><br/>2:30:45
+					<!-- The Modal -->
+			<div id="myModalBtnT2" class="modal">
+
+  			<!-- Modal content -->
+  			<div class="modal-content">
+  			<span class="close">&times;</span>
+   			 <p>Some text in the Modal..</p>
+  			</div>
+
+			</div>
 				</li>
 			<li class="resource-item tooltip" >
 				<img src="resources/img/troops/genericTrooper.png" class="img">
@@ -78,14 +125,21 @@
 			</ul>
 		</aside>
 			<div class="building-wrapper">
-				<a class="building"><img class="building-image" src="resources/img/mine.png" > </a>
-				<a class="building"><img class="building-image" src="resources/img/build2.png"> </a>
-				<a class="building"><img class="building-image" src="resources/img/build3.png" > </a> 
-				<a class="building"><img class="building-image" src="resources/img/build4.png" > </a> 
-				<a class="building"><img class="building-image" src="resources/img/build3.png" > </a> 
-				<a class="building"><img class="building-image" src="resources/img/build2.png" > </a> 
-				<a class="building"><img class="building-image" src="resources/img/build3.png" > </a> 
-				<a class="building"><img class="building-image" src="resources/img/build4.png" > </a> 
+				
+				<div class="building2"><img class="building-image2" src="resources/img/buildings/barracks.png"> </div> 
+				<div class="building5"><img class="building-image5" src="resources/img/buildings/ironmine.png" > </div> 
+				<div class="building8"><img class="building-image8" src="resources/img/buildings/tankfactory.png" > </div> 
+				<div class="building1"><img class="building-image1" src="resources/img/buildings/bank.png" > </div>	 
+				<div class="building3"><img class="building-image3" src="resources/img/buildings/planfactory.png"> </div> 
+				<div class="building4"><img class="building-image4" src="resources/img/buildings/stone.png" > </div>
+				<div class="building6"><img class="building-image6" src="resources/img/buildings/farm.png" > </div>	
+				<div class="eoliana"><img class="eoliana-image" src="resources/img/street/eoliana.png" > </div> 
+				<div class="eoliana1"><img class="eoliana1-image" src="resources/img/street/eoliana.png" > </div> 
+				<div class="eoliana2"><img class="eoliana2-image" src="resources/img/street/eoliana.png" > </div> 
+				<div class="eoliana3"><img class="eoliana3-image" src="resources/img/street/eoliana.png" > </div> 
+				<div class="eoliana4"><img class="eoliana2-image" src="resources/img/street/eoliana.png" > </div> 
+				<div class="eoliana5"><img class="eoliana3-image" src="resources/img/street/eoliana.png" > </div> 
+	
 			</div>
 		<aside>
 			<ul class="resource-wrap reset--list">
@@ -128,14 +182,14 @@
         <g class="map-content"></g>
       </svg>
     </div>
-	<!--START app main-->
+	<!--START app main
 	<footer class="app__footer">
 		
 			&copy; 2017 NttData Romania <br> Design by Atlantis | Atlantis
 			Portal
 		
 	</footer>
-	<!--END app main content-->
+	END app main content-->
 
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -184,6 +238,101 @@
 		src="<c:url value="/resources/app/map/commands/renderMap.command.js"/>" /></script>
 	<script
 		src="<c:url value="/resources/app/map/map.config.js"/>" /></script>
+		
+	<script>
+		// Get the modal
+		var modal = document.getElementById('myModalBtn');
+
+		//Get the button that opens the modal
+		var btn = document.getElementById("myBtnMesg");
+		
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal 
+		btn.onclick = function() { modal.style.display = "block";}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() { modal.style.display = "none";}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+   				 if (event.target == modal) {
+       				 modal.style.display = "none";
+    			}
+		}
+	</script>
+	
+	<script>
+		// Get the modal
+		var modal = document.getElementById('myModal');
+
+		//Get the button that opens the modal
+		var btn = document.getElementById("myBtn");
+		
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal 
+		btn.onclick = function() { modal.style.display = "block";}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() { modal.style.display = "none";}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+   				 if (event.target == modal) {
+       				 modal.style.display = "none";
+    			}
+		}
+	</script>
+	<script>
+		// Get the modal
+		var modal = document.getElementById('myModalBtnT1');
+
+		//Get the button that opens the modal
+		var btn = document.getElementById("myBtnT1");
+		
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal 
+		btn.onclick = function() { modal.style.display = "block";}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() { modal.style.display = "none";}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+   				 if (event.target == modal) {
+       				 modal.style.display = "none";
+    			}
+		}
+	</script>
+	
+	<script>
+		// Get the modal
+		var modal = document.getElementById('myModalBtnT2');
+
+		//Get the button that opens the modal
+		var btn = document.getElementById("myBtnT2");
+		
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal 
+		btn.onclick = function() { modal.style.display = "block";}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() { modal.style.display = "none";}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+   				 if (event.target == modal) {
+       				 modal.style.display = "none";
+    			}
+		}
+	</script>
 
 </body>
 </html>
