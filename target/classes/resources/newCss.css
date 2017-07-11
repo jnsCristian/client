@@ -160,9 +160,9 @@
 	z-index: 1;
 }
 
-html {
+/* html {
 	background:url('../resources/img/cr.png'),url('../resources/img/images.jpg') ;
-}
+} */
 #map-wrap {
   width: 1040px;
   height: 500px;

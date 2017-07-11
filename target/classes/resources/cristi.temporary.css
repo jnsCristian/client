@@ -1,0 +1,41 @@
+.innerimg {
+	height: 60px;
+	width: 50px;
+	padding-left: 10px;
+}
+
+.troops-input {
+	width: 50px;
+}
+
+.action-form__troops {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.form-element {
+	padding-left: 5px;
+}
+
+.action-form {
+	
+}
+
+.center {
+	display: flex;
+	justify-content: space-around;
+	padding-top: 1em;
+}
+
+.w3-table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 75%;
+	display: table
+}
+
+.w3-table td, .w3-table th {
+	padding: 8px 8px;
+	text-align: center;
+}
+
