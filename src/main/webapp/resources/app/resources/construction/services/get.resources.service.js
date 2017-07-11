@@ -6,11 +6,13 @@ function GetReourcesService() {
 		type : "GET",
 
 		beforeSend : function(request) {
-			if(atlantis.entity.constructionResources)
+			if(atlantis.entity.resourceETag){
 				request.setRequestHeader("etag", atlantis.entity.constructionResources);
+			}
 		},
 		success : function(data, textStatus, request) {
 			if (textStatus == 'success') {
+				var constructionResourcesETag;
 				console.log(request.getResponseHeader('etag'));
 				atlantis.entity.resourceETag = request
 						.getResponseHeader('etag');
@@ -19,16 +21,16 @@ function GetReourcesService() {
 				atlantis.eventManger.fire('get.resources.success');
 			}
 			else{
-				atlantis.entity.constructionResources=atlantis.entity.constructionResources;
 				atlantis.eventManger.fire('get.resources.success');
 			}
+			console.log(atlantis,localStorage);
 		}
 		
 	});
 };
 
-/*
-function GetReourcesService() {
+
+/*function GetReourcesService() {
 'use strict';
 
 $.ajax({
