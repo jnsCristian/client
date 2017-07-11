@@ -10,7 +10,7 @@ function ActionCommand () {
 		
 		$(".form-element").each(function(){
 			
-			var troopName=$(this).find("input").attr("id"),
+			var troopName=$(this).find("input").attr("data-troopId"),
 			troopNumber=$(this).find("input").val();
 			troops[troopName]=troopNumber||"0";
 			
