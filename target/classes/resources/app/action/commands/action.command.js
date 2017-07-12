@@ -1,4 +1,4 @@
-function ActionCommand () {
+function CreateActionCommand () {
 	'use strict';
 
 	$(".action-form").on("submit",function(event){

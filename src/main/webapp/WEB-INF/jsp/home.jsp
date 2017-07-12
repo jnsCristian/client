@@ -19,7 +19,7 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="<c:url value="/resources/common.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/newCss.css" />" rel="stylesheet">
-
+<link href="<c:url value="/resources/cristi.temporary.css" />" rel="stylesheet">
 </head>
 <!--  data-userId="3" -->
 <body>
@@ -39,7 +39,7 @@
   			<!-- Modal content -->
   			<div class="modal-content">
   			<span class="close">&times;</span>
-   			 <p>Some text in the Modal..</p>
+   			 <p>Some text in the Modal</p>
   			</div>
 
 			</div>
@@ -73,37 +73,97 @@
 		<aside>
 			<ul class="resource-wrap reset--list">
 				<li class="resource-item">
-					<button class="transparent" id="myBtnT1"><img src="resources/img/arrowLeft.png" class="img"></button><br/>2:30:45
-					<!-- The Modal -->
-			<div id="myModalBtnT1" class="modal">
+					<button onclick="document.getElementById('id03').style.display='block'" class="transparent "><img src="resources/img/attack.png" class="img"></button><br/>
+			<div id="id03" class="w3-modal">
+			<div class="w3-modal-content">
+			 <span onclick="document.getElementById('id03').style.display='none'" class="button">&times;</span>
+  				<form class="action-form">
+			<div class="center coordinates">
+				<input id="x" type="text" class="troops-input coordinates"
+					placeholder="x">
+			</div>
+			<div class="center coordinates">
+				<input id="y" type="text" class="troops-input coordinates"
+					placeholder="y">
+			</div>
+			<div class="action-form__troops">
+				<div class="form-element">
+					<img src="resources/img/troops/1.png" class="innerimg"> <br />
+					<input data-troopId="1" type="text" class="troops-input">
+				</div>
+				<div class="form-element">
+					<img src="resources/img/troops/2.png" class="innerimg"> <br />
+					<input data-troopId="2" type="text" class="troops-input">
+				</div>
+				<div class="form-element">
+					<img src="resources/img/troops/3.png" class="innerimg"> <br />
+					<input data-troopId="3" type="text" class="troops-input">
+				</div>
+				<div class="form-element">
+					<img src="resources/img/troops/4.png" class="innerimg"> <br />
+					<input data-troopId="9" type="text" class="troops-input">
+				</div>
+				<div class="form-element">
+					<img src="resources/img/troops/5.png" class="innerimg"> <br />
+					<input data-troopId="10" type="text" class="troops-input">
+				</div>
+				<div class="form-element">
+					<img src="resources/img/troops/6.png" class="innerimg"> <br />
+					<input data-troopId="11" type="text" class="troops-input">
+				</div>
+				<div class="form-element">
+					<img src="resources/img/troops/7.png" class="innerimg"> <br />
+					<input data-troopId="12" type="text" class="troops-input">
+				</div>
+				<div class="form-element">
+					<img src="resources/img/troops/8.png" class="innerimg"> <br />
+					<input data-troopId="13" type="text" class="troops-input">
+				</div>
+				<div class="form-element">
+					<img src="resources/img/troops/9.png" class="innerimg"> <br />
+					<input data-troopId="14" type="text" class="troops-input">
+				</div>
+				<input type="submit" value="Send" class="button">
+			</div>
 
-  			<!-- Modal content -->
-  			<div class="modal-content">
-  			<span class="close">&times;</span>
-   			 <p>Some text in the Modal..</p>
-  			</div>
-
+		</form>
+			</div>
 			</div>
 				</li>
+			
+			
 				<li class="resource-item">
-					<button class="transparent" id="myBtnT2"><img src="resources/img/arrowRight.png" class="img"></button><br/>2:30:45
-					<!-- The Modal -->
-			<div id="myModalBtnT2" class="modal">
+					<button onclick="document.getElementById('id01').style.display='block'" class="transparent incomming-actions"><img src="resources/img/arrowLeft.png" class="img"></button><br/>
+					<span class="incoming"></span>
+			<div id="id01" class="w3-modal">
+			<div class="w3-modal-content">
+			 <span onclick="document.getElementById('id01').style.display='none'" class="button">&times;</span>
+  				<table class="w3-table incoming-actions-table">
 
-  			<!-- Modal content -->
-  			<div class="modal-content">
-  			<span class="close">&times;</span>
-   			 <p>Some text in the Modal..</p>
-  			</div>
-
+				</table>
+			</div>
 			</div>
 				</li>
+				
+				<li class="resource-item">
+					<button onclick="document.getElementById('id02').style.display='block'" class="transparent outgoing-actions"><img src="resources/img/arrowRight.png" class="img"></button><br/>
+					<span class="outgoing"></span>
+					<div id="id02" class="w3-modal">
+					<div class="w3-modal-content">
+					 <span onclick="document.getElementById('id02').style.display='none'" class="button">&times;</span>
+		  				<table class="w3-table outgoing-actions-table">
+		
+						</table>
+					</div>
+					</div>
+				</li>
+
 			<li class="resource-item tooltip" >
 				<img src="resources/img/troops/genericTrooper.png" class="img">
 				<span class="tooltiptext"> 
 					<span data-resourceName="basic trooper"><img src="resources/img/troops/1.png" class="innerimg"><br/><span class="army-quantity"></span><br/> </span>
 					<span data-resourceName="storm trooper"><img src="resources/img/troops/2.png" class="innerimg"><br/><span  class="army-quantity"></span><br/> </span>
-					<span data-resourceName="cyborg"><img src="resources/img/troops/3.png" class="innerimg"><br/><span class="army-quantity"></span></span>
+					<span data-resourceName="commando"><img src="resources/img/troops/3.png" class="innerimg"><br/><span class="army-quantity"></span></span>
 				</span>
 			</li>
 			<li class="resource-item tooltip">
@@ -238,8 +298,31 @@
 		src="<c:url value="/resources/app/map/commands/renderMap.command.js"/>" /></script>
 	<script
 		src="<c:url value="/resources/app/map/map.config.js"/>" /></script>
-		
-	<script>
+	<!-- Action dependencies -->
+		<script
+		src="<c:url value="/resources/app/action/commands/action.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/action/services/create.action.service.js"/>" /></script>
+		<script
+		src="<c:url value="/resources/app/action/commands/show.first.action.command.js"/>" /></script>
+				<script
+		src="<c:url value="/resources/app/action/commands/show.incomming.actions.command.js"/>" /></script>
+						<script
+		src="<c:url value="/resources/app/action/commands/show.outgoing.actions.command.js"/>" /></script>
+				<script
+		src="<c:url value="/resources/app/action/commands/action.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/action/services/show.first.action.service.js"/>" /></script>
+		<script
+		src="<c:url value="/resources/app/action/services/show.incoming.actions.service.js"/>" /></script>
+				<script
+		src="<c:url value="/resources/app/action/services/show.outgoing.actions.service.js"/>" /></script>
+			<script
+		src="<c:url value="/resources/app/action/services/show.outgoing.actions.service.js"/>" /></script>
+	<script src="<c:url value="/resources/app/action/action.config.js"/>" /></script>	
+
+
+<!-- 	<script>
 		// Get the modal
 		var modal = document.getElementById('myModalBtn');
 
@@ -286,29 +369,7 @@
     			}
 		}
 	</script>
-	<script>
-		// Get the modal
-		var modal = document.getElementById('myModalBtnT1');
 
-		//Get the button that opens the modal
-		var btn = document.getElementById("myBtnT1");
-		
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-
-		// When the user clicks the button, open the modal 
-		btn.onclick = function() { modal.style.display = "block";}
-
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() { modal.style.display = "none";}
-
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-   				 if (event.target == modal) {
-       				 modal.style.display = "none";
-    			}
-		}
-	</script>
 	
 	<script>
 		// Get the modal
@@ -333,6 +394,6 @@
     			}
 		}
 	</script>
-
+ -->
 </body>
 </html>

@@ -1,11 +1,10 @@
-function CreateActionService(params) {
+function EditUserService(params) {
 	'use strict';
 
-	params["idSource"]="24";
 	var test=JSON.stringify(params);
 	$.ajax({
-		url : atlantis.endpoints.actions ,
-		type : "POST",
+		url : atlantis.endpoints.user+"/"+atlantis.entity.userId ,
+		type : "PUT",
 		data: test,
         contentType: "application/json",
 		success : function(data, textStatus, request) {

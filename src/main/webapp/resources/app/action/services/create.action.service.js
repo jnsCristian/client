@@ -2,9 +2,7 @@ function CreateActionService(params) {
 	'use strict';
 
 	params["idSource"]="24";
-	
 	var test=JSON.stringify(params);
-	console.log(test);
 	$.ajax({
 		url : atlantis.endpoints.actions ,
 		type : "POST",
