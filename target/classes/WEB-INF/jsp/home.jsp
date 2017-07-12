@@ -126,20 +126,24 @@
 		</aside>
 			<div class="building-wrapper">
 				
-				<div class="building2"><img class="building-image2" src="resources/img/buildings/barracks.png"> </div> 
-				<div class="building5"><img class="building-image5" src="resources/img/buildings/ironmine.png" > </div> 
-				<div class="building8"><img class="building-image8" src="resources/img/buildings/tankfactory.png" > </div> 
-				<div class="building1"><img class="building-image1" src="resources/img/buildings/bank.png" > </div>	 
-				<div class="building3"><img class="building-image3" src="resources/img/buildings/planfactory.png"> </div> 
-				<div class="building4"><img class="building-image4" src="resources/img/buildings/stone.png" > </div>
-				<div class="building6"><img class="building-image6" src="resources/img/buildings/farm.png" > </div>	
+				<div class="barracks"><img class="barracks-image" src="resources/img/buildings/barracks.png"> </div> 
+			<div class="farm"><img class="farm-image" src="resources/img/buildings/farm.png" > </div>
+				<div class="tankfactory"><img class="tankfactory-image" src="resources/img/buildings/tankfactory.png" > </div> 
+				<div class="ironmine"><img class="ironmine-image" src="resources/img/buildings/ironmine.png" > </div>  
+				<div class="planfactory"><img class="planfactory-image" src="resources/img/buildings/planfactory.png"> </div> 
+				<div class="stone"><img class="stone-image" src="resources/img/buildings/stone.png" > </div>
+					
+				<div class="bank"><img class="bank-image" src="resources/img/buildings/bank.png" > </div>	
 				<div class="eoliana"><img class="eoliana-image" src="resources/img/street/eoliana.png" > </div> 
 				<div class="eoliana1"><img class="eoliana1-image" src="resources/img/street/eoliana.png" > </div> 
 				<div class="eoliana2"><img class="eoliana2-image" src="resources/img/street/eoliana.png" > </div> 
 				<div class="eoliana3"><img class="eoliana3-image" src="resources/img/street/eoliana.png" > </div> 
 				<div class="eoliana4"><img class="eoliana2-image" src="resources/img/street/eoliana.png" > </div> 
 				<div class="eoliana5"><img class="eoliana3-image" src="resources/img/street/eoliana.png" > </div> 
-	
+	            <div class="forest"><img class="forest-image" src="resources/img/street/forest.png" > </div> 
+	            <div class="forest1"><img class="forest1-image" src="resources/img/street/forest1.png" > </div> 
+	            <div class="forest2"><img class="forest2-image" src="resources/img/street/forest2.png" > </div> 
+	            <div class="forest3"><img class="forest3-image" src="resources/img/street/forest3.png" > </div> 
 			</div>
 		<aside>
 			<ul class="resource-wrap reset--list">

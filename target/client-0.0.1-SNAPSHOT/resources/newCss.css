@@ -100,8 +100,6 @@
 }
 
 .building-wrapper {
-
-
   position:relative;
 
 }
@@ -124,23 +122,23 @@
 }
 
 .building3 {
-	width:200px;
+  width:200px;
   height:100px;
   position:absolute;
-  bottom:0px;;
-  left:250px;
+  bottom:80px;;
+  left:-150px;
 }
 
 .building4 {
-	width:80px;
+  width:80px;
   height:80px;
   position:absolute;
-  bottom:0px;
-  left:-200px;
+  bottom:300px;
+  right:-250px;
 }
 
 .building5 {
-		width:100px;
+  width:100px;
   height:100px;
   position:absolute;
   bottom:-200px;
@@ -148,7 +146,7 @@
 }
 
 .building6 {
-	width:100px;
+  width:100px;
   height:100px;
   position:absolute;
   bottom:320px;
@@ -162,11 +160,10 @@
   bottom:0px;
   left:-200px;
 }
-
-.building2 {
-	width:200px;
-  height:1000px;
+.building2 {   
   position:absolute;
+  width:200px;
+  height:1000px;
   bottom:-600px;
   right:+450px;
 }
@@ -222,6 +219,35 @@
   bottom:-1050px;
   right:0px;
 }
+
+.forest{
+		width:200px;
+  height:1000px;
+  position:relative;
+  bottom:-1050px;
+  right:0px;
+}
+.forest1{
+		width:200px;
+  height:1000px;
+  position:relative;
+  bottom:-1050px;
+  right:0px;
+}
+.forest2{
+		width:200px;
+  height:1000px;
+  position:relative;
+  bottom:-1050px;
+  right:0px;
+}
+.forest3{
+		width:200px;
+  height:1000px;
+  position:relative;
+  bottom:-1050px;
+  right:0px;
+}
 .myButton {
 	background-color:#97a7c4;
 	-moz-border-radius:10px;
@@ -251,7 +277,22 @@
 }
 
 
-
+.forest-image {
+	height: 100px;
+	width: 100px;
+}
+.forest1-image {
+	height: 100px;
+	width: 100px;
+}
+.forest2-image {
+	height: 100px;
+	width: 100px;
+}
+.forest3-image {
+	height: 100px;
+	width: 100px;
+}
 .street-image {
 	height: 100px;
 	width: 100px;
@@ -392,13 +433,13 @@ html {
 }
 
 .building-image3 {
-	height: 100px;
-	width: 100px;
+	height: 300px;
+	width: 300px;
 }
 
 .building-image4 {
-	height: 200px;
-	width: 400px;
+	height:70px;
+	width: 150px;
 }
 
 .building-image5 {  
@@ -407,7 +448,7 @@ html {
 }
 
 .building-image6 {
-height: 300px;
+height: 200px;
 	width: 300px;
 }
 
@@ -423,7 +464,7 @@ height: 300px;
 
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 900px) {
     .building-image1 {
 	height: 50px;
 	width: 55px;
@@ -435,42 +476,42 @@ height: 300px;
 }
 
 .building-image3 {
-	height: 100px;
-	width: 100px;
+    height: 80px;
+	width: 80px;
 }
 
 .building-image4 {
-	height: 200px;
-	width: 400px;
+    height: 80px;
+	width: 80px;
 }
 
 .building-image5 {  
-    height: 200px;
-	width: 300px;
+    height: 80px;
+	width: 80px;
 }
 
 .building-image6 {
-height: 300px;
-	width: 100px;
+    height: 80px;
+	width: 80px;
 }
 
 .building-image7 {
-	height: 100px;
-	width: 100px;
+    height: 80px;
+	width: 80px;
 }
 
 .building-image8 {
-	height: 200px;
-	width: 300px;
+    height: 80px;
+	width: 80px;
 }
 .street-image {
-	height: 100px;
-	width: 100px;
+    height: 80px;
+	width: 80px;
 }
 
 .eoliana-image {
-	height: 200px;
-	width: 300px;
+	height: 30px;
+	width: 30px;
 }
 
     

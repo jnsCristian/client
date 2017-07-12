@@ -139,7 +139,10 @@
 				<div class="eoliana3"><img class="eoliana3-image" src="resources/img/street/eoliana.png" > </div> 
 				<div class="eoliana4"><img class="eoliana2-image" src="resources/img/street/eoliana.png" > </div> 
 				<div class="eoliana5"><img class="eoliana3-image" src="resources/img/street/eoliana.png" > </div> 
-	
+	            <div class="forest"><img class="forest-image" src="resources/img/street/forest.png" > </div> 
+	            <div class="forest1"><img class="forest1-image" src="resources/img/street/forest1.png" > </div> 
+	            <div class="forest2"><img class="forest2-image" src="resources/img/street/forest2.png" > </div> 
+	            <div class="forest3"><img class="forest3-image" src="resources/img/street/forest3.png" > </div> 
 			</div>
 		<aside>
 			<ul class="resource-wrap reset--list">

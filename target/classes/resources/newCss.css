@@ -36,6 +36,7 @@
 	cursor: pointer;
 	white-space: nowrap;
 }
+
 .avatar-button {
 	border: none;
 	vertical-align: middle;
@@ -46,18 +47,21 @@
 	text-align: center;
 	cursor: pointer;
 	white-space: nowrap;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
 }
+
 .button:hover {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
 		rgba(0, 0, 0, 0.19);
 }
+
 .avatar-button:hover {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
 		rgba(0, 0, 0, 0.19);
 }
+
 .resource-wrap {
 	max-width: 100%;
 	background-color: #555;
@@ -77,17 +81,20 @@
 	max-width: 100%;
 	width: 80%;
 }
+
 .avatar {
-	height:70px;
-	width:70px;
+	height: 70px;
+	width: 70px;
 	-webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
 }
+
 .logo {
-	height:90px;
-	width:110px;
+	height: 90px;
+	width: 110px;
 }
+
 .body-wrapper {
 	display: flex;
 	justify-content: space-between;
@@ -100,154 +107,164 @@
 }
 
 .building-wrapper {
-  position:relative;
-
+	display: flex;
+	flex-wrap: wrap;
 }
 
-.building1 {
-  width:100px;
-  height:100px;
- 
-  position:absolute;
-  bottom:-200px;
-  right:-500px;
+.barracks {
+	width: 33%;
+	position: relative;
 }
 
-.building8 {
-	width:100px;
-  height:100px;
-  position:absolute;
-  bottom:250px;
-  right:-450px;
+.ironmine {
+	width: 33%;
+	position: relative;
 }
 
-.building3 {
-  width:200px;
-  height:100px;
-  position:absolute;
-  bottom:80px;;
-  left:-150px;
+.tankfactory {
+	
+width: 33%;
+	position: relative;
 }
 
-.building4 {
-  width:80px;
-  height:80px;
-  position:absolute;
-  bottom:300px;
-  right:-250px;
+.bank {
+width: 33%;
+	position: relative;
 }
 
-.building5 {
-  width:100px;
-  height:100px;
-  position:absolute;
-  bottom:-200px;
-  right:+660px;
+.planfactory {
+width: 33%;
+	position: relative;
 }
 
-.building6 {
-  width:100px;
-  height:100px;
-  position:absolute;
-  bottom:320px;
-  left:-300px;
+.stone {
+width: 33%;
+	position: relative;
 }
 
-.building7 {
-		width:100px;
-  height:100px;
-  position:absolute;
-  bottom:0px;
-  left:-200px;
+.farm {
+width: 33%;
+	position: relative;
 }
-.building2 {   
-  position:absolute;
-  width:200px;
-  height:1000px;
-  bottom:-600px;
-  right:+450px;
-}
-
 
 .street {
-		width:100px;
-  height:100px;
-  position:absolute;
-  bottom:-100px;
-  right:500px;
+	width: 33%;
+	position: relative;
 }
 
 .eoliana {
-	width:200px;
-  height:1000px;
-  position:absolute;
-  bottom:-600px;
-  right:+450px;
+	width: 200px;
+	height: 100px;
+	position: relative;
+	bottom: -600px;
+	right: +450px;
 }
+
 .eoliana1 {
-	width:200px;
-  height:1000px;
-  position:absolute;
-  bottom:-750px;
-  right:+450px;
+	width: 200px;
+	height: 100px;
+	position: relative;
 }
+
 .eoliana2 {
-	width:200px;
-  height:1000px;
-  position:absolute;
- bottom:-1050px;
-  right:+150px;
+	width: 200px;
+	height: 100px;
+	position: relative;
 }
+
 .eoliana3 {
-	width:200px;
-  height:1000px;
-  position:absolute;
-  bottom:-1050px;
-  right:+200px;
+	width: 200px;
+	height: 100px;
+	position: relative;
 }
+
 .eoliana4 {
-	width:200px;
-  height:1000px;
-  position:absolute;
- bottom:-1050px;
-  right:+50px;
+	width: 200px;
+	height: 100px;
+	position: relative;
 }
+
 .eoliana5 {
-	width:200px;
-  height:1000px;
-  position:absolute;
-  bottom:-1050px;
-  right:0px;
+	width: 200px;
+	height: 100px;
+	position: relative;
 }
+
+.forest {
+	width: 200px;
+	height: 100px;
+	position: relative;
+	bottom: -1050px;
+	right: 0px;
+	height: 1000px;
+}
+
+.forest1 {
+	width: 200px;
+	height: 100px;
+	position: relative;
+	bottom: -1050px;
+	right: 0px;
+	height: 1000px;
+}
+
+.forest2 {
+	width: 200px;
+	height: 100px;
+	position: relative;
+	bottom: -1050px;
+	right: 0px;
+	height: 1000px;
+}
+
+.forest3 {
+	width: 200px;
+	height: 100px;
+	position: relative;
+	bottom: -1050px;
+	right: 0px;
+}
+
 .myButton {
-	background-color:#97a7c4;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-	border-radius:10px;
-	border:1px solid #9da3b8;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:19px;
-	padding:12px 37px;
-	text-decoration:none;
+	background-color: #97a7c4;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #9da3b8;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 19px;
+	padding: 12px 37px;
+	text-decoration: none;
 	margin: 8px;
-	height:50px;
-	weight:30px;
-	outline:none;
+	height: 50px;
+	weight: 30px;
+	outline: none;
 }
+
 .transparent {
-	background-color: Transparent;  
-    border: none;
-    outline:none;
+	background-color: Transparent;
+	border: none;
+	outline: none;
 }
+
 .myButton:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a1aebd), color-stop(1, #97a7c4));
-	background:-moz-linear-gradient(top, #a1aebd 5%, #97a7c4 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a1aebd
+		), color-stop(1, #97a7c4));
+	background: -moz-linear-gradient(top, #a1aebd 5%, #97a7c4 100%);
 }
 
+.forest-image {
+	height: 100px;
+	width: 100px;
+}
 
+.forest-image {
+	height: 100px;
+	width: 100px;
+}
 
 .street-image {
 	height: 100px;
@@ -258,14 +275,17 @@
 	height: 200px;
 	width: 300px;
 }
+
 .eoliana1-image {
 	height: 200px;
 	width: 300px;
 }
+
 .eoliana2-image {
 	height: 200px;
 	width: 300px;
 }
+
 .eoliana3-image {
 	height: 200px;
 	width: 300px;
@@ -327,148 +347,150 @@
 }
 
 html {
-	background:url('../resources/img/cr.png'),url('../resources/img/images.jpg') ;
-}
-#map-wrap {
-  width: 1040px;
-  height: 500px;
-  overflow: hidden
+	background: url('../resources/img/cr.png'),
+		url('../resources/img/images.jpg');
 }
 
+#map-wrap {
+	width: 1040px;
+	height: 500px;
+	overflow: hidden
+}
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0,0.4); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0, 0.4); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    background-color: rgb(0,0,0,0.4); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	background-color: rgb(0, 0, 0, 0.4); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* The Close Button */
 .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+.close:hover, .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
 }
 
-
-.building-image1 {
-	height: 180px;
+.barracks-image {
+	height: 380px;
 	width: 300px;
 }
 
-.building-image2 {
-	height: 400px;
-	width: 300px;
-}
-
-.building-image3 {
-	height: 300px;
-	width: 300px;
-}
-
-.building-image4 {
-	height:70px;
-	width: 150px;
-}
-
-.building-image5 {  
-    height: 200px;
-	width: 300px;
-}
-
-.building-image6 {
-height: 200px;
-	width: 300px;
-}
-
-.building-image7 {
-	height: 100px;
-	width: 100px;
-}
-
-.building-image8 {
+.ironmine-image {
 	height: 200px;
 	width: 300px;
 }
 
+.tankfactory-image {
+	height: 200px;
+	width: 300px;
+}
 
+.bank-image {
+	height: 270px;
+	width: 200px;
+}
+
+.planfactory-image {
+	height: 200px;
+	width: 300px;
+}
+
+.stone-image {
+	height: 80px;
+	width: 150px;
+}
+
+.farm-image {
+	height: 300px;
+	width: 200px;
+}
+
+.forest-image {
+	height: 100px;
+	width: 100px;
+}
+
+.forest1-image {
+	height: 100px;
+	width: 100px;
+}
+
+.forest2-image {
+	height: 100px;
+	width: 100px;
+}
+
+.forest3-image {
+	height: 100px;
+	width: 100px;
+}
 
 @media only screen and (max-width: 900px) {
-    .building-image1 {
-	height: 50px;
-	width: 55px;
-}
-
-.building-image2 {
-	height: 30px;
-	width: 30px;
-}
-
-.building-image3 {
-    height: 80px;
-	width: 80px;
-}
-
-.building-image4 {
-    height: 80px;
-	width: 80px;
-}
-
-.building-image5 {  
-    height: 80px;
-	width: 80px;
-}
-
-.building-image6 {
-    height: 80px;
-	width: 80px;
-}
-
-.building-image7 {
-    height: 80px;
-	width: 80px;
-}
-
-.building-image8 {
-    height: 80px;
-	width: 80px;
-}
-.street-image {
-    height: 80px;
-	width: 80px;
-}
-
-.eoliana-image {
-	height: 30px;
-	width: 30px;
-}
-
-    
+	.building-image1 {
+		height: 50px;
+		width: 55px;
+	}
+	.building-image2 {
+		height: 30px;
+		width: 30px;
+	}
+	.building-image3 {
+		height: 80px;
+		width: 80px;
+	}
+	.building-image4 {
+		height: 80px;
+		width: 80px;
+	}
+	.building-image5 {
+		height: 80px;
+		width: 80px;
+	}
+	.building-image6 {
+		height: 80px;
+		width: 80px;
+	}
+	.building-image7 {
+		height: 80px;
+		width: 80px;
+	}
+	.building-image8 {
+		height: 80px;
+		width: 80px;
+	}
+	.street-image {
+		height: 80px;
+		width: 80px;
+	}
+	.eoliana-image {
+		height: 30px;
+		width: 30px;
+	}
 }
