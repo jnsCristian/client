@@ -73,6 +73,19 @@
 	<div id="content">
 		  <table class="w3-table__full white buildings-table" >
 </table>
+		<div id="content" class="clearfix">
+
+			<h1>Buildings</h1>
+			<section class="building-data">
+				<p>Edit building settings:</p>
+
+				<p class="setting building-name"></p>
+
+				<p class="setting building-description"></p>
+
+				<button class="button editbuilding">Submit changes</button>
+			</section>
+		</div>
 </div>
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -86,9 +99,13 @@
 	<script src="<c:url value="/resources/app/config/app.config.js"/>" /></script>
 	<script src="<c:url value="/resources/app/config/app.entity.js"/>" /></script>
 	<script src="<c:url value="/resources/app/config/app.endpoints.js"/>" /></script>
-		<script src="<c:url value="/resources/app/building/commands/get.all.buildings.command.js"/>" /></script>
-	<script src="<c:url value="/resources/app/building/services/get.all.buildings.service.js"/>" /></script>
-	<script src="<c:url value="/resources/app/building/building.config.js"/>" /></script>
+		<script src="<c:url value="/resources/app/editResource/commands/get.all.buildings.command.js"/>" /></script>
+	<script src="<c:url value="/resources/app/editResource/services/get.all.buildings.service.js"/>" /></script>
+			<script
+			src="<c:url value="/resources/app/editResource/commands/building.command.js"/>" /></script>
+		<script
+			src="<c:url value="/resources/app/editResource/services/get.building.service.js"/>" /></script>
+	<script src="<c:url value="/resources/app/editResource/building.config.js"/>" /></script>
 </div>
 </body>
 </html>

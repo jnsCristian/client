@@ -18,14 +18,13 @@ function GetAllIncommingActionsCommand() {
 
 							}
 
-
 						} else {
 							temp = temp + '<tr><td>' + actions.initiator
 									+ '</td><td>' + actions.type + '</td><td>'
 									+ actions.time + '</td></tr>';
-							
+
 						}
-						temp=temp+"";
+						temp = temp + "";
 						$('.incoming-actions-table').html(temp);
 
 					});

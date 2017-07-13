@@ -1,19 +1,24 @@
 (function () {
 	'use strict';
-	
+
 	if (atlantis.entity.userId) {
 		GetBuildingsService();
-		
+		 
 		atlantis.eventManger.addListener('get.all.buildings.success', function() {
 
 			BuildingsCommand(); 
+			
 		});
 		
+		atlantis.eventManger.addListener('written.all.buildings', function() {
+			BuildingCommand();
+			
+		});
 
 		return;
 	}
 	
-	console.error('No userId found.');
+	console.error('No buildingId found.');
 	
 	return;
 })();
