@@ -31,14 +31,25 @@
 	border-collapse: collapse;
 	border-spacing: 0;
 	width: 75%;
-	display: table
+	display: table;
 }
-
-.w3-table td, .w3-table th {
+.w3-table__full {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	display: table;
+}
+.w3-table td, .w3-table th  {
 	padding: 8px 8px;
 	text-align: center;
 }
-
+.w3-table__full td, .w3-table__full th  {
+	padding: 8px 8px;
+	text-align: center;
+}
+tr{
+	 border-bottom: 1px solid #ddd;
+}
 /* html {
 	background:none;
 } */
@@ -49,7 +60,13 @@
   padding-top: 30px;
   padding-bottom: 45px;
 }
-
+.users-wrapper {
+  display: block;
+  width: 750px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 45px;
+}
 #content {
   display: block;
   width: 100%;
@@ -101,5 +118,8 @@
 input{
 border:none;
 width:35%;
+}
+.white{
+	background-color:white;
 }
  

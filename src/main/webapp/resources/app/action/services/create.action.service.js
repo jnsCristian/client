@@ -10,9 +10,12 @@ function CreateActionService(params) {
         contentType: "application/json",
 		success : function(data, textStatus, request) {
 			console.log('merge');
+			atlantis.eventManger.fire('created.action');
 		}
 		
 	});
+	
+
 };
 
 
