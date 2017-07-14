@@ -71,9 +71,33 @@
 	</header>
 	<div  class="users-wrapper" >
 	<div id="content">
-		  <table class="w3-table__full white users-table" >
-</table>
-</div>
+		
+		<button class="button users-switch-tab" data-tab="all">All Users</button>
+		<button class="button users-switch-tab" data-tab="red">Red Alliance</button>
+		<button class="button users-switch-tab" data-tab="green">Green Alliance</button>
+		<button class="button users-switch-tab" data-tab="blue">Blue Alliance</button>
+		<button class="button users-switch-tab" data-tab="white">White Alliance</button>
+		<div class="tabContent tab-active" id="all">
+			 <table class="w3-table__full white users-table" >
+			</table>
+		</div>
+		<div class="tabContent " id="red">
+			 <table class="w3-table__full white users-table" >
+			</table>
+		</div>
+		<div class="tabContent " id="green">
+			 <table class="w3-table__full white users-table" >
+			</table>
+		</div>
+		<div class="tabContent " id="blue">
+			 <table class="w3-table__full white users-table" >
+			</table>
+		</div>
+		<div class="tabContent " id="white">
+			 <table class="w3-table__full white users-table" >
+			</table>
+		</div>
+	</div>
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -86,7 +110,7 @@
 	<script src="<c:url value="/resources/app/config/app.config.js"/>" /></script>
 	<script src="<c:url value="/resources/app/config/app.entity.js"/>" /></script>
 	<script src="<c:url value="/resources/app/config/app.endpoints.js"/>" /></script>
-	
+	<script src="<c:url value="/resources/app/user/commands/users.switch.tab.command.js"/>" /></script>
 		<script src="<c:url value="/resources/app/user/commands/get.all.users.command.js"/>" /></script>
 	<script src="<c:url value="/resources/app/user/services/get.all.users.service.js"/>" /></script>
 	<script src="<c:url value="/resources/app/user/get.all.users.config.js"/>" /></script>

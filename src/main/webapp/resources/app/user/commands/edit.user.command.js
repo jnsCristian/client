@@ -1,9 +1,8 @@
 function EditUserCommand () {
 	'use strict';
-
+	console.log("uraaa");
 	$(".edituser").click(function(event){
 		event.preventDefault();
-		
 		var user={
 				
 		};
