@@ -10,6 +10,7 @@ public class MyController {
 	
 	@RequestMapping(method=RequestMethod.GET,path="/")
 	public ModelAndView get(){
+		//return new ModelAndView("geo.temporary.getbuilding");
 		return new ModelAndView("geo.temporary.editCostAndName");
 	}
 }

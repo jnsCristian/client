@@ -66,7 +66,7 @@
 			</div>
 		</div>
 	</header>
-	<div id="w">
+<!-- 	<div id="w">
 		<div id="content" class="clearfix">
 
 			<h1>Buildings</h1>
@@ -79,7 +79,43 @@
 
 				<button class="button editbuilding">Submit changes</button>
 			</section>
+		</div> -->
+		
+			<div id="w">
+		<div id="content" class="clearfix">
+
+			<h1>Troops</h1>
+			<section class="troop-data">
+				<p>Edit building settings:</p>
+
+		<p class="setting troop-name"></p>
+					
+					<p>The cost is:</p>
+
+					<p class="setting troop-resourceid"></p>
+
+					<p class="setting troop-resourcename"></p>
+					
+					<p class="setting troop-cost"></p>
+
+				<button class="button edittroop">Submit changes</button>
+			</section>
 		</div>
+		
+<!-- 			<div id="w">
+		<div id="content" class="clearfix">
+
+			<h1>building level</h1>
+			<section class="buildinglevel-data">
+				<p>Edit building settings:</p>
+
+				<p class="setting buildinglevel-name"></p>
+
+				<p class="setting buildinglevel-description"></p>
+
+				<button class="button editbuildinglevel">Submit changes</button>
+			</section>
+		</div> -->
 
 <!-- 	<div id="w">
 		<div id="content" class="clearfix">
@@ -88,9 +124,9 @@
 			<section class="resource-data">
 				<p>Edit resource settings:</p>
 
-				<p class="setting resource-name"></p>
+					<p class="setting resource-id"></p>
 
-				<p class="setting resource-cost"></p>
+					<p class="setting resource-name"></p>
 
 				<button class="button editresource">Submit changes</button>
 			</section>
@@ -109,29 +145,53 @@
 		<script src="<c:url value="/resources/app/config/app.config.js"/>" /></script>
 		<script src="<c:url value="/resources/app/config/app.entity.js"/>" /></script>
 		<script src="<c:url value="/resources/app/config/app.endpoints.js"/>" /></script>
-		<!-- Buildings dependencies -->
+	<%-- 	<!-- Buildings dependencies -->
 		<script
-			src="<c:url value="/resources/app/editResource/commands/building.command.js"/>" /></script>
+			src="<c:url value="/resources/app/editResource/building/commands/building.command.js"/>" /></script>
 		<script
-			src="<c:url value="/resources/app/editResource/services/get.building.service.js"/>" /></script>
+			src="<c:url value="/resources/app/editResource/building/services/get.building.service.js"/>" /></script>
 		<script
-			src="<c:url value="/resources/app/editResource/commands/get.all.buildings.command.js"/>" /></script>
+			src="<c:url value="/resources/app/editResource/building/commands/get.all.buildings.command.js"/>" /></script>
 		<script
-			src="<c:url value="/resources/app/editResource/services/get.all.buildings.service.js"/>" /></script>
+			src="<c:url value="/resources/app/editResource/building/services/get.all.buildings.service.js"/>" /></script>
 		<script
-			src="<c:url value="/resources/app/editResource/building.config.js"/>" /></script>
-		<%-- 	<!-- Resource dependencies -->
+			src="<c:url value="/resources/app/editResource/building/building.config.js"/>" /></script>
+			 --%>
+	<%-- 	<!-- Resource dependencies -->
 		<script
-			src="<c:url value="/resources/app/editResource/commands/building.command.js"/>" /></script>
+			src="<c:url value="/resources/app/editResource/resource/commands/resource.command.js"/>" /></script>
 		<script
-			src="<c:url value="/resources/app/editResource/services/get.building.service.js"/>" /></script>
+			src="<c:url value="/resources/app/editResource/resource/services/get.resource.service.js"/>" /></script>
 		<script
-			src="<c:url value="/resources/app/editResource/commands/get.all.buildings.command.js"/>" /></script>
+			src="<c:url value="/resources/app/editResource/resource/commands/get.all.resource.command.js"/>" /></script>
 		<script
-			src="<c:url value="/resources/app/editResource/services/get.all.buildings.service.js"/>" /></script>
+			src="<c:url value="/resources/app/editResource/resource/services/get.all.resource.service.js"/>" /></script>
 		<script
-			src="<c:url value="/resources/app/editResource/building.config.js"/>" /></script> --%>
-			
+			src="<c:url value="/resources/app/editResource/resource/resource.config.js"/>" /></script> --%>
+	<!-- Building Level dependencies -->
+<%-- 	
+	<script
+			src="<c:url value="/resources/app/editResource/buildinglevel/commands/buildinglevel.command.js"/>" /></script>
+		<script
+			src="<c:url value="/resources/app/editResource/buildinglevel/services/get.buildinglevel.service.js"/>" /></script>
+		<script
+			src="<c:url value="/resources/app/editResource/buildinglevel/commands/get.all.buildinglevel.command.js"/>" /></script>
+		<script
+			src="<c:url value="/resources/app/editResource/buildinglevel/services/get.all.buildinglevel.service.js"/>" /></script>
+		<script
+			src="<c:url value="/resources/app/editResource/buildinglevel/buildinglevel.config.js"/>" /></script>
+ --%>
+ 
+  <script
+			src="<c:url value="/resources/app/editResource/troop/commands/troop.command.js"/>" /></script>
+		<script
+			src="<c:url value="/resources/app/editResource/troop/services/get.troop.service.js"/>" /></script>
+		<script
+			src="<c:url value="/resources/app/editResource/troop/commands/get.all.troop.command.js"/>" /></script>
+		<script
+			src="<c:url value="/resources/app/editResource/troop/services/get.all.troop.service.js"/>" /></script>
+		<script
+			src="<c:url value="/resources/app/editResource/troop/troop.config.js"/>" /></script>
 	</div>
 </body>
 </html>
