@@ -77,6 +77,7 @@
 		<button class="button users-switch-tab" data-tab="green">Green Alliance</button>
 		<button class="button users-switch-tab" data-tab="blue">Blue Alliance</button>
 		<button class="button users-switch-tab" data-tab="white">White Alliance</button>
+		<input class="button " class="search" placeholder="Search"/> <button class="button users-switch-tab find" data-tab="search">Search</button>
 		<div class="tabContent tab-active" id="all">
 			 <table class="w3-table__full white users-table" >
 			</table>
@@ -97,6 +98,25 @@
 			 <table class="w3-table__full white users-table" >
 			</table>
 		</div>
+		<div class="tabContent " id="user">
+      <div id="userphoto"><img src="resources/avatar.png" ></div>
+      <h1>Profile</h1> 
+      <section  class="user-data">
+        
+        
+        <p class="setting nickname" ></p>
+        
+        <p class="setting userAlliance "></p>
+		 
+		 <button class="button sendmessage">Send message</button>
+		 
+		 <button class="button sendtroops">Send troops</button>
+      </section>
+		</div>
+		<div class="tabContent " id="search">
+			 <table class="w3-table__full white users-table" >
+			</table>
+		</div>
 	</div>
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -111,8 +131,12 @@
 	<script src="<c:url value="/resources/app/config/app.entity.js"/>" /></script>
 	<script src="<c:url value="/resources/app/config/app.endpoints.js"/>" /></script>
 	<script src="<c:url value="/resources/app/user/commands/users.switch.tab.command.js"/>" /></script>
+	<script src="<c:url value="/resources/app/user/commands/view.users.switch.tab.command.js"/>" /></script>
 		<script src="<c:url value="/resources/app/user/commands/get.all.users.command.js"/>" /></script>
 	<script src="<c:url value="/resources/app/user/services/get.all.users.service.js"/>" /></script>
+		<script src="<c:url value="/resources/app/user/services/get.otheruser.service.js"/>" /></script>
+	<script src="<c:url value="/resources/app/user/commands/otheruser.command.js"/>" /></script>
+	<script src="<c:url value="/resources/app/user/services/search.users.service.js"/>" /></script>
 	<script src="<c:url value="/resources/app/user/get.all.users.config.js"/>" /></script>
 </div>
 </body>

@@ -5,20 +5,22 @@ function GetAllUsersCommand () {
 	var temp='<tr><th>Nickname</th><th>Alliance</th></tr>';
 	if(users&&users.length){
 		for (var i = 0; i < users.length; i++) {
-			temp = temp + '<tr data-userId='+users[i].userId+'><td><a href="">' + users[i].nickName
-					+ '</a></td><td>' + users[i].alliance
+			temp = temp + '<tr><td><button data-tab="user" class="view-user users-switch-tab-button button"  data-userId='+users[i].userId+' >' + users[i].nickName
+					+ '</button></td><td>' + users[i].alliance
 					+ '</td></tr>';
 
 		}
 	}
 	else if(users){
-		temp = temp + '<tr data-userId='+users.userId+'><td>' + users.nickName
-		+ '</td><td>' + users.alliance
+		temp = temp + '<tr><td><button data-tab="user" class="view-user users-switch-tab-button button"  data-userId='+users.userId+' >' + users.nickName
+		+ '</button></td><td>' + users.alliance
 		+ '</td></tr>';
 	}
 	else{
 		temp+='<tr ><td>No users found</td></tr>';
 	}
+
 	$('.users-table').html(temp);
+	atlantis.eventManger.fire('written.all.users');
 };
 

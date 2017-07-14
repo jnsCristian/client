@@ -1,7 +1,8 @@
-function UsersSwitchTabCommand() {
+function ViewUsersSwitchTabCommand() {
 	"use strict";
 
-	$(".users-switch-tab").click( function(event) { 
+	console.log('aici');
+	$(".users-switch-tab-button").click( function(event) { 
 		event.preventDefault();
 		var tabTarget=$(this).attr("data-tab"),
 		tabToDisplay="#"+tabTarget;

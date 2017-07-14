@@ -23,11 +23,23 @@
 			GetAllUsersService("4");
 		});
 		
+		atlantis.eventManger.addListener('search.users.active.tab', function() {
+			SearchUsersService();
+		});
+		
+		
+		atlantis.eventManger.addListener('found.users.success', function() {
+			GetAllUsersCommand();
+		});
+		
 		atlantis.eventManger.addListener('get.all.users.success', function() {
 			GetAllUsersCommand();
 		});
 		
-
+		atlantis.eventManger.addListener('written.all.users', function() {
+			ViewUsersSwitchTabCommand();
+			OtherUserCommand();
+		});
 		return;
 	}
 	
