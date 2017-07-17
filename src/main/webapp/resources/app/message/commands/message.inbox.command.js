@@ -14,7 +14,7 @@ function MessageInboxCommand() {
 		
 	} else if (message.length) {
 		for (var i = 0; i < message.length; i++) {
-			console.log(message[i].recieverNickName);
+			
 			messageMarkup += '<tr><td>'
 					+ String(message[i].recieverNickName)
 					+ '</td><td>'

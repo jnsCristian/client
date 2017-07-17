@@ -4,11 +4,12 @@
 	if (atlantis.entity.userId) {
 		GetReourcesService();
 		
+		
 		atlantis.eventManger.addListener('get.resources.success', function() {
 			ContructionCommand();
 		});
 		
-		
+
 		return;
 	}
 	

@@ -1,16 +1,18 @@
 (function () {
 	'use strict';
 
-	if (atlantis.entity.userId) {
-		
+	GetReportsService();
+	
+	atlantis.eventManger.addListener('get.reports.success', function() {
 		RaportCommand();
+		DeleteRaportCommand();
+		
+	});
 
-		return;
-	}
-	
-	console.error('No userId found.');
-	
-	return;
+	atlantis.eventManger.addListener('written.all.reports', function() {
+		OpenRaportCommand();
+	});
+
 			
 
 })();

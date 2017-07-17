@@ -21,7 +21,8 @@
 <link href="<c:url value="/resources/newCss.css" />" rel="stylesheet">
 
 </head>
-<body data-userId="3">
+<!--  data-userId="3" -->
+<body>
 	<header class="app__header ">
 		<div class="logo">Logo here</div>
 		<ul class="menu reset--list ">
@@ -121,6 +122,12 @@
 			</ul>
 		</aside>
 	</div>
+	
+	<div id="map-wrap">
+      <svg class="map-body" width="100%" height="100%" preserveAspectRatio="xMaxYMin meet">
+        <g class="map-content"></g>
+      </svg>
+    </div>
 	<!--START app main-->
 	<footer class="app__footer">
 		
@@ -136,6 +143,8 @@
 	<!-- Plugins -->
 	<script src="<c:url value="/resources/app/common/eventmanager.js"/>" /></script>
 	<script src="<c:url value="/resources/app/common/ajax.command.js"/>" /></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.9.1/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 	<!-- App config -->
 	<script src="<c:url value="/resources/app/config/app.config.js"/>" /></script>
 	<script src="<c:url value="/resources/app/config/app.entity.js"/>" /></script>
@@ -166,5 +175,15 @@
 		src="<c:url value="/resources/app/home/commands/setMarkup.command.js"/>" /></script>
 	<script src="<c:url value="/resources/app/home/home.config.js"/>" /></script>
 	<script src="<c:url value="/resources/app/home/home.entity.js"/>" /></script>
+		<!-- Map dependencies -->
+	<script
+		src="<c:url value="/resources/app/map/services/getMap.response.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/map/commands/dragMap.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/map/commands/renderMap.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/map/map.config.js"/>" /></script>
+
 </body>
 </html>

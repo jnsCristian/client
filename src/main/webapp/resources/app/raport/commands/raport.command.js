@@ -1,39 +1,34 @@
 function RaportCommand() {
 	'use strict';
 	
-	$(".raport").click( function(event) {
-		event.preventDefault();
-		
-		GetReportsService().then(function(response){
-			
-			var raport=atlantis.entity.raports.raportDto;
-			console.log( raport);
-			var temp='<tr><th>Nick Name</th><th>Read</th><th></th></tr>';
-			if (raport.length) {
-				if(raport.length==1){
-					temp = temp
-					+ '<tr><td>'
-					+ raport
-					+ '</td><td>'
-					+ raport
-					+ '</td><td><button class="button delete1">Delete</button></td></tr>';
+	var raport = atlantis.entity.reports.raports, raportMarkup = "";
 
-			}	else
-				for (var i = 0; i < raport.length; i++) {
-					temp=temp+'<tr><td>'+raport[i]+'</td><td>'+raport[i]+'</td><td><button class="button delete1">Delete</button></td></tr>';
-					
-					
-					
-				}
-				$('.testtable').html(temp);
-			
-				}
-			
-			
-		});
-	
+	if(!atlantis.entity.reports.raports){
+		console.log("No messages");
+		raportMarkup += '<tr><td>'
+			+ "No reports"
+			+ '</td><td>';
 		
-	});
+	} else if (raport.length) {
+		for (var i = 0; i < raport.length; i++) {
+			
+			raportMarkup += '<tr><td>'
+					+ String(raport[i].message)
+					+ '</td><td><button class="button raport-delete" data-raport-id="'
+					+ raport[i].id + '">Delete</button><button class="button raport-view" data-raport-id="'
+					+ raport[i].id + ' ">Open</button></td></tr>';
+		}
+	} else {
+		raportMarkup = '<tr><td>'
+			+ String(raport.message)
+			+ '</td><td><button class="button raport-delete" data-raport-id="'
+			+ raport.id + '">Delete</button><button class="button raport-view" data-raport-id="'
+			+ raport.id + '" >Open</button></td></tr>';
+
+	}
+		
+	$('.testtable tbody').html(raportMarkup);
+	atlantis.eventManger.fire('written.all.reports');
 
 };
 
