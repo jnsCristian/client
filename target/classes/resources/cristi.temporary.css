@@ -83,7 +83,30 @@ tr {
 	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 }
-
+.login-wrapper{
+	
+	display:flex;
+	justify-content:space-around;
+}
+.login{
+	margin-top:40px;
+	background: #fff;
+	width:35%;
+	border-radius: 25px;
+	display:block;
+}
+.register{
+	margin-top:40px;
+	background: #fff;
+	width:35%;
+	border-radius: 25px;
+}
+.register-button{
+	margin-left:45%;
+}
+.login-button{
+	margin-left:45%;
+}
 #userphoto {
 	display: block;
 	float: right;
@@ -137,3 +160,4 @@ a {
 .tab-active{
 	display: block;
 }
+

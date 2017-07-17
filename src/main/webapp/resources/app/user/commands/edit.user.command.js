@@ -1,20 +1,10 @@
 function EditUserCommand () {
 	'use strict';
-	console.log("uraaa");
 	$(".edituser").click(function(event){
 		event.preventDefault();
 		var user={
 				
 		};
-		
-/*		$(".user-data").each(function(){
-			
-			var elementName=$(this).find("input").attr("id"),
-			elementValue=$(this).find("input").val();
-			user[elementName]=elementValue||undefined;
-			console.log('intra');
-
-		});*/
 		var elementName=$(".user-data").find("#email").attr("id"),
 		elementValue=$(".user-data").find("#email").val();
 		user[elementName]=elementValue||undefined;

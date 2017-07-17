@@ -22,7 +22,7 @@
 <link href="<c:url value="/resources/cristi.temporary.css" />" rel="stylesheet">
 </head>
 <!--  data-userId="3" -->
-<body>
+<body data-ID=<c:out value="${ userId}" ></c:out>>
 	<header class="app__header ">
 		<!--APP header: logo-->
 		<div class="logo">
@@ -31,7 +31,9 @@
 		
 		<!--APP header: main menu-->
 		<ul class="menu reset--list ">
-			<li><button class="myButton">Home</button></li>
+			<li><a href="home"class="myButton">Home</a></li>
+			<li><a href="users"class="myButton">Users</a></li>
+			<li><a href="map"class="myButton">Map</a></li>
 			<li><button class="myButton" id="myBtn">Reports</button>
 			<!-- The Modal -->
 			<div id="myModal" class="modal">
@@ -56,18 +58,24 @@
 
 			</div>
 			</li>
-			<li><button class="myButton">Map</button></li>
+			
 		</ul>
 
 		<!--APP header: profile-->
 	  <div class="w3-dropdown-hover">
 	    <button class="avatar-button"><img src="resources/avatar.png" class="avatar"></button>
 	    <div class="w3-dropdown-content ">
-	      <a href="#" class=" button">Link 1</a>
-	      <a href="#" class=" button">Link 2</a>
-	      <a href="#" class=" button">Link 3</a>
+	      <a href="profile" class=" button">Profile</a>
+	      <c:url value="/j_spring_security_logout" var="logoutUrl" />
+	      		<form action="${logoutUrl}" method="POST" >
+							<button class="button" type="submit"  >Logout</button>
+            <input type="hidden"
+                    name="${_csrf.parameterName}"
+                    value="${_csrf.token}" />
+</form>
 	    </div>
   	  </div>
+  	  
 	</header>
 	<div class="body-wrapper">
 		<aside>
@@ -138,7 +146,7 @@
 			<div id="id01" class="w3-modal">
 			<div class="w3-modal-content">
 			 <span onclick="document.getElementById('id01').style.display='none'" class="button">&times;</span>
-  				<table class="w3-table incoming-actions-table">
+  				<table class="w3-table__full incoming-actions-table">
 
 				</table>
 			</div>
@@ -151,7 +159,7 @@
 					<div id="id02" class="w3-modal">
 					<div class="w3-modal-content">
 					 <span onclick="document.getElementById('id02').style.display='none'" class="button">&times;</span>
-		  				<table class="w3-table outgoing-actions-table">
+		  				<table class="w3-table__full outgoing-actions-table">
 		
 						</table>
 					</div>
@@ -169,17 +177,17 @@
 			<li class="resource-item tooltip">
 				<img src="resources/img/troops/genericTank.png" class="img">
 				<span class="tooltiptext"> 
-					<img src="resources/img/troops/4.png" class="innerimg"><br/> 
-					<img src="resources/img/troops/5.png" class="innerimg"><br/> 
-					<img src="resources/img/troops/6.png" class="innerimg">
+					<span data-resourceName="tank 1"><img src="resources/img/troops/4.png" class="innerimg"><br/> <span class="army-quantity"></span><br/> </span>
+					<span data-resourceName="tank 2"><img src="resources/img/troops/5.png" class="innerimg"><br/>  <span class="army-quantity"></span><br/> </span>
+					<span data-resourceName="tank 3"><img src="resources/img/troops/6.png" class="innerimg"><br/><span class="army-quantity"></span></span>
 				</span>
 			</li>
 			<li class="resource-item tooltip">
 				<img src="resources/img/troops/genericPlane.png" class="img">
 				<span class="tooltiptext"> 
-					<img src="resources/img/troops/7.png" class="innerimg"><br/> 
-					<img src="resources/img/troops/8.png" class="innerimg"><br/> 
-					<img src="resources/img/troops/9.png" class="innerimg">
+					<span data-resourceName="plane 1"><img src="resources/img/troops/7.png" class="innerimg"><br/>  <span class="army-quantity"></span><br/> </span>
+					<span data-resourceName="plane 2"><img src="resources/img/troops/8.png" class="innerimg"><br/>  <span class="army-quantity"></span><br/> </span>
+					<span data-resourceName="plane 3"><img src="resources/img/troops/9.png" class="innerimg"><br/><span class="army-quantity"></span></span>
 				</span>
 			</li>
 			</ul>
@@ -241,11 +249,6 @@
 		</aside>
 	</div>
 	
-	<div id="map-wrap">
-      <svg class="map-body" width="100%" height="100%" preserveAspectRatio="xMaxYMin meet">
-        <g class="map-content"></g>
-      </svg>
-    </div>
 	<!--START app main
 	<footer class="app__footer">
 		
@@ -293,15 +296,6 @@
 		src="<c:url value="/resources/app/home/commands/setMarkup.command.js"/>" /></script>
 	<script src="<c:url value="/resources/app/home/home.config.js"/>" /></script>
 	<script src="<c:url value="/resources/app/home/home.entity.js"/>" /></script>
-		<!-- Map dependencies -->
-	<script
-		src="<c:url value="/resources/app/map/services/getMap.response.js"/>" /></script>
-	<script
-		src="<c:url value="/resources/app/map/commands/dragMap.command.js"/>" /></script>
-	<script
-		src="<c:url value="/resources/app/map/commands/renderMap.command.js"/>" /></script>
-	<script
-		src="<c:url value="/resources/app/map/map.config.js"/>" /></script>
 	<!-- Action dependencies -->
 		<script
 		src="<c:url value="/resources/app/action/commands/action.command.js"/>" /></script>
@@ -326,78 +320,5 @@
 	<script src="<c:url value="/resources/app/action/action.config.js"/>" /></script>	
 
 
-<!-- 	<script>
-		// Get the modal
-		var modal = document.getElementById('myModalBtn');
-
-		//Get the button that opens the modal
-		var btn = document.getElementById("myBtnMesg");
-		
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-
-		// When the user clicks the button, open the modal 
-		btn.onclick = function() { modal.style.display = "block";}
-
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() { modal.style.display = "none";}
-
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-   				 if (event.target == modal) {
-       				 modal.style.display = "none";
-    			}
-		}
-	</script>
-	
-	<script>
-		// Get the modal
-		var modal = document.getElementById('myModal');
-
-		//Get the button that opens the modal
-		var btn = document.getElementById("myBtn");
-		
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-
-		// When the user clicks the button, open the modal 
-		btn.onclick = function() { modal.style.display = "block";}
-
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() { modal.style.display = "none";}
-
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-   				 if (event.target == modal) {
-       				 modal.style.display = "none";
-    			}
-		}
-	</script>
-
-	
-	<script>
-		// Get the modal
-		var modal = document.getElementById('myModalBtnT2');
-
-		//Get the button that opens the modal
-		var btn = document.getElementById("myBtnT2");
-		
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-
-		// When the user clicks the button, open the modal 
-		btn.onclick = function() { modal.style.display = "block";}
-
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() { modal.style.display = "none";}
-
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-   				 if (event.target == modal) {
-       				 modal.style.display = "none";
-    			}
-		}
-	</script>
- -->
 </body>
 </html>

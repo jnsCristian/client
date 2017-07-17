@@ -1,4 +1,4 @@
-/*(function () {
+(function () {
 	'use strict';
 	if (atlantis.entity.userId) {
 		GetMapService();
@@ -20,4 +20,4 @@
 	console.error('No userId found.');
 	
 	return;
-})();*/
+})();

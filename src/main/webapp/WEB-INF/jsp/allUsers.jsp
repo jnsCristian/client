@@ -22,7 +22,7 @@
 <link href="<c:url value="/resources/cristi.temporary.css" />" rel="stylesheet">
 </head>
 <!--  data-userId="3" -->
-<body>
+<body data-ID=<c:out value="${ userId}" ></c:out>>
 	<header class="app__header ">
 		<!--APP header: logo-->
 		<div class="logo">
@@ -31,7 +31,9 @@
 		
 		<!--APP header: main menu-->
 		<ul class="menu reset--list ">
-			<li><button class="myButton">Home</button></li>
+			<li><a href="home"class="myButton">Home</a></li>
+			<li><a href="users"class="myButton">Users</a></li>
+			<li><a href="map"class="myButton">Map</a></li>
 			<li><button class="myButton" id="myBtn">Reports</button>
 			<!-- The Modal -->
 			<div id="myModal" class="modal">
@@ -56,18 +58,24 @@
 
 			</div>
 			</li>
-			<li><button class="myButton">Map</button></li>
+			
 		</ul>
 
 		<!--APP header: profile-->
 	  <div class="w3-dropdown-hover">
 	    <button class="avatar-button"><img src="resources/avatar.png" class="avatar"></button>
 	    <div class="w3-dropdown-content ">
-	      <a href="#" class=" button">Link 1</a>
-	      <a href="#" class=" button">Link 2</a>
-	      <a href="#" class=" button">Link 3</a>
+	      <a href="profile" class=" button">Profile</a>
+	      <c:url value="/j_spring_security_logout" var="logoutUrl" />
+	      		<form action="${logoutUrl}" method="POST" >
+							<button class="button" type="submit"  >Logout</button>
+            <input type="hidden"
+                    name="${_csrf.parameterName}"
+                    value="${_csrf.token}" />
+</form>
 	    </div>
   	  </div>
+  	  
 	</header>
 	<div  class="users-wrapper" >
 	<div id="content">
