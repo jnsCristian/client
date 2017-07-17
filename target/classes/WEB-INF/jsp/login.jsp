@@ -74,17 +74,24 @@
   	  </div>
 	</header>
 	<div  class="login-wrapper">
+	<div class="login">
+	 <h1 >Login</h1> 
+	<section class="user-data">
 	<c:url value="/j_spring_security_check" var="loginUrl" />
 	<form name="myFormLogin" action="${loginUrl}" method="POST">
-		<div class="tooltip">
+		<p class="login-data setting user-email" >
+		<span>Email</span>
 			<input class="cell" type="text" name="j_username">
-		</div>
-		<div class="tooltip">
+		</p>
+		<p class="login-data setting user-password" >
+		<span>Password</span>
 			<input class="cell" type="text" name="j_password">
-		</div>
-		<button class="button" type="submit"  >Login</button> <input
+		</p>
+		<button class="button login-button" type="submit"  >Login</button> <input
 			type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 	</form>
+	</section>
+	</div>
             <div  class="register">
       <h1 >Register</h1> 
       <section  class="user-data">
