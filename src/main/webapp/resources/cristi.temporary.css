@@ -160,4 +160,11 @@ a {
 .tab-active{
 	display: block;
 }
-
+.alliances{
+	width:70%;
+	display:flex;
+	justify-content:space-around;
+	background-color:white;
+	margin-left:15%;
+	margin-top:3em;
+}

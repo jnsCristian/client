@@ -2,6 +2,8 @@ package com.nttdata.atlantis_client.controller;
 
 import java.io.IOException;
 
+import javax.ws.rs.QueryParam;
+
 import org.apache.http.ParseException;
 import org.apache.http.client.ClientProtocolException;
 import org.json.JSONException;
@@ -72,6 +74,14 @@ public class MyController {
 			return m;
 		} else
 			return new ModelAndView("redirect:/");
+	}
+	
+	@RequestMapping(method = RequestMethod.GET, path = "/confirm")
+	public ModelAndView confirm(@QueryParam("code")String code,Authentication authentication)
+			throws ClientProtocolException, ParseException, IOException, JSONException {
+		ModelAndView m=new ModelAndView("confirm");
+		m.addObject("code", code);
+		return m;
 	}
 
 }
