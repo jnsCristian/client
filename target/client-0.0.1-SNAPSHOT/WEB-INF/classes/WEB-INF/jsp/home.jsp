@@ -185,7 +185,11 @@
         <g class="map-content"></g>
       </svg>
     </div>
+<<<<<<< HEAD
 	<!--START app main
+=======
+	<!--START app main-->
+>>>>>>> 82d371eac0a1ffd6b1b7b6bed21c8040b5d81888
 	<footer class="app__footer">
 		
 			&copy; 2017 NttData Romania <br> Design by Atlantis | Atlantis
@@ -241,6 +245,7 @@
 		src="<c:url value="/resources/app/map/commands/renderMap.command.js"/>" /></script>
 	<script
 		src="<c:url value="/resources/app/map/map.config.js"/>" /></script>
+<<<<<<< HEAD
 		
 	<script>
 		// Get the modal
@@ -336,6 +341,8 @@
     			}
 		}
 	</script>
+=======
+>>>>>>> 82d371eac0a1ffd6b1b7b6bed21c8040b5d81888
 
 </body>
 </html>

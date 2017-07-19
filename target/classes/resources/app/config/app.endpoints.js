@@ -7,6 +7,9 @@
 		user : atlantis.config.host + atlantis.config.port + "atlantis/users",
 		map:atlantis.config.host + atlantis.config.port + "atlantis/map",
 		actions:atlantis.config.host + atlantis.config.port + "atlantis/actions",
-		alliances:atlantis.config.host + atlantis.config.port + "atlantis/alliances"
+		alliances:atlantis.config.host + atlantis.config.port + "atlantis/alliances",
+		messages: atlantis.config.host + atlantis.config.port + "atlantis/messages",
+		raports: atlantis.config.host + atlantis.config.port + "atlantis/raports",
+		building: atlantis.config.host + atlantis.config.port + "atlantis/buildings"
 	}
 })();

@@ -1,0 +1,78 @@
+.img {
+	max-width: 100%;
+	width: 80%;
+}
+
+.button {
+	border: none;
+	display: inline-block;
+	outline: 0;
+	padding: 8px 16px;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	color: inherit;
+	background-color: inherit;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap;
+}
+.setting {
+	display: block;
+	font-weight: normal;
+	padding: 7px 3px;
+	border-bottom: 1px solid #d6d1af;
+	margin-bottom: 5px;
+}
+
+.setting span {
+	float: left;
+	width: 250px;
+	font-weight: bold;
+}
+
+input {
+	border: none;
+	width: 35%;
+}
+
+.white {
+	background-color: white;
+}
+
+a {
+	text-decoration: none;
+}
+.tabContent {
+	padding: 0.5em;
+	background-color: #f1f0ee;
+	
+}
+#w {
+	display: block;
+	width: 750px;
+	margin: 0 auto;
+	padding-top: 30px;
+	padding-bottom: 45px;
+}
+.reset--list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.reset--h {
+      display:inline; 
+}
+.building{
+	display: inline;
+	 float: rigth;
+	
+}
+.after-box {
+    clear: left;
+         
+}
+
+
+
+
