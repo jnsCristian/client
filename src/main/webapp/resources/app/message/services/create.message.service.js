@@ -1,7 +1,7 @@
 function CreateMessageService(params) {
 	'use strict';
 
-	params["source_id"]="24";
+	params["source_id"]=atlantis.entity.userId;
 	
 	var test=JSON.stringify(params);
 	console.log(test);

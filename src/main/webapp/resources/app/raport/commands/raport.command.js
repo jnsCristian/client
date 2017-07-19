@@ -1,8 +1,8 @@
 function RaportCommand() {
 	'use strict';
 	
-	var raport = atlantis.entity.reports.raports, raportMarkup = "";
-
+	var raport = atlantis.entity.reports.raports, raportMarkup = "<tr><th>Message</th><th></th></tr>";
+	
 	if(!atlantis.entity.reports.raports){
 		console.log("No messages");
 		raportMarkup += '<tr><td>'
@@ -26,8 +26,8 @@ function RaportCommand() {
 			+ raport.id + '" >Open</button></td></tr>';
 
 	}
-		
-	$('.testtable tbody').html(raportMarkup);
+	$('.testtable').html(raportMarkup);
+	console.log(raportMarkup);
 	atlantis.eventManger.fire('written.all.reports');
 
 };

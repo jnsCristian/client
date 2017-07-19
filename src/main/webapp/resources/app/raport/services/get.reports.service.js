@@ -1,6 +1,7 @@
 function GetReportsService(){
 	'use strict';
-	
+	$(".report-button").click(function(event){
+		event.preventDefault();
 	 $.ajax({
 		url : atlantis.endpoints.raports ,
 		type : "GET",
@@ -17,4 +18,5 @@ function GetReportsService(){
 		}
 		
 	});
+	})
 };

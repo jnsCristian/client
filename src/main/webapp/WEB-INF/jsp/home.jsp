@@ -20,6 +20,8 @@
 <link href="<c:url value="/resources/common.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/newCss.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/cristi.temporary.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/message.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/raport.css" />" rel="stylesheet">
 </head>
 <!--  data-userId="3" -->
 <body data-ID=<c:out value="${ userId}" ></c:out>>
@@ -34,28 +36,83 @@
 			<li><a href="home"class="myButton">Home</a></li>
 			<li><a href="users"class="myButton">Users</a></li>
 			<li><a href="map"class="myButton">Map</a></li>
-			<li><button class="myButton" id="myBtn">Reports</button>
-			<!-- The Modal -->
-			<div id="myModal" class="modal">
+			<li><button onclick="document.getElementById('id05').style.display='block'" class="myButton report-button" >Reports</button>
+			<div id="id05" class="w3-modal">
+			<div class="w3-modal-content">
+			 <span onclick="document.getElementById('id05').style.display='none'" class="button white">&times;</span>
+					
+		<table class="w3-table__full white testtable">
 
-  			<!-- Modal content -->
-  			<div class="modal-content">
-  			<span class="close">&times;</span>
-   			 <p>Some text in the Modal</p>
-  			</div>
-
-			</div>
+		</table>
+	
+</div>
+</div>
 			</li>
-			<li><button class="myButton" id="myBtnMesg">Messages</button>
-			<!-- The Modal -->
-			<div id="myModalBtn" class="modal">
+			<li><button onclick="document.getElementById('id04').style.display='block'" class="myButton" >Messages</button>
+			<div id="id04" class="w3-modal">
+			<div class="w3-modal-content">
+			 <span onclick="document.getElementById('id04').style.display='none'" class="button white">&times;</span>
+				<button class="button white messsage-switch-tab" data-tab="inbox">Inbox</button>
+	<button class="button white messsage-switch-tab" data-tab="sent">Sent</button>
+	<button class="button white messsage-switch-tab" data-tab="create">Create</button>
 
-  			<!-- Modal content -->
-  			<div class="modal-content">
-  			<span class="close">&times;</span>
-   			 <p>Some text in the Modal..</p>
-  			</div>
+	<div class="tabContent message-tab-active" id="inbox">
 
+
+		<table class="w3-table__full white testtable">
+			<thead>
+				<tr>
+					<th>Nick Name</th>
+					<th>Subject</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+			
+			</tbody>
+		</table>
+
+	</div>
+
+	<div class="tabContent" id="sent">
+
+		<table class="testtable">
+			<thead>
+				<tr>
+					<th>Nick Name</th>
+					<th>Subject</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+			
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="tabContent" id="create">
+		<form class="create-message">
+			NickName : <input type="text" class="message-field message-nickname" data-type="reciever_id" /><br />
+			Subject : <input type="text" class="message-field message-subject"  data-type="subject"/><br />
+			Message : <input type="text" class="message-field message-message" data-type="message"/><br /> 
+						<input type="submit" class="button" value="Send" /> <br />
+		</form>
+
+	</div>
+	<div class="tabContent" id="view">
+		<table class="testtable">
+			<thead>
+				<tr>
+					<th>Message</th>
+				</tr>
+			</thead>
+			<tbody>
+			
+			</tbody>
+		</table>
+
+	</div>
+			</div>
 			</div>
 			</li>
 			
@@ -319,6 +376,52 @@
 		src="<c:url value="/resources/app/action/services/show.outgoing.actions.service.js"/>" /></script>
 	<script src="<c:url value="/resources/app/action/action.config.js"/>" /></script>	
 
+<!-- Messages dependencies -->
+	<script
+		src="<c:url value="/resources/app/message/services/get.message.inbox.service.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/message/services/get.message.sent.service.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/message/services/create.message.service.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/message/services/delete.message.service.js"/>" /></script>
+			<script
+		src="<c:url value="/resources/app/message/services/view.message.inbox.service.js"/>" /></script>
+				<script
+		src="<c:url value="/resources/app/message/services/view.message.sent.service.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/message/commands/message.inbox.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/message/commands/message.switch.tab.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/message/commands/message.sent.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/message/commands/message.create.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/message/commands/message.delete.inbox.command.js"/>" /></script>
+		<script
+		src="<c:url value="/resources/app/message/commands/message.delete.sent.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/message/commands/message.view.inbox.command.js"/>" /></script>
+	
+	
+		<script
+		src="<c:url value="/resources/app/message/commands/message.view.sent.command.js"/>" /></script>
+		<script src="<c:url value="/resources/app/message/message.config.js"/>" /></script>
+		<!-- Reports dependencies -->
+			<script
+		src="<c:url value="/resources/app/raport/services/get.reports.service.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/raport/services/delete.raport.service.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/raport/services/view.raport.service.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/raport/commands/raport.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/raport/commands/raport.delete.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/raport/commands/raport.view.command.js"/>" /></script>
 
+	<script src="<c:url value="/resources/app/raport/raport.config.js"/>" /></script>
 </body>
 </html>
