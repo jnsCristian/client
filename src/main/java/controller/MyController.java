@@ -10,6 +10,6 @@ public class MyController {
 	
 	@RequestMapping(method=RequestMethod.GET,path="/")
 	public ModelAndView get(){
-		return new ModelAndView("reports");
+		return new ModelAndView("warBuilding");
 	}
 }
