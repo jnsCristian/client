@@ -6,6 +6,15 @@ public class User {
 	private String role;
 	private String password;
 	private long id;
+	private long placeId;
+
+	public long getPlaceId() {
+		return placeId;
+	}
+
+	public void setPlaceId(long placeId) {
+		this.placeId = placeId;
+	}
 
 	public long getId() {
 		return id;

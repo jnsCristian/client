@@ -26,7 +26,7 @@ function RaportCommand() {
 			+ raport.id + '" >Open</button></td></tr>';
 
 	}
-	$('.testtable').html(raportMarkup);
+	$('.testtable-r').html(raportMarkup);
 	console.log(raportMarkup);
 	atlantis.eventManger.fire('written.all.reports');
 

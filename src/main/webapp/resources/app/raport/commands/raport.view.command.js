@@ -12,7 +12,7 @@ function OpenRaportCommand() {
 				+ temp.message
 				+ '</td>';
 			
-			$(' .testtable').html(raportMarkup);
+			$(' .testtable-r').html(raportMarkup);
 			
 			
 			});

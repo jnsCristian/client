@@ -10,7 +10,7 @@ function UpgradeBuildingService(params) {
 		},
 		
 		success : function(data, textStatus, request) {
-			alert('upgrade');
+			
 		
 			
 		}

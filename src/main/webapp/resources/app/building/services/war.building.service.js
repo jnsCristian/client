@@ -1,11 +1,11 @@
-function WarBuildingService() {
+function WarBuildingService(buildingId) {
 	'use strict';
 	$.ajax({
 		url : atlantis.endpoints.troops + '/building',
 		type : "GET",
 		beforeSend : function(request) {
-			request.setRequestHeader("buildingId", '1');
-			request.setRequestHeader("buildingLevel",'3');
+			request.setRequestHeader("buildingId", buildingId);
+			request.setRequestHeader("userId",atlantis.entity.userId);
 			
 		},
 	success : function(data, textStatus, request) {
@@ -18,3 +18,5 @@ function WarBuildingService() {
 	});
 
 };
+
+

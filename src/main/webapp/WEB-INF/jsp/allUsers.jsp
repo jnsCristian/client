@@ -20,63 +20,12 @@
 <link href="<c:url value="/resources/common.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/newCss.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/cristi.temporary.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/message.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/raport.css" />" rel="stylesheet">
 </head>
 <!--  data-userId="3" -->
 <body data-ID=<c:out value="${ userId}" ></c:out>>
-	<header class="app__header ">
-		<!--APP header: logo-->
-		<div class="logo">
-		  <img src="resources/logo.png" class="logo">
-		</div>
-		
-		<!--APP header: main menu-->
-		<ul class="menu reset--list ">
-			<li><a href="home"class="myButton">Home</a></li>
-			<li><a href="users"class="myButton">Users</a></li>
-			<li><a href="map"class="myButton">Map</a></li>
-			<li><button class="myButton" id="myBtn">Reports</button>
-			<!-- The Modal -->
-			<div id="myModal" class="modal">
-
-  			<!-- Modal content -->
-  			<div class="modal-content">
-  			<span class="close">&times;</span>
-   			 <p>Some text in the Modal</p>
-  			</div>
-
-			</div>
-			</li>
-			<li><button class="myButton" id="myBtnMesg">Messages</button>
-			<!-- The Modal -->
-			<div id="myModalBtn" class="modal">
-
-  			<!-- Modal content -->
-  			<div class="modal-content">
-  			<span class="close">&times;</span>
-   			 <p>Some text in the Modal..</p>
-  			</div>
-
-			</div>
-			</li>
-			
-		</ul>
-
-		<!--APP header: profile-->
-	  <div class="w3-dropdown-hover">
-	    <button class="avatar-button"><img src="resources/avatar.png" class="avatar"></button>
-	    <div class="w3-dropdown-content ">
-	      <a href="profile" class=" button">Profile</a>
-	      <c:url value="/j_spring_security_logout" var="logoutUrl" />
-	      		<form action="${logoutUrl}" method="POST" >
-							<button class="button" type="submit"  >Logout</button>
-            <input type="hidden"
-                    name="${_csrf.parameterName}"
-                    value="${_csrf.token}" />
-</form>
-	    </div>
-  	  </div>
-  	  
-	</header>
+	<jsp:include page="header.jsp" />
 	<div  class="users-wrapper" >
 	<div id="content">
 		
@@ -146,6 +95,54 @@
 	<script src="<c:url value="/resources/app/user/commands/otheruser.command.js"/>" /></script>
 	<script src="<c:url value="/resources/app/user/services/search.users.service.js"/>" /></script>
 	<script src="<c:url value="/resources/app/user/get.all.users.config.js"/>" /></script>
+	
+<!-- Messages dependencies -->
+	<script
+		src="<c:url value="/resources/app/message/services/get.message.inbox.service.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/message/services/get.message.sent.service.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/message/services/create.message.service.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/message/services/delete.message.service.js"/>" /></script>
+			<script
+		src="<c:url value="/resources/app/message/services/view.message.inbox.service.js"/>" /></script>
+				<script
+		src="<c:url value="/resources/app/message/services/view.message.sent.service.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/message/commands/message.inbox.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/message/commands/message.switch.tab.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/message/commands/message.sent.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/message/commands/message.create.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/message/commands/message.delete.inbox.command.js"/>" /></script>
+		<script
+		src="<c:url value="/resources/app/message/commands/message.delete.sent.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/message/commands/message.view.inbox.command.js"/>" /></script>
+	
+	
+		<script
+		src="<c:url value="/resources/app/message/commands/message.view.sent.command.js"/>" /></script>
+		<script src="<c:url value="/resources/app/message/message.config.js"/>" /></script>
+		<!-- Reports dependencies -->
+			<script
+		src="<c:url value="/resources/app/raport/services/get.reports.service.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/raport/services/delete.raport.service.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/raport/services/view.raport.service.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/raport/commands/raport.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/raport/commands/raport.delete.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/raport/commands/raport.view.command.js"/>" /></script>
+
+	<script src="<c:url value="/resources/app/raport/raport.config.js"/>" /></script>
 </div>
 </body>
 </html>

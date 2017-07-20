@@ -1,7 +1,7 @@
 function OpenConstructionBuildingCommand() {
 	'use strict';
-
-	ConstructionBuildingService(1);
+	console.log(atlantis.entity.userId);
+	ConstructionBuildingService($('body').attr('data-building-id'));
 	
 	atlantis.eventManger.addListener('get.construction.building.success',function() {
 		var building = atlantis.entity.building, cBuildingMarkup = '<span>Next level cost</span>';

@@ -28,12 +28,7 @@
 	  font-weight: bold; 
 	  padding: 0.7em 0.3em 0.38em 0.3em;
 }
-.tabContent {
-	display: none;
-	padding: 0.5em;
-	background-color: #f1f0ee;
-	
-}
+
 .message-tab-active{
 	display: block;
 }
