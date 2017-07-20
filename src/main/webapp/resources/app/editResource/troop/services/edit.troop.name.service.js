@@ -4,12 +4,9 @@ function EditTroopNameService(params) {
 	$.ajax({
 		url :atlantis.endpoints.troops,
 		type : "PUT",
-		
 		data: test,
         contentType: "application/json",
-		success : function(data, textStatus, request) {
-			
-		}
-		
+		success : function(data, textStatus, request) {		
+		}		
 	});
 };

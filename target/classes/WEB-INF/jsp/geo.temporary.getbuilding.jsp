@@ -66,22 +66,25 @@
 			</div>
 		</div>
 	</header>
-<!-- 	<div id="w">
+<!-- 		<div id="w">
 		<div id="content" class="clearfix">
 
 			<h1>Buildings</h1>
 			<section class="building-data">
 				<p>Edit building settings:</p>
 
-				<p class="setting building-name"></p>
+				<p class="setting building-id"></p>
 
-				<p class="setting building-description"></p>
+				<p class="setting building-name"></p>
+				
+			<p class="setting building-description"></p>
 
 				<button class="button editbuilding">Submit changes</button>
 			</section>
+		</div>
 		</div> -->
-		
-			<div id="w">
+
+	<!-- 			<div id="w">
 		<div id="content" class="clearfix">
 
 			<h1>Troops</h1>
@@ -100,33 +103,37 @@
 
 				<button class="button edittroop">Submit changes</button>
 			</section>
-		</div>
-		
-<!-- 			<div id="w">
+		</div> -->
+
+				<div id="w">
 		<div id="content" class="clearfix">
 
 			<h1>building level</h1>
 			<section class="buildinglevel-data">
 				<p>Edit building settings:</p>
+				<p class="setting buildinglevel-name"></p>
+					
+					<p>The cost is:</p>
+				<p class="setting buildinglevel-buildinglevelId"></p>
 
 				<p class="setting buildinglevel-name"></p>
 
-				<p class="setting buildinglevel-description"></p>
+				<p class="setting buildinglevel-name"></p>
 
 				<button class="button editbuildinglevel">Submit changes</button>
 			</section>
-		</div> -->
+		</div>
 
-<!-- 	<div id="w">
+	<!-- <div id="w">
 		<div id="content" class="clearfix">
 
 			<h1>Resources</h1>
 			<section class="resource-data">
 				<p>Edit resource settings:</p>
 
-					<p class="setting resource-id"></p>
+				<p class="setting resource-id"></p>
 
-					<p class="setting resource-name"></p>
+				<p class="setting resource-name"></p>
 
 				<button class="button editresource">Submit changes</button>
 			</section>
@@ -145,8 +152,8 @@
 		<script src="<c:url value="/resources/app/config/app.config.js"/>" /></script>
 		<script src="<c:url value="/resources/app/config/app.entity.js"/>" /></script>
 		<script src="<c:url value="/resources/app/config/app.endpoints.js"/>" /></script>
-	<%-- 	<!-- Buildings dependencies -->
-		<script
+			<!-- Buildings dependencies -->
+	<%-- 	<script
 			src="<c:url value="/resources/app/editResource/building/commands/building.command.js"/>" /></script>
 		<script
 			src="<c:url value="/resources/app/editResource/building/services/get.building.service.js"/>" /></script>
@@ -155,10 +162,10 @@
 		<script
 			src="<c:url value="/resources/app/editResource/building/services/get.all.buildings.service.js"/>" /></script>
 		<script
-			src="<c:url value="/resources/app/editResource/building/building.config.js"/>" /></script>
-			 --%>
-	<%-- 	<!-- Resource dependencies -->
-		<script
+			src="<c:url value="/resources/app/editResource/building/building.config.js"/>" /></script> --%>
+			
+			<!-- Resource dependencies -->
+	<%-- 	<script
 			src="<c:url value="/resources/app/editResource/resource/commands/resource.command.js"/>" /></script>
 		<script
 			src="<c:url value="/resources/app/editResource/resource/services/get.resource.service.js"/>" /></script>
@@ -167,22 +174,22 @@
 		<script
 			src="<c:url value="/resources/app/editResource/resource/services/get.all.resource.service.js"/>" /></script>
 		<script
-			src="<c:url value="/resources/app/editResource/resource/resource.config.js"/>" /></script> --%>
-	<!-- Building Level dependencies -->
-<%-- 	
+			src="<c:url value="/resources/app/editResource/resource/resource.config.js"/>" /></script>
+	 --%>	<!-- Building Level dependencies -->
+			
 	<script
 			src="<c:url value="/resources/app/editResource/buildinglevel/commands/buildinglevel.command.js"/>" /></script>
 		<script
 			src="<c:url value="/resources/app/editResource/buildinglevel/services/get.buildinglevel.service.js"/>" /></script>
 		<script
-			src="<c:url value="/resources/app/editResource/buildinglevel/commands/get.all.buildinglevel.command.js"/>" /></script>
+			src="<c:url value="/resources/app/editResource/buildinglevel/commands/get.all.buildingslevel.command.js"/>" /></script>
 		<script
 			src="<c:url value="/resources/app/editResource/buildinglevel/services/get.all.buildinglevel.service.js"/>" /></script>
 		<script
 			src="<c:url value="/resources/app/editResource/buildinglevel/buildinglevel.config.js"/>" /></script>
- --%>
- 
-  <script
+
+
+<%-- 		<script
 			src="<c:url value="/resources/app/editResource/troop/commands/troop.command.js"/>" /></script>
 		<script
 			src="<c:url value="/resources/app/editResource/troop/services/get.troop.service.js"/>" /></script>
@@ -191,7 +198,7 @@
 		<script
 			src="<c:url value="/resources/app/editResource/troop/services/get.all.troop.service.js"/>" /></script>
 		<script
-			src="<c:url value="/resources/app/editResource/troop/troop.config.js"/>" /></script>
+			src="<c:url value="/resources/app/editResource/troop/troop.config.js"/>" /></script> --%>
 	</div>
 </body>
 </html>

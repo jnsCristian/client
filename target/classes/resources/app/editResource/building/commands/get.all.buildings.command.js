@@ -6,9 +6,9 @@ function BuildingsCommand () {
 	if(buildings.length){
 		for (var i = 0; i < buildings.length; i++) {
 			temp = temp + '<tr ><td>' + buildings[i].buildingName
-					+ '</td><td>' + '<button class="button viewbuilding" data-buildingId='+buildings[i].buildingId +' >View</button>'
+					+ '</td><td>' 
+					+ '<button data-tab="view-building" class="button viewbuilding admin-switch-button" data-buildingid='+buildings[i].buildingId +' >View</button>'
 					+ '</td></tr>';
-
 		} 
 	}
 	

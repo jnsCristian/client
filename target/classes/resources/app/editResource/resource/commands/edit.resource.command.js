@@ -1,23 +1,17 @@
-function EditResourceCommand () {
+function EditResourceCommand() {
 	'use strict';
-	console.log("mergeresource");
-	$(".editresource").click(function(event){
-		event.preventDefault();
-		
-		var resource={
-				
-		};
-		
-		$(".resource-data").each(function(){
-			
-			var elementName=$(this).find("input").attr("id"),
-			elementValue=$(this).find("input").val();
-			resource[elementName]=elementValue||undefined;
-			
+	$(".editresourcename").click(
+			function(event) {
+				event.preventDefault();
+				var resource = {
 
-		});
-		
-		EditResourceService(resource);
-	})
-	
+				};
+				resource.id = $('.resource-name').find('input').attr(
+						'data-resourceid');
+
+				resource.name = $(".resource-name").find('input').val();
+				console.log(resource);
+				EditResourceNameService(resource);
+			});
+
 };

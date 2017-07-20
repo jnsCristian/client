@@ -3,13 +3,10 @@ function EditTroopService(params) {
 	var test=JSON.stringify(params);
 	$.ajax({
 		url :atlantis.endpoints.resources+"/cost",
-		type : "PUT",
-		
+		type : "PUT",		
 		data: test,
         contentType: "application/json",
-		success : function(data, textStatus, request) {
-			
-		}
-		
+		success : function(data, textStatus, request) {			
+		}		
 	});
 };

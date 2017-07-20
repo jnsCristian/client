@@ -66,87 +66,96 @@
 			</div>
 		</div>
 	</header>
-	<!-- 		<div class="users-wrapper">
-		<div id="content">
-			<table class="w3-table__full white buildings-table">
-			</table>
-			<div id="content" class="clearfix">
+		<div  class="users-wrapper" >
+	<div id="content">
+	
+		<button class="button admin-switch-tab" data-tab="buildings">Buildings</button>
+		<button class="button admin-switch-tab" data-tab="levels">Levels</button>
+		<button class="button admin-switch-tab" data-tab="troops">Troops</button>
+		<button class="button admin-switch-tab" data-tab="resources">Resources</button>
+	
+	<div class="tabContent tab-active" id="buildings">
+		<table class="w3-table__full white buildings-table">
+		</table>
 
-				<h1>Buildings</h1>
-				<section class="building-data">
-					<p>Edit building settings:</p>
+	</div>
+	<div class="tabContent " id="view-building">
+			<div id="content" >
 
-					<p class="setting building-name"></p>
+			<h1>Buildings</h1>
+			<section class="building-data">
+				<p>Edit building settings:</p>
+				<p class="setting building-id"></p>
+				<p class="setting building-name"></p>
+				<p class="setting building-description"></p>
+				<button class="button editbuildingname">Submit name</button>
 
-					<p class="setting building-description"></p>
-
-					<button class="button editbuilding">Submit changes</button>
-				</section>
-			</div>
-		</div> -->
-
-	<div class="users-wrapper">
-		<div id="content">
+			</section>
+		</div>
+		</div>
+		<div class="tabContent " id="troops">
 			<table class="w3-table__full white troops-table">
 			</table>
-			<div id="content" class="clearfix">
+
+		</div>
+		<div class="tabContent " id="view-troop">
 
 				<h1>Troops</h1>
 				<section class="troop-data">
 					<p>Edit troop settings:</p>
-
 					<p class="setting troop-name"></p>
 					<button class="button edittroopname">Submit name</button>
-					
-					
-					<p>The cost is:</p>		
+
+					<p>The cost is:</p>
 					<p class="setting troop-cost1"></p>
 					<p class="setting troop-cost2"></p>
 					<p class="setting troop-cost3"></p>
 					<p class="setting troop-cost4"></p>
 					<p class="setting troop-cost5"></p>
-
 					<button class="button edittroop">Submit changes</button>
 				</section>
 			</div>
-		</div>
-
-		<!-- 		<div class="users-wrapper">
-		<div id="content">
+		<div class="tabContent " id="levels">
 			<table class="w3-table__full white buildinglevel-table">
 			</table>
-			<div id="content" class="clearfix">
 
-				<h1>building level</h1>
+		</div>
+		<div class="tabContent " id="view-level">
+
+				<h1>Building level</h1>
 				<section class="buildinglevel-data">
-					<p>Edit buildinglevel settings:</p>
-
+					<p>Edit settings:</p>
 					<p class="setting buildinglevel-name"></p>
+					
 
-					<p class="setting buildinglevel-description"></p>
 
+					<p>The cost is:</p>
+					<p class="setting buildinglevel-cost1"></p>
+					<p class="setting buildinglevel-cost2"></p>
+					<p class="setting buildinglevel-cost3"></p>
+					<p class="setting buildinglevel-cost4"></p>
+					<p class="setting buildinglevel-cost5"></p>
 					<button class="button editbuildinglevel">Submit changes</button>
 				</section>
 			</div>
-		</div> -->
+			<div class="tabContent " id="resources">
+		<table class="w3-table__full white resource-table">
+		</table>
 
-		<!-- 	<div id="content">
-			<table class="w3-table__full white resource-table">
-			</table>
-			<div id="content" class="clearfix">
+	</div>
+	<div class="tabContent " id="view-resource">
 
-				<h1>Resources</h1>
-				<section class="resource-data">
-					<p>Edit resource settings:</p>
-
-					<p class="setting resource-id"></p>
-
-					<p class="setting resource-name"></p>
-
-					<button class="button editresource">Submit changes</button>
-				</section>
-			</div>
-		</div> -->
+			<h1>Resources</h1>
+			<section class="resource-data">
+				<p>Edit resource settings:</p>
+				<p class="setting resource-id"></p>
+				<p class="setting resource-name"></p>
+				
+				<button class="button editresourcename">Submit name</button>
+			</section>
+		</div>
+		</div>
+		</div>
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -161,7 +170,7 @@
 		<script src="<c:url value="/resources/app/config/app.config.js"/>" /></script>
 		<script src="<c:url value="/resources/app/config/app.entity.js"/>" /></script>
 		<script src="<c:url value="/resources/app/config/app.endpoints.js"/>" /></script>
-		<%-- 	<script
+			<script
 			src="<c:url value="/resources/app/editResource/building/commands/get.all.buildings.command.js"/>" /></script>
 		<script
 			src="<c:url value="/resources/app/editResource/building/services/get.all.buildings.service.js"/>" /></script>
@@ -169,34 +178,52 @@
 			src="<c:url value="/resources/app/editResource/building/commands/building.command.js"/>" /></script>
 		<script
 			src="<c:url value="/resources/app/editResource/building/services/get.building.service.js"/>" /></script>
-		<script
-			src="<c:url value="/resources/app/editResource/building/building.config.js"/>" /></script> --%>
 
-		<%-- 	<!-- Resource dependencies -->
+					<script
+			src="<c:url value="/resources/app/editResource/building/commands/edit.building.command.js"/>" /></script>
 		<script
-			src="<c:url value="/resources/app/editResource/resource/commands/resource.command.js"/>" /></script>
+			src="<c:url value="/resources/app/editResource/building/services/edit.building.service.js"/>" /></script>
 		<script
-			src="<c:url value="/resources/app/editResource/resource/services/get.resource.service.js"/>" /></script>
+			src="<c:url value="/resources/app/editResource/building/services/edit.building.name.service.js"/>" /></script>
 		<script
-			src="<c:url value="/resources/app/editResource/resource/commands/get.all.resource.command.js"/>" /></script>
+			src="<c:url value="/resources/app/editResource/building/building.config.js"/>" /></script>
+		<!-- Resource dependencies -->
 		<script
-			src="<c:url value="/resources/app/editResource/resource/services/get.all.resource.service.js"/>" /></script>
+		src="<c:url value="/resources/app/editResource/resource/commands/resource.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/editResource/resource/services/get.resource.service.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/editResource/resource/commands/get.all.resource.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/editResource/resource/services/get.all.resource.service.js"/>" /></script>
+			<script
+			src="<c:url value="/resources/app/editResource/resource/commands/edit.resource.command.js"/>" /></script>
 		<script
-			src="<c:url value="/resources/app/editResource/resource/resource.config.js"/>" /></script> --%>
-		<!-- Building Level dependencies -->
+			src="<c:url value="/resources/app/editResource/resource/services/edit.resource.service.js"/>" /></script>
+		<script
+			src="<c:url value="/resources/app/editResource/resource/services/edit.resource.name.service.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/editResource/resource/resource.config.js"/>" /></script>
+		
+ <!-- Building Level dependencies -->
 
-		<%-- <script
+		<script
 			src="<c:url value="/resources/app/editResource/buildinglevel/commands/buildinglevel.command.js"/>" /></script>
 		<script
 			src="<c:url value="/resources/app/editResource/buildinglevel/services/get.buildinglevel.service.js"/>" /></script>
 		<script
-			src="<c:url value="/resources/app/editResource/buildinglevel/commands/get.all.buildinglevel.command.js"/>" /></script>
+			src="<c:url value="/resources/app/editResource/buildinglevel/commands/get.all.buildingslevel.command.js"/>" /></script>
 		<script
 			src="<c:url value="/resources/app/editResource/buildinglevel/services/get.all.buildinglevel.service.js"/>" /></script>
+
+		<script
+			src="<c:url value="/resources/app/editResource/buildinglevel/commands/edit.buildinglevel.command.js"/>" /></script>
+		<script
+			src="<c:url value="/resources/app/editResource/buildinglevel/services/edit.buildinglevel.service.js"/>" /></script>
 		<script
 			src="<c:url value="/resources/app/editResource/buildinglevel/buildinglevel.config.js"/>" /></script>
- --%>
 
+					<!--Troop dependencies -->
 		<script
 			src="<c:url value="/resources/app/editResource/troop/commands/troop.command.js"/>" /></script>
 		<script
@@ -205,16 +232,19 @@
 			src="<c:url value="/resources/app/editResource/troop/commands/get.all.troop.command.js"/>" /></script>
 		<script
 			src="<c:url value="/resources/app/editResource/troop/services/get.all.troop.service.js"/>" /></script>
-		
+
 		<script
 			src="<c:url value="/resources/app/editResource/troop/commands/edit.troop.command.js"/>" /></script>
 		<script
 			src="<c:url value="/resources/app/editResource/troop/services/edit.troop.service.js"/>" /></script>
-			<script
+		<script
 			src="<c:url value="/resources/app/editResource/troop/services/edit.troop.name.service.js"/>" /></script>
 		<script
 			src="<c:url value="/resources/app/editResource/troop/troop.config.js"/>" /></script>
 
-	</div>
+		<script
+			src="<c:url value="/resources/app/editResource/edit.switch.tab.config.js"/>" /></script>
+					<script
+			src="<c:url value="/resources/app/editResource/edit.button.switch.tab.config.js"/>" /></script>
 </body>
 </html>

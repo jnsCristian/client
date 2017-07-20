@@ -1,24 +1,19 @@
 (function () {
 	'use strict';
 
-	if (atlantis.entity.userId) {
+	if (atlantis.entity.userId) {	
+		EditBuildingLevelCommand();	
 		GetBuildingsLevelService();
-		 
-		atlantis.eventManger.addListener('get.all.buildingslevel.success', function() {
-
+		atlantis.eventManger.addListener('get.all.buildingLevel.success', function() {
 			BuildingsLevelCommand(); 
 			
 		});
 		
-		atlantis.eventManger.addListener('written.all.buildingslevel', function() {
-		BuildingLevelCommand();
-			
+		atlantis.eventManger.addListener('written.all.buildinglevel', function() {
+		BuildingLevelCommand();		
+		ButtonSwitchTab();
 	});
-
 		return;
 	}
-	
-	console.error('No buildingLevelId found.');
-	
 	return;
 })();

@@ -3,16 +3,14 @@
 
 	if (atlantis.entity.userId) {
 		EditTroopCommand();
-		GetTroopsService();
-		 
+		GetTroopsService();		 
 		atlantis.eventManger.addListener('get.all.troops.success', function() {
-
-			TroopsCommand(); 
-			
+			TroopsCommand(); 			
 		});
 
 		atlantis.eventManger.addListener('written.all.troops', function() {
 		TroopCommand();			
+		ButtonSwitchTab();
 	});
 		return;
 	}

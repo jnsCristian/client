@@ -7,9 +7,8 @@ function TroopsCommand () {
 		for (var i = 0; i < troops.length; i++) {
 			temp = temp + '<tr ><td>' + troops[i].name + '</td><td>' 
 			+ 
-			'<button class="button viewtroop" data-troopId='+troops[i].id +' >View</button>'
+			'<button data-tab="view-troop" class="button viewtroop admin-switch-button" data-troopId='+troops[i].id +' >View</button>'
 					+ '</td></tr>';
-
 		} 
 	}
 	

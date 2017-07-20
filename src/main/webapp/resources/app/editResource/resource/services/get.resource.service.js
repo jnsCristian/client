@@ -1,7 +1,5 @@
 function GetResourceService(param) {
 	'use strict';
-	
-
 	$.ajax({
 		url :atlantis.endpoints.resources+"/"+param ,
 		type : "GET",

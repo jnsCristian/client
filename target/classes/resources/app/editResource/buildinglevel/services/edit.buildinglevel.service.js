@@ -1,11 +1,12 @@
-function EditResourceService(params) {
+function EditBuildingLevelService(params) {
 	'use strict';
-
+	var test=JSON.stringify(params);
 	$.ajax({
-		url :atlantis.endpoints.buildinglevel+"?id="+"4" ,
-		type : "GET",
+		url :atlantis.endpoints.buildings+"/cost",
+		type : "PUT",
+		data: test,
+        contentType: "application/json",
 		success : function(data, textStatus, request) {
-			atlantis.entity.buildinglevels=data;
 		}
 		
 	});
