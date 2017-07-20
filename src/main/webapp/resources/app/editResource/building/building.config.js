@@ -1,6 +1,5 @@
 (function () {
 	'use strict';
-
 	if (atlantis.entity.userId) {
 		EditBuildingCommand();
 		GetBuildingsService();		 
