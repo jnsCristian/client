@@ -30,6 +30,7 @@ public class UserService {
 		user.setRole((String) obj.get("role"));
 		user.setConfirmed(obj.getBoolean("confirmed"));
 		user.setId(obj.getLong("userId"));
+		user.setPlaceId(obj.getLong("placeId"));
 		return user;
 	}
 
