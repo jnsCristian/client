@@ -45,7 +45,7 @@
 
 	</div>
 	<div class="tabContent " id="view-building">
-			<div id="content" >
+			<div >
 
 			<h1>Buildings</h1>
 			<section class="building-data">
