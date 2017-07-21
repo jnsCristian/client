@@ -6,13 +6,8 @@
 			<div class="w3-modal-content">
 			 <span onclick="document.getElementById('id03').style.display='none'" class="button">&times;</span>
   				<form class="action-form">
-			<div class="center coordinates">
-				<input id="x" type="text" class="troops-input coordinates"
-					placeholder="x">
-			</div>
-			<div class="center coordinates">
-				<input id="y" type="text" class="troops-input coordinates"
-					placeholder="y">
+			<div class="center nick">
+				<input id="nick" type="text" placeholder="Nickname">
 			</div>
 			<div class="action-form__troops">
 				<div class="form-element">
@@ -89,25 +84,25 @@
 			<li class="resource-item tooltip" >
 				<img src="resources/img/troops/genericTrooper.png" class="img">
 				<span class="tooltiptext"> 
-					<span data-resourceName="basic trooper"><img src="resources/img/troops/1.png" class="innerimg"><br/><span class="army-quantity"></span><br/> </span>
-					<span data-resourceName="storm trooper"><img src="resources/img/troops/2.png" class="innerimg"><br/><span  class="army-quantity"></span><br/> </span>
-					<span data-resourceName="commando"><img src="resources/img/troops/3.png" class="innerimg"><br/><span class="army-quantity"></span></span>
+					<span data-troopId="1"><img src="resources/img/troops/1.png" class="innerimg"><br/><span class="army-quantity"></span><br/> </span>
+					<span data-troopId="2r"><img src="resources/img/troops/2.png" class="innerimg"><br/><span  class="army-quantity"></span><br/> </span>
+					<span data-troopId="3"><img src="resources/img/troops/3.png" class="innerimg"><br/><span class="army-quantity"></span></span>
 				</span>
 			</li>
 			<li class="resource-item tooltip">
 				<img src="resources/img/troops/genericTank.png" class="img">
 				<span class="tooltiptext"> 
-					<span data-resourceName="tank 1"><img src="resources/img/troops/4.png" class="innerimg"><br/> <span class="army-quantity"></span><br/> </span>
-					<span data-resourceName="tank 2"><img src="resources/img/troops/5.png" class="innerimg"><br/>  <span class="army-quantity"></span><br/> </span>
-					<span data-resourceName="tank 3"><img src="resources/img/troops/6.png" class="innerimg"><br/><span class="army-quantity"></span></span>
+					<span data-troopId="9"><img src="resources/img/troops/4.png" class="innerimg"><br/> <span class="army-quantity"></span><br/> </span>
+					<span data-troopId="10"><img src="resources/img/troops/5.png" class="innerimg"><br/>  <span class="army-quantity"></span><br/> </span>
+					<span data-troopId="11"><img src="resources/img/troops/6.png" class="innerimg"><br/><span class="army-quantity"></span></span>
 				</span>
 			</li>
 			<li class="resource-item tooltip">
 				<img src="resources/img/troops/genericPlane.png" class="img">
 				<span class="tooltiptext"> 
-					<span data-resourceName="plane 1"><img src="resources/img/troops/7.png" class="innerimg"><br/>  <span class="army-quantity"></span><br/> </span>
-					<span data-resourceName="plane 2"><img src="resources/img/troops/8.png" class="innerimg"><br/>  <span class="army-quantity"></span><br/> </span>
-					<span data-resourceName="plane 3"><img src="resources/img/troops/9.png" class="innerimg"><br/><span class="army-quantity"></span></span>
+					<span data-troopId="12"><img src="resources/img/troops/7.png" class="innerimg"><br/>  <span class="army-quantity"></span><br/> </span>
+					<span data-troopId="13"><img src="resources/img/troops/8.png" class="innerimg"><br/>  <span class="army-quantity"></span><br/> </span>
+					<span data-troopId="14"><img src="resources/img/troops/9.png" class="innerimg"><br/><span class="army-quantity"></span></span>
 				</span>
 			</li>
 			</ul>

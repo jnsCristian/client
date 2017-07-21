@@ -17,14 +17,7 @@ function CreateActionCommand () {
 
 		});
 		
-		$(".coordinates").each(function(){
-			
-			var troopName=$(this).find("input").attr("id"),
-			troopNumber=$(this).find("input").val();
-			troops[troopName]=troopNumber;
-			console.log(troopName);
-
-		});
+		troops.nickName=$('.nick').find('input').val();
 		
 		console.log(troops);
 		CreateActionService(troops);
