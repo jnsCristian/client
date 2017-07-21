@@ -1,7 +1,11 @@
 (function () {
 	'use strict';
 	if (atlantis.entity.userId) {
+		PopulateButtonsService();
 		UsersSwitchTabCommand();
+		atlantis.eventManger.addListener('get.alliances.success', function() {
+			PopulateButtonsCommand();
+		});
 		
 		atlantis.eventManger.addListener('atlantis.users.active.tab', function() {
 			GetUsersFromAtlantis();

@@ -36,11 +36,11 @@
 	<div  class="users-wrapper" >
 	<div id="content">
 		
-		<button class="button users-switch-tab" data-tab="all">All Users</button>
-		<button class="button users-switch-tab" data-tab="red">Red Alliance</button>
-		<button class="button users-switch-tab" data-tab="green">Green Alliance</button>
-		<button class="button users-switch-tab" data-tab="blue">Blue Alliance</button>
-		<button class="button users-switch-tab" data-tab="white">White Alliance</button>
+		<button class="button users-switch-tab" data-tab="all" >All Users</button>
+		<button class="button users-switch-tab" data-tab="red" data-allianceId="1"></button>
+		<button class="button users-switch-tab" data-tab="green" data-allianceId="2"></button>
+		<button class="button users-switch-tab" data-tab="blue" data-allianceId="3"></button>
+		<button class="button users-switch-tab" data-tab="white" data-allianceId="4"></button>
 		<button class="button users-switch-tab" data-tab="atlantis">Atlantis</button>
 		<input class="button " class="search" placeholder="Search"/> <button class="button users-switch-tab find" data-tab="search">Search</button>
 		<div class="tabContent tab-active" id="all">
@@ -108,6 +108,8 @@
 	<script src="<c:url value="/resources/app/user/services/search.users.service.js"/>" /></script>
 		<script src="<c:url value="/resources/app/user/commands/get.users.from.atlantis.command.js"/>" /></script>
 	<script src="<c:url value="/resources/app/user/services/get.users.from.atlantis.service.js"/>" /></script>
+			<script src="<c:url value="/resources/app/user/commands/populate.buttons.command.js"/>" /></script>
+	<script src="<c:url value="/resources/app/user/services/populate.buttons.service.js"/>" /></script>
 	<script src="<c:url value="/resources/app/user/get.all.users.config.js"/>" /></script>
 	
 <!-- Messages dependencies -->

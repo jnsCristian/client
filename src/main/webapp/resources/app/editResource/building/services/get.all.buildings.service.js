@@ -1,6 +1,5 @@
 function GetBuildingsService() {
 	'use strict';
-	console.log("get all service");
 	$.ajax({
 		url : atlantis.endpoints.buildings,
 		type : "GET",

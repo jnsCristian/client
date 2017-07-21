@@ -38,6 +38,7 @@
 		<button class="button admin-switch-tab" data-tab="levels">Levels</button>
 		<button class="button admin-switch-tab" data-tab="troops">Troops</button>
 		<button class="button admin-switch-tab" data-tab="resources">Resources</button>
+		<button class="button admin-switch-tab" data-tab="alliances">Alliances</button>
 	
 	<div class="tabContent tab-active" id="buildings">
 		<table class="w3-table__full white buildings-table">
@@ -118,6 +119,24 @@
 				
 				<button class="button editresourcename">Submit name</button>
 			</section>
+		</div>
+		
+		<div class="tabContent " id="alliances">
+		<table class="w3-table__full white alliances-table">
+		</table>
+
+	</div>
+	<div class="tabContent " id="view-alliance">
+			<div >
+
+			<h1>Alliances</h1>
+			<section class="alliance-data">
+				<p>Edit Alliance name:</p>
+				<p class="setting alliance-name"></p>
+				<button class="button editalliancename">Submit name</button>
+
+			</section>
+		</div>
 		</div>
 		</div>
 		</div>
@@ -210,6 +229,24 @@
 			src="<c:url value="/resources/app/editResource/edit.button.switch.tab.config.js"/>" /></script>
 		<script
 			src="<c:url value="/resources/app/editResource/edit.switch.tab.config.js"/>" /></script>
+			<!-- Alliance dependencies -->
+			<script
+			src="<c:url value="/resources/app/editResource/alliance/commands/get.all.alliance.command.js"/>" /></script>
+		<script
+			src="<c:url value="/resources/app/editResource/alliance/services/get.all.alliance.service.js"/>" /></script>
+		<script
+			src="<c:url value="/resources/app/editResource/alliance/commands/alliance.command.js"/>" /></script>
+		<script
+			src="<c:url value="/resources/app/editResource/alliance/services/get.alliance.service.js"/>" /></script>
+
+					<script
+			src="<c:url value="/resources/app/editResource/alliance/commands/edit.alliance.command.js"/>" /></script>
+		<script
+			src="<c:url value="/resources/app/editResource/alliance/services/edit.alliance.service.js"/>" /></script>
+		<script
+			src="<c:url value="/resources/app/editResource/alliance/services/edit.alliance.name.service.js"/>" /></script>
+		<script
+			src="<c:url value="/resources/app/editResource/alliance/alliance.config.js"/>" /></script>
 
 </body>
 </html>

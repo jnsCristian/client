@@ -20,11 +20,6 @@ function MessageCreateCommand() {
 
 	})
 	
-	console.log(message);
 
-	/*
-	 * 
-	 * CreateMessageService(messages);
-	 */
 
 };

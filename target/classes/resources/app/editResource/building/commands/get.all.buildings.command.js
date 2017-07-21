@@ -1,6 +1,5 @@
 function BuildingsCommand () {
 	'use strict';
-	console.log("get all");
 	var buildings = atlantis.entity.buildings.buildingsDto;
 	var temp = '<tr><th>Name</th><th></th></tr>';
 	if(buildings.length){
