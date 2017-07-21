@@ -5,7 +5,6 @@ function ContructionCommand () {
 	
 	if(constructionResources.length){
 		for(var i=0 ; i < constructionResources.length; i++){
-			console.log(constructionResources[i]);
 			$('.resource-wrap [data-resourceId="' + constructionResources[i].id + '"]')
 				.find('.resource-quantity').text(constructionResources[i].quantity);
 			$('.resource-wrap [data-resourceId="' + constructionResources[i].id + '"]')
