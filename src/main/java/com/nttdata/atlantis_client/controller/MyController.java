@@ -57,6 +57,7 @@ public class MyController {
 			ModelAndView m = new ModelAndView("allUsers");
 			User user=userService.findByEmail(authentication.getName());
 			m.addObject("userId", user.getId());
+			m.addObject("role", user.getRole());
 			return m;
 		} else
 			return new ModelAndView("redirect:/");
@@ -69,6 +70,7 @@ public class MyController {
 			ModelAndView m = new ModelAndView("map");
 			User user=userService.findByEmail(authentication.getName());
 			m.addObject("userId", user.getId());
+			m.addObject("role", user.getRole());
 			return m;
 		} else
 			return new ModelAndView("redirect:/");
@@ -81,6 +83,7 @@ public class MyController {
 			ModelAndView m = new ModelAndView("user");
 			User user=userService.findByEmail(authentication.getName());
 			m.addObject("userId", user.getId());
+			m.addObject("role", user.getRole());
 			return m;
 		} else
 			return new ModelAndView("redirect:/");
@@ -103,6 +106,7 @@ public class MyController {
 			m.addObject("userId", user.getId());
 			System.out.println(id);
 			m.addObject("buildingId",id);
+			m.addObject("role", user.getRole());
 			return m;
 		} else
 			return new ModelAndView("redirect:/");
@@ -118,6 +122,7 @@ public class MyController {
 			m.addObject("userId", user.getId());
 			m.addObject("buildingId",id);
 			m.addObject("placeId", user.getPlaceId());
+			m.addObject("role", user.getRole());
 			return m;
 		} else
 			return new ModelAndView("redirect:/");
@@ -129,6 +134,7 @@ public class MyController {
 			ModelAndView m = new ModelAndView("admin");
 			User user=userService.findByEmail(authentication.getName());
 			m.addObject("userId", user.getId());
+			m.addObject("role", user.getRole());
 			return m;
 		} else
 			return new ModelAndView("redirect:/");
