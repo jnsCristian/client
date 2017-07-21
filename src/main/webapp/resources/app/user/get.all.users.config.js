@@ -3,6 +3,15 @@
 	if (atlantis.entity.userId) {
 		UsersSwitchTabCommand();
 		
+		atlantis.eventManger.addListener('atlantis.users.active.tab', function() {
+			GetUsersFromAtlantis();
+		});
+		
+		atlantis.eventManger.addListener('get.users.from.atlantis.success', function() {
+			GetAllUsersFromAtlantisCommand();
+		});
+		
+		
 		atlantis.eventManger.addListener('all.users.active.tab', function() {
 			GetAllUsersService();
 		});
