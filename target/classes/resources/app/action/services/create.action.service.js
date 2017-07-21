@@ -1,7 +1,7 @@
 function CreateActionService(params) {
 	'use strict';
 
-	params["idSource"]="24";
+	params["idSource"]=atlantis.entity.userId;
 	var test=JSON.stringify(params);
 	$.ajax({
 		url : atlantis.endpoints.actions ,
