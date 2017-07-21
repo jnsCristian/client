@@ -40,22 +40,17 @@
 			<div class="building-wrapper">
 				
 				<div class="barracks"><a   href="war-building?id=1" ><img class="barracks-image" src="resources/img/buildings/barracks.png"></a> </div> 
-				<div class="farm"><a href="building?id=2" ><img class="farm-image" src="resources/img/buildings/farm.png" ></a> </div>
+				<div class="planfactory"><a href="war-building?id=8" ><img class="planfactory-image" src="resources/img/buildings/planfactory.png"></a> </div>
 				<div class="tankfactory"><a href="war-building?id=7" ><img class="tankfactory-image" src="resources/img/buildings/tankfactory.png" ></a> </div> 		
-				<div class="ironmine"><a href="building?id=4" ><img class="ironmine-image" src="resources/img/buildings/ironmine.png" > </a></div>  
-				<div class="planfactory"><a href="war-building?id=8" ><img class="planfactory-image" src="resources/img/buildings/planfactory.png"></a> </div> 
-				<div class="stone"><a href="building?id=3" ><img class="stone-image" src="resources/img/buildings/stone.png" > </a></div>				
-				<div class="bank"><a  href="building?id=5" ><img class="bank-image" src="resources/img/buildings/bank.png" ></a> </div>	
-				<div class="forest"><a  href="building?id=6" ><img class="forest-image" src="resources/img/street/forest.png" > </a></div> 
+				<div class="farm"><a href="building?id=2" ><img class="farm-image" src="resources/img/buildings/farm.png" ></a> </div>
 				<div class="eoliana"><img class="eoliana-image" src="resources/img/street/eoliana.png" > </div> 
 				<div class="eoliana1"><img class="eoliana1-image" src="resources/img/street/eoliana.png" > </div> 
-				<div class="eoliana2"><img class="eoliana2-image" src="resources/img/street/eoliana.png" > </div> 
-				<div class="eoliana3"><img class="eoliana3-image" src="resources/img/street/eoliana.png" > </div> 
-				<div class="eoliana4"><img class="eoliana2-image" src="resources/img/street/eoliana.png" > </div> 
-				<div class="eoliana5"><img class="eoliana3-image" src="resources/img/street/eoliana.png" > </div> 
-	            <div class="forest1"><img class="forest1-image" src="resources/img/street/forest1.png" > </div> 
-	            <div class="forest2"><img class="forest2-image" src="resources/img/street/forest2.png" > </div> 
-	            <div class="forest3"><img class="forest3-image" src="resources/img/street/forest3.png" > </div> 
+				<div class="eoliana2"><img class="eoliana2-image" src="resources/img/street/eoliana.png" > </div>
+				<div class="bank"><a  href="building?id=5" ><img class="bank-image" src="resources/img/buildings/bank.png" ></a> </div>
+	            <div class="ironmine"><a href="building?id=4" ><img class="ironmine-image" src="resources/img/buildings/ironmine.png" > </a></div> 	
+	            <div class="forest3"><a  href="building?id=6" ><img class="forest3-image" src="resources/img/forest.png" > </a></div> 
+	             <div class="stone"><a href="building?id=3" ><img class="stone-image" src="resources/img/buildings/stone.png" > </a></div>
+	        	 
 			</div>
 		<jsp:include page="resources.jsp" />
 	</div>

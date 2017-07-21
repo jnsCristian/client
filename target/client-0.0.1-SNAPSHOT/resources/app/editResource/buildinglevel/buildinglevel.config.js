@@ -1,26 +1,18 @@
 (function () {
 	'use strict';
-
-	if (atlantis.entity.userId) {
-		GetBuildingsService();
-		 
-		atlantis.eventManger.addListener('get.all.buildings.success', function() {
-
-			BuildingsCommand(); 
+	if (atlantis.entity.userId) {	
+		EditBuildingLevelCommand();	
+		GetBuildingsLevelService();
+		atlantis.eventManger.addListener('get.all.buildingLevel.success', function() {
+			BuildingsLevelCommand(); 
 			
 		});
 		
-	//GetBuildingService();
-//	atlantis.eventManger.addListener('get.building.success', function() {
-		atlantis.eventManger.addListener('written.all.buildings', function() {
-		BuildingCommand();
-			
+		atlantis.eventManger.addListener('written.all.buildinglevel', function() {
+		BuildingLevelCommand();		
+		ButtonSwitchTab();
 	});
-
 		return;
 	}
-	
-	console.error('No buildingId found.');
-	
 	return;
 })();

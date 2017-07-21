@@ -2,23 +2,17 @@
 	'use strict';
 
 	if (atlantis.entity.userId) {
-		GetTroopsService();
-		 
+		EditTroopCommand();
+		GetTroopsService();		 
 		atlantis.eventManger.addListener('get.all.troops.success', function() {
-
-			TroopsCommand(); 
-			
+			TroopsCommand(); 			
 		});
 
 		atlantis.eventManger.addListener('written.all.troops', function() {
-		TroopCommand();
-			
+		TroopCommand();			
+		ButtonSwitchTab();
 	});
-
 		return;
 	}
-	
-	console.error('No troopId found.');
-	
 	return;
 })();

@@ -1,23 +1,12 @@
 function EditBuildingCommand () {
 	'use strict';
-	console.log("merge");
-	$(".editbuilding").click(function(event){
+	$(".editbuildingname").click(function(event) {
 		event.preventDefault();
-		
-		var building={
-				
-		};
-		
-		$(".building-data").each(function(){
-			
-			var elementName=$(this).find("input").attr("id"),
-			elementValue=$(this).find("input").val();
-			building[elementName]=elementValue||undefined;
-			
+		var building = {		};
+		building.id = $('.building-name').find('input').attr('data-buildingid');
+		building.name = $(".building-name").find('input').val();
+		building.description = $(".building-description").find('input').val();
 
-		});
-		
-		EditBuildingService(building);
-	})
-	
+		EditBuildingNameService(building);
+	});
 };

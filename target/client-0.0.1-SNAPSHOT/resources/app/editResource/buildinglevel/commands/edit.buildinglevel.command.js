@@ -1,23 +1,20 @@
-function EditBuildingCommand () {
+function EditBuildingLevelCommand () {
 	'use strict';
-	console.log("merge");
-	$(".editbuilding").click(function(event){
-		event.preventDefault();
-		
-		var building={
-				
-		};
-		
-		$(".building-data").each(function(){
-			
-			var elementName=$(this).find("input").attr("id"),
-			elementValue=$(this).find("input").val();
-			building[elementName]=elementValue||undefined;
-			
+	$(".editbuildinglevel").click(
+			function(event) {
+				event.preventDefault();
 
-		});
-		
-		EditBuildingService(building);
-	})
+				var buildinglevel = {
+				};
+				buildinglevel.levelId = $('.buildinglevel-name').find('input').attr('data-buildinglevelId');
+
+				$(".setting").each(
+						function() {var elementName = $(this).find("input").attr(
+									"data-buildinglevelId"), elementValue = $(this)
+									.find("input").val();
+							buildinglevel[elementName] = elementValue || undefined;});
+
+				EditBuildingLevelService(buildinglevel);
+			});
 	
 };

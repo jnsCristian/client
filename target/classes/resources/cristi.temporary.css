@@ -168,3 +168,30 @@ a {
 	margin-left:15%;
 	margin-top:3em;
 }
+@media only screen and (max-width: 320px) {
+.login-wrapper{
+	
+	display:flex;
+	flex-direction:column;
+	
+}
+.login{
+	margin-top:40px;
+	background: #fff;
+	width:150%;
+	border-radius: 25px;
+	display:block;
+}
+.register{
+	margin-top:40px;
+	background: #fff;
+	width:150%;
+	border-radius: 25px;
+}
+.register-button{
+	margin-left:45%;
+}
+.login-button{
+	margin-left:45%;
+}
+}

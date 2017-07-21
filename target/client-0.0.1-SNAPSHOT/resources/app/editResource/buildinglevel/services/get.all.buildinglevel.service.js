@@ -1,12 +1,11 @@
-function GetResourcesService() {
+function GetBuildingsLevelService() {
 	'use strict';
 	$.ajax({
-		url : atlantis.endpoints.resources,
+		url : atlantis.endpoints.levels,
 		type : "GET",
 		success : function(data, textStatus, request) {
-				atlantis.entity.resources = data;
-				atlantis.eventManger.fire('get.all.resource.success');
+				atlantis.entity.levels = data;
+				atlantis.eventManger.fire('get.all.buildingLevel.success');
 		}
-		
 	});
 };
