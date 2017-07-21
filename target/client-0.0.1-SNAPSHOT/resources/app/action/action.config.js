@@ -23,6 +23,15 @@
 		atlantis.eventManger.addListener('get.outgoing.actions.success', function() {
 			GetAllOutgoingActionsCommand();
 		});
+		
+		atlantis.eventManger.addListener('created.action', function() {
+			/*CreateActionCommand();*/
+			GetFirstActionService();
+			GetAllIncommingActionsService();
+			GetAllOutgoingActionsService();
+			GetTroopsService();
+			
+		});
 		return;
 	}
 })();

@@ -28,6 +28,9 @@ function CreateActionCommand () {
 		
 		console.log(troops);
 		CreateActionService(troops);
+		
+		
+		
 	})
 	
 };

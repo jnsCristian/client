@@ -2,7 +2,6 @@ package com.nttdata.atlantis_client.controller;
 
 import java.io.IOException;
 
-import javax.websocket.server.PathParam;
 import javax.ws.rs.QueryParam;
 
 import org.apache.http.ParseException;

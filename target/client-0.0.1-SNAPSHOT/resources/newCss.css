@@ -119,6 +119,7 @@
 .ironmine {
 	width: 33%;
 	position: relative;
+	height:20px;
 }
 
 .tankfactory {
@@ -129,6 +130,7 @@
 .bank {
 	width: 33%;
 	position: relative;
+	padding-left:150px;
 }
 
 .planfactory {
@@ -224,82 +226,63 @@
 }
 
 .eoliana {
-	width: 200px;
+		width: 100px;
 	height: 100px;
 	position: relative;
 }
 
 .eoliana1 {
-	width: 200px;
+	width: 100px;
 	height: 100px;
 	position: relative;
+	buttom: 200px;
+	right:20px;
 }
 
 .eoliana2 {
-	width: 200px;
+	width: 100px;
 	height: 100px;
 	position: relative;
 }
 
 .eoliana3 {
-	width: 200px;
+	width: 100px;
 	height: 100px;
 	position: relative;
 }
 
 .eoliana4 {
-	width: 200px;
+	width: 100px;
 	height: 100px;
 	position: relative;
 }
 
 .eoliana5 {
-	width: 200px;
+	width: 100px;
 	height: 100px;
 	position: relative;
 }
 
-.forest {
-	width: 200px;
-	height: 100px;
-	position: relative;
-	bottom: -1050px;
-	right: 0px;
-	height: 1000px;
-}
 
-.forest1 {
+.forest3 {
 	width: 200px;
 	height: 100px;
-	position: relative;
-	bottom: -1050px;
-	right: 0px;
-	height: 1000px;
-}
 
-.forest2 {
-	width: 200px;
-	height: 100px;
-	position: relative;
-	bottom: -1050px;
-	right: 0px;
-	height: 1000px;
+
+	right: 800px;
+	
 }
 
 .forest3 {
 	width: 200px;
 	height: 100px;
-	position: relative;
-	bottom: -1050px;
-	right: 0px;
+
+
+	right: 800px;
+	
 }
 
-.forest4 {
-	height: 1000px;
-	position: absolute;
-	bottom: -1050px;
-	right: 0px;
-}
+
 
 .myButton {
 	background-color: #97a7c4;
@@ -315,8 +298,6 @@
 	padding: 12px 37px;
 	text-decoration: none;
 	margin: 8px;
-	height: 50px;
-	weight: 30px;
 	outline: none;
 }
 
@@ -533,6 +514,7 @@ html {
 .bank-image {
 	height: 270px;
 	width: 200px;
+	left: -1000px;
 }
 
 .planfactory-image {
@@ -541,7 +523,7 @@ html {
 }
 
 .stone-image {
-	height: 80px;
+	height: 130px;
 	width: 150px;
 }
 

@@ -1,26 +1,16 @@
 (function () {
 	'use strict';
-
 	if (atlantis.entity.userId) {
-		GetBuildingsService();
-		 
+		EditBuildingCommand();
+		GetBuildingsService();		 
 		atlantis.eventManger.addListener('get.all.buildings.success', function() {
-
-			BuildingsCommand(); 
-			
+			BuildingsCommand(); 	
 		});
-		
-	//GetBuildingService();
-//	atlantis.eventManger.addListener('get.building.success', function() {
 		atlantis.eventManger.addListener('written.all.buildings', function() {
 		BuildingCommand();
-			
+		ButtonSwitchTab();
 	});
-
 		return;
-	}
-	
-	console.error('No buildingId found.');
-	
+	}	
 	return;
 })();

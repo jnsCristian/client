@@ -57,4 +57,13 @@ border:none;
 width:35%;
 }
 
+.tabContent {
+	display: none;
+	padding: 0.5em;
+	background-color: #f1f0ee;
+	
+}
+.tab-active{
+	display: block;
+}
 

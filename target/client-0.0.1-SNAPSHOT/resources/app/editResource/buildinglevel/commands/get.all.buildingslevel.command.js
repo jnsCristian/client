@@ -1,19 +1,15 @@
-function BuildingsCommand () {
+function BuildingsLevelCommand () {
 	'use strict';
-
-	var buildings = atlantis.entity.buildings.buildingsDto;
-	var temp = '<tr><th>Name</th><th></th></tr>';
-	if(buildings.length){
-		for (var i = 0; i < buildings.length; i++) {
-			temp = temp + '<tr ><td>' + buildings[i].buildingName
-					+ '</td><td>' + '<button class="button viewbuilding" data-buildingId='+buildings[i].buildingId +' >View</button>'
+	var buildingsLevel = atlantis.entity.levels.buildingsLevel;
+	var temp = '<tr><th>Level</th><th></th></tr>';
+	if(buildingsLevel.length){
+		for (var i = 0; i < buildingsLevel.length; i++) {
+			temp = temp + '<tr ><td>' + buildingsLevel[i].level
+					+ '</td><td>' + '<button data-tab="view-level" class="button viewbuildinglevel admin-switch-button" data-buildinglevelId='+buildingsLevel[i].id +' >View</button>'
 					+ '</td></tr>';
-
 		} 
 	}
-	
-	$('.buildings-table').html(temp); 
-	atlantis.eventManger.fire('written.all.buildings');
-	
+	$('.buildinglevel-table').html(temp); 
+	atlantis.eventManger.fire('written.all.buildinglevel');	
 };
 
