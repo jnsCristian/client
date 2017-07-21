@@ -2,8 +2,6 @@ package com.nttdata.atlantis_client.controller;
 
 import java.io.IOException;
 
-import javax.ws.rs.QueryParam;
-
 import org.apache.http.ParseException;
 import org.apache.http.client.ClientProtocolException;
 import org.json.JSONException;
@@ -18,23 +16,11 @@ import com.nttdata.atlantis_client.security.User;
 import com.nttdata.atlantis_client.security.UserService;
 
 @Controller
-public class MyController {
+public class NormalPagesController {
 	@Autowired
 	UserService userService;
 
-	@RequestMapping(method = RequestMethod.GET, path = "/")
-	public ModelAndView getLogin(Authentication authentication)
-			throws ClientProtocolException, ParseException, IOException, JSONException {
-		if ((authentication != null) && authentication.isAuthenticated()) {
-			ModelAndView m = new ModelAndView("home");
-			User user=userService.findByEmail(authentication.getName());
-			m.addObject("userId", user.getId());
-			m.addObject("placeId", user.getPlaceId());
-			m.addObject("role", user.getRole());
-			return m;
-		}
-		return new ModelAndView("login");
-	}
+
 
 	@RequestMapping(method = RequestMethod.GET, path = "/home")
 	public ModelAndView getHome(Authentication authentication)
@@ -81,57 +67,6 @@ public class MyController {
 			throws ClientProtocolException, ParseException, IOException, JSONException {
 		if ((authentication != null) && authentication.isAuthenticated()) {
 			ModelAndView m = new ModelAndView("user");
-			User user=userService.findByEmail(authentication.getName());
-			m.addObject("userId", user.getId());
-			m.addObject("role", user.getRole());
-			return m;
-		} else
-			return new ModelAndView("redirect:/");
-	}
-	
-	@RequestMapping(method = RequestMethod.GET, path = "/confirm")
-	public ModelAndView confirm(@QueryParam("code")String code,Authentication authentication)
-			throws ClientProtocolException, ParseException, IOException, JSONException {
-		ModelAndView m=new ModelAndView("confirm");
-		m.addObject("code", code);
-		return m;
-	}
-
-	@RequestMapping(method = RequestMethod.GET, value = "/building")
-	public ModelAndView getConstructionBuilding(@QueryParam("id")String id,Authentication authentication)
-			throws ClientProtocolException, ParseException, IOException, JSONException {
-		if ((authentication != null) && authentication.isAuthenticated()) {
-			ModelAndView m = new ModelAndView("constructionBuilding");
-			User user=userService.findByEmail(authentication.getName());
-			m.addObject("userId", user.getId());
-			System.out.println(id);
-			m.addObject("buildingId",id);
-			m.addObject("role", user.getRole());
-			return m;
-		} else
-			return new ModelAndView("redirect:/");
-	}
-	
-	@RequestMapping(method = RequestMethod.GET, value = "/war-building")
-	public ModelAndView getWarBuilding(@QueryParam("id")String id,Authentication authentication)
-			throws ClientProtocolException, ParseException, IOException, JSONException {
-		if ((authentication != null) && authentication.isAuthenticated()) {
-			System.out.println(id);
-			ModelAndView m = new ModelAndView("warBuilding");
-			User user=userService.findByEmail(authentication.getName());
-			m.addObject("userId", user.getId());
-			m.addObject("buildingId",id);
-			m.addObject("placeId", user.getPlaceId());
-			m.addObject("role", user.getRole());
-			return m;
-		} else
-			return new ModelAndView("redirect:/");
-	}
-	@RequestMapping(method = RequestMethod.GET, path = "/admin")
-	public ModelAndView getAdmin(Authentication authentication)
-			throws ClientProtocolException, ParseException, IOException, JSONException {
-		if ((authentication != null) && authentication.isAuthenticated()) {
-			ModelAndView m = new ModelAndView("admin");
 			User user=userService.findByEmail(authentication.getName());
 			m.addObject("userId", user.getId());
 			m.addObject("role", user.getRole());
