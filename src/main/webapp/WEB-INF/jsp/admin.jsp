@@ -54,8 +54,21 @@
 				<p class="setting building-id"></p>
 				<p class="setting building-name"></p>
 				<p class="setting building-description"></p>
-				<button class="button editbuildingname">Submit name</button>
-
+				<button class="button " onclick="document.getElementById('editbuildingname').style.display='block'">Submit name</button>
+							<div id="editbuildingname" class="w3-modal  ">
+							
+			<div class="w3-modal-content center">	
+			<div class="white pop-up-wrapper">
+			<div>
+			<h3>Are you sure?</h3>	
+			</div>
+			<div>
+			<button class="editbuildingname button green" onclick="document.getElementById('editbuildingname').style.display='none'">Yes</button>
+			<button class=" button red" onclick="document.getElementById('editbuildingname').style.display='none'">No</button>
+			</div>
+			</div>
+</div>
+</div>
 			</section>
 		</div>
 		</div>
@@ -70,15 +83,42 @@
 				<section class="troop-data">
 					<p>Edit troop settings:</p>
 					<p class="setting troop-name"></p>
-					<button class="button edittroopname">Submit name</button>
-
+					<button class="button " onclick="document.getElementById('edittroopname').style.display='block'">Submit name</button>
+												<div id="edittroopname" class="w3-modal  ">
+							
+			<div class="w3-modal-content center">	
+			<div class="white pop-up-wrapper">
+			<div>
+			<h3>Are you sure?</h3>	
+			</div>
+			<div>
+			<button class="edittroopname button green" onclick="document.getElementById('edittroopname').style.display='none'">Yes</button>
+			<button class=" button red" onclick="document.getElementById('edittroopname').style.display='none'">No</button>
+			</div>
+			</div>
+</div>
+</div>
 					<p>The cost is:</p>
 					<p class="setting troop-cost1"></p>
 					<p class="setting troop-cost2"></p>
 					<p class="setting troop-cost3"></p>
 					<p class="setting troop-cost4"></p>
 					<p class="setting troop-cost5"></p>
-					<button class="button edittroop">Submit changes</button>
+					<button class="button " onclick="document.getElementById('edittroop').style.display='block'">Submit changes</button>
+												<div id="edittroop" class="w3-modal  ">
+							
+			<div class="w3-modal-content center">	
+			<div class="white pop-up-wrapper">
+			<div>
+			<h3>Are you sure?</h3>	
+			</div>
+			<div>
+			<button class="edittroop button green" onclick="document.getElementById('edittroop').style.display='none'">Yes</button>
+			<button class=" button red" onclick="document.getElementById('edittroop').style.display='none'">No</button>
+			</div>
+			</div>
+</div>
+</div>
 				</section>
 			</div>
 		<div class="tabContent " id="levels">
@@ -101,7 +141,21 @@
 					<p class="setting buildinglevel-cost3"></p>
 					<p class="setting buildinglevel-cost4"></p>
 					<p class="setting buildinglevel-cost5"></p>
-					<button class="button editbuildinglevel">Submit changes</button>
+					<button class="button "  onclick="document.getElementById('editbuildinglevel').style.display='block'">Submit changes</button>
+					<div id="editbuildinglevel" class="w3-modal  " >
+							
+			<div class="w3-modal-content center">	
+			<div class="white pop-up-wrapper">
+			<div>
+			<h3>Are you sure?</h3>	
+			</div>
+			<div>
+			<button class="editbuildinglevel button green" onclick="document.getElementById('editbuildinglevel').style.display='none'">Yes</button>
+			<button class=" button red" onclick="document.getElementById('editbuildinglevel').style.display='none'">No</button>
+			</div>
+			</div>
+</div>
+</div>
 				</section>
 			</div>
 			<div class="tabContent " id="resources">
@@ -117,7 +171,21 @@
 				<p class="setting resource-id"></p>
 				<p class="setting resource-name"></p>
 				
-				<button class="button editresourcename">Submit name</button>
+				<button class="button " onclick="document.getElementById('editresourcename').style.display='block'">Submit name</button>
+				<div id="editresourcename" class="w3-modal  " >
+							
+			<div class="w3-modal-content center">	
+			<div class="white pop-up-wrapper">
+			<div>
+			<h3>Are you sure?</h3>	
+			</div>
+			<div>
+			<button class="editresourcename button green" onclick="document.getElementById('editresourcename').style.display='none'">Yes</button>
+			<button class=" button red" onclick="document.getElementById('editresourcename').style.display='none'">No</button>
+			</div>
+			</div>
+</div>
+</div>
 			</section>
 		</div>
 		
@@ -133,8 +201,21 @@
 			<section class="alliance-data">
 				<p>Edit Alliance name:</p>
 				<p class="setting alliance-name"></p>
-				<button class="button editalliancename">Submit name</button>
-
+				<button class="button "  onclick="document.getElementById('editalliancename').style.display='block'">Submit name</button>
+<div id="editalliancename" class="w3-modal  " >
+							
+			<div class="w3-modal-content center">	
+			<div class="white pop-up-wrapper">
+			<div>
+			<h3>Are you sure?</h3>	
+			</div>
+			<div>
+			<button class="editalliancename button green" onclick="document.getElementById('editalliancename').style.display='none'">Yes</button>
+			<button class=" button red" onclick="document.getElementById('editalliancename').style.display='none'">No</button>
+			</div>
+			</div>
+</div>
+</div>
 			</section>
 		</div>
 		</div>

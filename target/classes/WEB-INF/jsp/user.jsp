@@ -48,7 +48,21 @@
 		
 		 <p class="setting lastname" ></p>
 		 
-		 <button class="button edituser">Submit changes</button>
+		 <button class="button " onclick="document.getElementById('edituser').style.display='block'">Submit changes</button>
+		 												<div id="edituser" class="w3-modal  ">
+							
+			<div class="w3-modal-content center">	
+			<div class="white pop-up-wrapper">
+			<div>
+			<h3>Are you sure?</h3>	
+			</div>
+			<div>
+			<button class="edituser button green" onclick="document.getElementById('edituser').style.display='none'">Yes</button>
+			<button class=" button red" onclick="document.getElementById('edituser').style.display='none'">No</button>
+			</div>
+			</div>
+</div>
+</div>
       </section>
     </div>
 </div>
