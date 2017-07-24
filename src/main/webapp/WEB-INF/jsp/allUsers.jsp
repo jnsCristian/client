@@ -77,9 +77,74 @@
         
         <p class="setting userAlliance "></p>
 		 
-		 <button class="button sendmessage">Send message</button>
+		 <button onclick="document.getElementById('message').style.display='block'" class="button sendmessage">Send message</button>
+		 			<div id="message" class="w3-modal">
+			<div class="w3-modal-content">
+			 <span onclick="document.getElementById('message').style.display='none'" class="button white">&times;</span>
+	
+	<div class="tabContent message-tab-active" id="create">
+		<form class="create-message">
+			NickName : <input type="text" class="message-field message-nickname" data-type="reciever_id" /><br />
+			Subject : <input type="text" class="message-field message-subject"  data-type="subject"/><br />
+			Message : <input type="text" class="message-field message-message" data-type="message"/><br /> 
+						<input type="submit" class="button" value="Send" /> <br />
+		</form>
+
+	</div>
+			</div>
+			</div>
 		 
-		 <button class="button sendtroops">Send troops</button>
+		 <button onclick="document.getElementById('sendtroops').style.display='block'" class="button sendtroops">Send troops</button>
+		 			<div id="sendtroops" class="w3-modal">
+			<div class="w3-modal-content">
+			 <span onclick="document.getElementById('sendtroops').style.display='none'" class="button">&times;</span>
+  				<form class="action-form">
+			<div class="center nick">
+				<input id="nick" type="text" placeholder="Nickname">
+			</div>
+			<div class="action-form__troops">
+				<div class="form-element">
+					<img src="resources/img/troops/1.png" class="innerimg"> <br />
+					<input data-troopId="1" type="text" class="troops-input">
+				</div>
+				<div class="form-element">
+					<img src="resources/img/troops/2.png" class="innerimg"> <br />
+					<input data-troopId="2" type="text" class="troops-input">
+				</div>
+				<div class="form-element">
+					<img src="resources/img/troops/3.png" class="innerimg"> <br />
+					<input data-troopId="3" type="text" class="troops-input">
+				</div>
+				<div class="form-element">
+					<img src="resources/img/troops/4.png" class="innerimg"> <br />
+					<input data-troopId="9" type="text" class="troops-input">
+				</div>
+				<div class="form-element">
+					<img src="resources/img/troops/5.png" class="innerimg"> <br />
+					<input data-troopId="10" type="text" class="troops-input">
+				</div>
+				<div class="form-element">
+					<img src="resources/img/troops/6.png" class="innerimg"> <br />
+					<input data-troopId="11" type="text" class="troops-input">
+				</div>
+				<div class="form-element">
+					<img src="resources/img/troops/7.png" class="innerimg"> <br />
+					<input data-troopId="12" type="text" class="troops-input">
+				</div>
+				<div class="form-element">
+					<img src="resources/img/troops/8.png" class="innerimg"> <br />
+					<input data-troopId="13" type="text" class="troops-input">
+				</div>
+				<div class="form-element">
+					<img src="resources/img/troops/9.png" class="innerimg"> <br />
+					<input data-troopId="14" type="text" class="troops-input">
+				</div>
+				<input type="submit" value="Send" class="button">
+			</div>
+
+		</form>
+			</div>
+			</div>
       </section>
 		</div>
 		<div class="tabContent " id="search">
@@ -159,6 +224,29 @@
 		src="<c:url value="/resources/app/raport/commands/raport.view.command.js"/>" /></script>
 
 	<script src="<c:url value="/resources/app/raport/raport.config.js"/>" /></script>
+	
+		<!-- Action dependencies -->
+		<script
+		src="<c:url value="/resources/app/action/commands/action.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/action/services/create.action.service.js"/>" /></script>
+		<script
+		src="<c:url value="/resources/app/action/commands/show.first.action.command.js"/>" /></script>
+				<script
+		src="<c:url value="/resources/app/action/commands/show.incomming.actions.command.js"/>" /></script>
+						<script
+		src="<c:url value="/resources/app/action/commands/show.outgoing.actions.command.js"/>" /></script>
+				<script
+		src="<c:url value="/resources/app/action/commands/action.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/action/services/show.first.action.service.js"/>" /></script>
+		<script
+		src="<c:url value="/resources/app/action/services/show.incoming.actions.service.js"/>" /></script>
+				<script
+		src="<c:url value="/resources/app/action/services/show.outgoing.actions.service.js"/>" /></script>
+			<script
+		src="<c:url value="/resources/app/action/services/show.outgoing.actions.service.js"/>" /></script>
+	<script src="<c:url value="/resources/app/action/action.config.js"/>" /></script>	
 </div>
 </body>
 </html>

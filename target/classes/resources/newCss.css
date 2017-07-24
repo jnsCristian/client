@@ -566,3 +566,17 @@ html {
 
 }
 }
+/* @media  screen and (min-width: 1441px) {
+	.app__header {
+	display: flex;
+	justify-content: space-around;
+	background-color: gray;
+	align-items: center;
+	width:
+}
+.body-wrapper {
+	display: flex;
+	justify-content: space-between;
+	width:
+}
+	} */
