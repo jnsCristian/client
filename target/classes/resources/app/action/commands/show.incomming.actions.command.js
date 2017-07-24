@@ -12,7 +12,6 @@ function GetAllIncommingActionsCommand() {
 								temp = temp + '<tr><td>' + actions[i].initiator
 								 		+ '</td><td>' + actions[i].target
 										+ '</td><td>' + actions[i].type
-										console.log(actions[i].type);
 										+ '</td><td>' + actions[i].time
 										+ '</td></tr>';
 

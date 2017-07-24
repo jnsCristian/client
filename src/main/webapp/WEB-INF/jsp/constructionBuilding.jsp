@@ -37,7 +37,7 @@
 	<div class="body-wrapper">
 	<jsp:include page="troops.jsp" />
 	<div id="w" class="white">
-
+		
 		<div class="white"> 
 			<img src="resources/avatar.png">
 			<p class="setting buildingName building"></p>
@@ -59,10 +59,13 @@
 
 
 			<button class="button upgrade-building">Upgrade</button>
+			<a href="home" class="button transparent ">Exit building</a>
 		</section>
 	</div>
 	<jsp:include page="resources.jsp" />
 	</div>
+	
+
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 

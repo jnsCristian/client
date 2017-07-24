@@ -6,7 +6,7 @@ function TroopsTrainCommand() {
 		var unitId=$(this).attr('data-troop-id');
 		
 		var placeId=atlantis.entity.placeId;
-		var quantity=$('.troop'+unitId).find('input').val();
+		var quantity=$('.troop'+unitId).find('input').val()||0;
 		TroopsTrainService(unitId,placeId,quantity);
 	});
 	
