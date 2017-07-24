@@ -23,60 +23,7 @@
 </head>
 <!--  data-userId="3" -->
 <body data-code=<c:out value="${ code}" ></c:out>>
-	<header class="app__header ">
-		<!--APP header: logo-->
-		<div class="logo">
-		  <img src="resources/logo.png" class="logo">
-		</div>
-		
-		<!--APP header: main menu-->
-		<ul class="menu reset--list ">
-			<li><a href="home"class="myButton">Home</a></li>
-			<li><a href="users"class="myButton">Users</a></li>
-			<li><a href="map"class="myButton">Map</a></li>
-			<li><button class="myButton" id="myBtn">Reports</button>
-			<!-- The Modal -->
-			<div id="myModal" class="modal">
-
-  			<!-- Modal content -->
-  			<div class="modal-content">
-  			<span class="close">&times;</span>
-   			 <p>Some text in the Modal</p>
-  			</div>
-
-			</div>
-			</li>
-			<li><button class="myButton" id="myBtnMesg">Messages</button>
-			<!-- The Modal -->
-			<div id="myModalBtn" class="modal">
-
-  			<!-- Modal content -->
-  			<div class="modal-content">
-  			<span class="close">&times;</span>
-   			 <p>Some text in the Modal..</p>
-  			</div>
-
-			</div>
-			</li>
-			
-		</ul>
-
-		<!--APP header: profile-->
-	  <div class="w3-dropdown-hover">
-	    <button class="avatar-button"><img src="resources/avatar.png" class="avatar"></button>
-	    <div class="w3-dropdown-content ">
-	      <a href="profile" class=" button">Profile</a>
-	      <c:url value="/j_spring_security_logout" var="logoutUrl" />
-	      		<form action="${logoutUrl}" method="POST" >
-							<button class="button" type="submit"  >Logout</button>
-            <input type="hidden"
-                    name="${_csrf.parameterName}"
-                    value="${_csrf.token}" />
-</form>
-	    </div>
-  	  </div>
-  	  
-	</header>
+	  <jsp:include page="header.jsp" />
 	<div  class="alliances">
 		<div class="alliance1"></div>
 		<div class="alliance2"></div>

@@ -20,59 +20,13 @@
 <link href="<c:url value="/resources/common.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/newCss.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/cristi.temporary.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/register.modifier.css" />" rel="stylesheet">
 <meta name="csrf-token" content="${_csrf.token}">
 <meta name="_csrf_header" content="${_csrf.headerName}" />
 </head>
 <!--  data-userId="3" -->
 <body>
-	<header class="app__header ">
-		<!--APP header: logo-->
-		<div class="logo">
-		  <img src="resources/logo.png" class="logo">
-		</div>
-		
-		<!--APP header: main menu-->
-		<ul class="menu reset--list ">
-			<li><a href="home"class="myButton">Home</a></li>
-			<li><a href="users"class="myButton">Users</a></li>
-			<li><a href="map"class="myButton">Map</a></li>
-			<li><button class="myButton" id="myBtn">Reports</button>
-			<!-- The Modal -->
-			<div id="myModal" class="modal">
-
-  			<!-- Modal content -->
-  			<div class="modal-content">
-  			<span class="close">&times;</span>
-   			 <p>Some text in the Modal</p>
-  			</div>
-
-			</div>
-			</li>
-			<li><button class="myButton" id="myBtnMesg">Messages</button>
-			<!-- The Modal -->
-			<div id="myModalBtn" class="modal">
-
-  			<!-- Modal content -->
-  			<div class="modal-content">
-  			<span class="close">&times;</span>
-   			 <p>Some text in the Modal..</p>
-  			</div>
-
-			</div>
-			</li>
-			
-		</ul>
-
-		<!--APP header: profile-->
-	  <div class="w3-dropdown-hover">
-	    <button class="avatar-button"><img src="resources/avatar.png" class="avatar"></button>
-	    <div class="w3-dropdown-content ">
-	      <a href="profile" class=" button">Profile</a>
-	      <a href="#" class=" button">Link 2</a>
-	      <a href="#" class=" button">Link 3</a>
-	    </div>
-  	  </div>
-	</header>
+	 <jsp:include page="header.jsp" />
 	<div  class="login-wrapper">
 	<div class="login">
 	 <h1 >Login</h1> 
@@ -97,32 +51,50 @@
       <section  class="user-data">
         
         <p class="register-data setting user-email" >
-        	<span>Email</span>
+        	<span class="tooltip">
+        	<span >Email</span>
+        	<span class="tooltiptext__position tooltiptext ">The format is: something@domain.smth</span>
+        	</span>
         	<input id="email">
         </p>
         
         <p class="register-data setting nickname" >
-        	<span>Nickname</span>
+        <span class="tooltip">
+        	<span >Nickname</span>
+        	<span class="tooltiptext__position tooltiptext ">Between 5 and 10 alphabetical characters</span>
+        	</span>
         	<input id="nickName">
         </p>
         
         <p class="register-data setting firstname ">
-        	<span>First Name</span>
+        <span class="tooltip">
+        	<span >First Name</span>
+        	<span class="tooltiptext__position tooltiptext ">Between 5 and 10 alphabetical characters</span>
+        	</span>
         	<input id="firstName">
         </p>
 		
 		 <p class="register-data setting lastname" >
-        	<span>Last Name</span>
+		 <span class="tooltip">
+        	<span >Last Name</span>
+        	<span class="tooltiptext__position tooltiptext ">Between 5 and 10 alphabetical characters</span>
+        	</span>	
         	<input id="lastName">
         </p>
 		 
 		  <p class="setting password" >
-        	<span>Password</span>
+		   <span class="tooltip">
+        	<span >Password</span>
+        	<span class="tooltiptext__position tooltiptext ">Between 6 and 20 characters</span>
+        	</span>
         	<input type="password" id="password">
         </p>
 		  
 		   <p class="setting repassword" >
-        	<span>Repeat password</span>
+		    <span class="tooltip">
+        	<span >Repeat password</span>
+        	<span class="tooltiptext__position tooltiptext ">Between 6 and 20 characters</span>
+        	</span>
         	<input type="password" id="repassword">
         </p>
 		 

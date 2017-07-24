@@ -1,8 +1,12 @@
 function GetAllUsersService(param) {
 	'use strict';
-	if(param){
+	var url;
+	param && param.allianceId ? url = atlantis.endpoints.user+'?alliance='+param.allianceId : url = atlantis.endpoints.user;
+
+	
+	param && param.activeTab && ( atlantis.entity.activeTab = param.activeTab ); 
 		$.ajax({
-			url : atlantis.endpoints.user+'?alliance='+param ,
+			url : url,
 			type : "GET",
 
 			success : function(data, textStatus, request) {
@@ -11,19 +15,7 @@ function GetAllUsersService(param) {
 			}
 			
 		});
-	}
 	
-	else{
-	$.ajax({
-		url : atlantis.endpoints.user ,
-		type : "GET",
 
-		success : function(data, textStatus, request) {
-				atlantis.entity.allUsers = data;
-				atlantis.eventManger.fire('get.all.users.success');
-		}
-		
-	});
-	}
 };
 

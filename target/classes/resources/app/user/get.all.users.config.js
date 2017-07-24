@@ -4,10 +4,12 @@
 		PopulateButtonsService();
 		UsersSwitchTabCommand();
 		atlantis.eventManger.addListener('get.alliances.success', function() {
+			
 			PopulateButtonsCommand();
 		});
 		
 		atlantis.eventManger.addListener('atlantis.users.active.tab', function() {
+			atlantis.entity.activeTab='atlantis';
 			GetUsersFromAtlantis();
 		});
 		
@@ -17,31 +19,46 @@
 		
 		
 		atlantis.eventManger.addListener('all.users.active.tab', function() {
-			GetAllUsersService();
+			GetAllUsersService({
+				activeTab : "all"
+			});
 		});
 		
 		atlantis.eventManger.addListener('red.users.active.tab', function() {
-			GetAllUsersService("1");
+			GetAllUsersService({
+				activeTab : "red",
+				allianceId : "1"
+			});
 		});
 		
 		atlantis.eventManger.addListener('green.users.active.tab', function() {
-			GetAllUsersService("2");
+			GetAllUsersService({
+				activeTab : "green",
+				allianceId : "2"
+			});
 		});
 		
 		atlantis.eventManger.addListener('blue.users.active.tab', function() {
-			GetAllUsersService("3");
+			GetAllUsersService({
+				activeTab : "blue",
+				allianceId : "3"
+			});
 		});
 		
 		atlantis.eventManger.addListener('white.users.active.tab', function() {
-			GetAllUsersService("4");
+			GetAllUsersService({
+				activeTab : "white",
+				allianceId : "4"
+			});
 		});
 		
 		atlantis.eventManger.addListener('search.users.active.tab', function() {
+			atlantis.entity.activeTab='all';
 			SearchUsersService();
 		});
 		
 		
-		atlantis.eventManger.addListener('found.users.success', function() {
+		atlantis.eventManger.addListener('found.users.success', function() {			
 			GetAllUsersCommand();
 		});
 		
@@ -52,6 +69,10 @@
 		atlantis.eventManger.addListener('written.all.users', function() {
 			ViewUsersSwitchTabCommand();
 			OtherUserCommand();
+		});
+		
+		atlantis.eventManger.addListener('got.user.success', function() {
+			BackSwitchTabCommand();
 		});
 		return;
 	}

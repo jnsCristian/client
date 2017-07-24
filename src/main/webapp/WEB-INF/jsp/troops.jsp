@@ -85,7 +85,7 @@
 				<img src="resources/img/troops/genericTrooper.png" class="img">
 				<span class="tooltiptext"> 
 					<span data-troopId="1"><img src="resources/img/troops/1.png" class="innerimg"><br/><span class="army-quantity"></span><br/> </span>
-					<span data-troopId="2r"><img src="resources/img/troops/2.png" class="innerimg"><br/><span  class="army-quantity"></span><br/> </span>
+					<span data-troopId="2"><img src="resources/img/troops/2.png" class="innerimg"><br/><span  class="army-quantity"></span><br/> </span>
 					<span data-troopId="3"><img src="resources/img/troops/3.png" class="innerimg"><br/><span class="army-quantity"></span></span>
 				</span>
 			</li>

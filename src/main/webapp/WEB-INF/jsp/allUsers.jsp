@@ -69,6 +69,7 @@
 		</div>
 		<div class="tabContent " id="user">
       <div id="userphoto"><img src="resources/avatar.png" ></div>
+      <div class="exitbutton"></div>
       <h1>Profile</h1> 
       <section  class="user-data">
         
@@ -145,6 +146,7 @@
 		</form>
 			</div>
 			</div>
+			
       </section>
 		</div>
 		<div class="tabContent " id="search">
@@ -164,6 +166,7 @@
 	<script src="<c:url value="/resources/app/config/app.config.js"/>" /></script>
 	<script src="<c:url value="/resources/app/config/app.entity.js"/>" /></script>
 	<script src="<c:url value="/resources/app/config/app.endpoints.js"/>" /></script>
+	<script src="<c:url value="/resources/app/user/commands/back.switch.tab.command.js"/>" /></script>
 	<script src="<c:url value="/resources/app/user/commands/users.switch.tab.command.js"/>" /></script>
 	<script src="<c:url value="/resources/app/user/commands/view.users.switch.tab.command.js"/>" /></script>
 		<script src="<c:url value="/resources/app/user/commands/get.all.users.command.js"/>" /></script>
