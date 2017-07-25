@@ -9,8 +9,11 @@ function CreateActionService(params) {
 		data: test,
         contentType: "application/json",
 		success : function(data, textStatus, request) {
-			console.log('merge');
+			location.reload();
 			atlantis.eventManger.fire('created.action');
+		},
+		error: function(data, textStatus, request) {
+			$('.response').text("Not enough troops or invalid player");
 		}
 		
 	});

@@ -281,6 +281,7 @@
 html {
 	background: url('../resources/img/cr.png'),
 		url('../resources/img/images.jpg');
+		overflow-x:hidden;
 }
 
 #map-wrap {

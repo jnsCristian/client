@@ -46,7 +46,9 @@
 					<img src="resources/img/troops/9.png" class="innerimg"> <br />
 					<input data-troopId="14" type="text" class="troops-input">
 				</div>
+				<p class="response"></p>
 				<input type="submit" value="Send" class="button">
+				
 			</div>
 
 		</form>
