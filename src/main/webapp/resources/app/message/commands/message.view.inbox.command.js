@@ -5,14 +5,15 @@ function OpenMessageInboxCommand() {
 			event.preventDefault();
 			
 			OpenMessagesService($(this).attr('data-message-id'));
+			ReadMessagesService($(this).attr("data-message-id"));
 			atlantis.eventManger.addListener('get.specific.message.success', function() {
-			var temp= atlantis.entity.message,messageMarkup = "";
-			console.log(temp,'message');
-			messageMarkup = '<tr><td>'
+			var temp= atlantis.entity.message,messageMarkup ='<tr><th>Message</th></tr>';
+			messageMarkup += '<tr><td>'
 				+ temp.message
 				+ '</td>';
 			
-			$(' .testtable tbody').html(messageMarkup);
+			
+			$('.testtable').html(messageMarkup);
 			
 			
 			});

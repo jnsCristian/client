@@ -33,6 +33,7 @@
 	atlantis.eventManger.addListener('written.all.sent.messages', function() {
 		OpenMessageSentCommand();
 	});
+
 	MessageCreateCommand();
 
 

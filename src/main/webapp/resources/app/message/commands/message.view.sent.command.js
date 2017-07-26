@@ -5,14 +5,15 @@ function OpenMessageSentCommand() {
 		event.preventDefault();
 		
 		OpenMessagesSentService($(this).attr('data-message-id'));
+		ReadMessagesService($(this).attr("data-message-id"));
 		atlantis.eventManger.addListener('get.specific.message.success', function() {
-		var temp= atlantis.entity.mess,messageMarkup = "";
+		var temp= atlantis.entity.mess,messageMarkup ='<tr><th>Message</th></tr>';
 		
-		messageMarkup = '<tr><td>'
+		messageMarkup += '<tr><td>'
 			+ temp.message
 			+ '</td>';
 		
-		$(' .testtable tbody').html(messageMarkup);
+		$(' .testtable').html(messageMarkup);
 		
 		});
 		

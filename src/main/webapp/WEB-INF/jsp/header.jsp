@@ -13,7 +13,7 @@
 			<li><a href="home"class="myButton">Home</a></li>
 			<li><a href="users"class="myButton">Users</a></li>
 			<li><a href="map"class="myButton">Map</a></li>
-			<li><button onclick="document.getElementById('id05').style.display='block'" class="myButton report-button" >Reports</button>
+			<li><button onclick="document.getElementById('id05').style.display='block'" class="myButton report-button raport" >Reports</button>
 			<div id="id05" class="w3-modal">
 			<div class="w3-modal-content">
 			 <span onclick="document.getElementById('id05').style.display='none'" class="button white">&times;</span>
@@ -25,7 +25,7 @@
 </div>
 </div>
 			</li>
-			<li><button onclick="document.getElementById('id04').style.display='block'" class="myButton" >Messages</button>
+			<li><button onclick="document.getElementById('id04').style.display='block'" class="myButton message" >Messages</button>
 			<div id="id04" class="w3-modal">
 			<div class="w3-modal-content">
 			 <span onclick="document.getElementById('id04').style.display='none'" class="button white">&times;</span>
@@ -33,43 +33,21 @@
 	<button class="button white messsage-switch-tab" data-tab="sent">Sent</button>
 	<button class="button white messsage-switch-tab" data-tab="create">Create</button>
 
-	<div class="tabContent message-tab-active" id="inbox">
-
-
-		<table class="w3-table__full white testtable">
-			<thead>
-				<tr>
-					<th>Nick Name</th>
-					<th>Subject</th>
-					<th></th>
-				</tr>
-			</thead>
-			<tbody>
-			
-			</tbody>
-		</table>
+	<div class="tabContent" id="inbox">
+		 <table class="w3-table__full white testtable">
+		</table> 
 
 	</div>
 
 	<div class="tabContent" id="sent">
 
-		<table class="testtable">
-			<thead>
-				<tr>
-					<th>Nick Name</th>
-					<th>Subject</th>
-					<th></th>
-				</tr>
-			</thead>
-			<tbody>
-			
-			</tbody>
+		<table class="w3-table__full white testtable">
 		</table>
 	</div>
 	
 	<div class="tabContent" id="create">
 		<form class="create-message">
-			NickName : <input type="text" class="message-field message-nickname" data-type="reciever_id" /><br />
+			NickName : <input type="text" class="message-field message-nickname" data-type="nick_name" /><br />
 			Subject : <input type="text" class="message-field message-subject"  data-type="subject"/><br />
 			Message : <input type="text" class="message-field message-message" data-type="message"/><br /> 
 						<input type="submit" class="button" value="Send" /> <br />
@@ -77,15 +55,7 @@
 
 	</div>
 	<div class="tabContent" id="view">
-		<table class="testtable">
-			<thead>
-				<tr>
-					<th>Message</th>
-				</tr>
-			</thead>
-			<tbody>
-			
-			</tbody>
+		<table class="w3-table__full white testtable">
 		</table>
 
 	</div>

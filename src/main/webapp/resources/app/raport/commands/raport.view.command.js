@@ -5,6 +5,7 @@ function OpenRaportCommand() {
 			event.preventDefault();
 			
 			OpenRaportService($(this).attr('data-raport-id'));
+			ReadReportsService($(this).attr('data-raport-id'));
 			atlantis.eventManger.addListener('get.specific.raport.success', function() {
 			var temp= atlantis.entity.raport,raportMarkup = "";
 		
