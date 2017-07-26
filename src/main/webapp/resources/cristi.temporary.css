@@ -101,10 +101,7 @@ tr {
 	width:35%;
 	border-radius: 25px;
 }
-.register-button{
-	margin-left:45%;
-}
-.login-button{
+.add-margin{
 	margin-left:45%;
 }
 #userphoto {
@@ -116,7 +113,7 @@ tr {
 
 #userphoto img {
 	display: block;
-	padding: 2px;
+	margin:-10px;
 	background: #fff;
 	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
@@ -167,4 +164,44 @@ a {
 	background-color:white;
 	margin-left:15%;
 	margin-top:3em;
+}
+@media only screen and (max-width: 320px) {
+.login-wrapper{
+	
+	display:flex;
+	flex-direction:column;
+	
+}
+.login{
+	margin-top:40px;
+	background: #fff;
+	width:150%;
+	border-radius: 25px;
+	display:block;
+}
+.register{
+	margin-top:40px;
+	background: #fff;
+	width:150%;
+	border-radius: 25px;
+}
+.register-button{
+	margin-left:45%;
+}
+.login-button{
+	margin-left:45%;
+}
+}
+.red{
+	background-color:red;
+}
+.green{
+	background-color:green;
+}
+.pop-up-wrapper{
+	padding:30px;
+	border-radius:15%;
+}
+.add-padding{
+	padding-left:3%;
 }

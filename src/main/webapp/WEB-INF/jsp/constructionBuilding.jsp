@@ -26,11 +26,18 @@
 	rel="stylesheet">
 </head>
 <body  data-ID=<c:out value="${ userId}" ></c:out>  data-building-id=<c:out value="${ buildingId}"> </c:out> >
-	<jsp:include page="header.jsp" />
+		<c:choose>
+		 <c:when test="${role=='ROLE_ADMIN'}">
+		 <jsp:include page="headerAdmin.jsp" />
+   		 </c:when> 
+   		     <c:otherwise>
+   		     <jsp:include page="header.jsp" />
+    </c:otherwise>
+	</c:choose>
 	<div class="body-wrapper">
 	<jsp:include page="troops.jsp" />
 	<div id="w" class="white">
-
+		
 		<div class="white"> 
 			<img src="resources/avatar.png">
 			<p class="setting buildingName building"></p>
@@ -52,10 +59,13 @@
 
 
 			<button class="button upgrade-building">Upgrade</button>
+			<a href="home" class="button transparent ">Exit building</a>
 		</section>
 	</div>
 	<jsp:include page="resources.jsp" />
 	</div>
+	
+
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 

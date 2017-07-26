@@ -11,5 +11,5 @@ function MessageCreateCommand() {
 		});
 		CreateMessageService(message);
 	})
-	
+
 };

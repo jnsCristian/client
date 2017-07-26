@@ -5,9 +5,9 @@ function ContructionCommand () {
 	
 	if(constructionResources.length){
 		for(var i=0 ; i < constructionResources.length; i++){
-			$('.resource-wrap [data-resourceName="' + constructionResources[i].name + '"]')
+			$('.resource-wrap [data-resourceId="' + constructionResources[i].id + '"]')
 				.find('.resource-quantity').text(constructionResources[i].quantity);
-			$('.resource-wrap [data-resourceName="' + constructionResources[i].name + '"]')
+			$('.resource-wrap [data-resourceId="' + constructionResources[i].id + '"]')
 				.find('.resource-production').text(constructionResources[i].production + '/h' );
 		}
 	}

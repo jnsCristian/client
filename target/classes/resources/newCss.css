@@ -114,11 +114,15 @@
 .barracks {
 	width: 33%;
 	position: relative;
+	left: 20px;
+	buttom: -20px;
 }
 
 .ironmine {
 	width: 33%;
 	position: relative;
+	height: 20px;
+	left: 20px;
 }
 
 .tankfactory {
@@ -129,6 +133,7 @@
 .bank {
 	width: 33%;
 	position: relative;
+	padding-left: 150px;
 }
 
 .planfactory {
@@ -139,166 +144,37 @@
 .stone {
 	width: 33%;
 	position: relative;
+	bottom: -2px;
+	right: -200px;
 }
 
 .farm {
 	width: 33%;
 	position: relative;
-}
-
-.street {
-	width: 33%;
-	position: relative;
-}
-
-.building1 {
-	width: 100px;
-	height: 100px;
-	position: absolute;
-	bottom: -200px;
-	right: -500px;
-}
-
-.building8 {
-	width: 100px;
-	height: 100px;
-	position: absolute;
-	bottom: 250px;
-	right: -450px;
-}
-
-.building3 {
-	width: 200px;
-	height: 100px;
-	position: absolute;
-	bottom: 80px;;
-	left: -150px;
-}
-
-.building4 {
-	width: 80px;
-	height: 80px;
-	position: absolute;
-	bottom: 300px;
-	right: -250px;
-}
-
-.building5 {
-	width: 100px;
-	height: 100px;
-	position: absolute;
-	bottom: -200px;
-	right: +660px;
-}
-
-.building6 {
-	width: 100px;
-	height: 100px;
-	position: absolute;
-	bottom: 320px;
-	left: -300px;
-}
-
-.building7 {
-	width: 100px;
-	height: 100px;
-	position: absolute;
-	bottom: 0px;
-	left: -200px;
-}
-
-.building2 {
-	position: absolute;
-	width: 200px;
-	height: 1000px;
-	bottom: -600px;
-	right: +450px;
-}
-
-.street {
-	width: 100px;
-	height: 100px;
-	position: absolute;
-	bottom: -100px;
-	right: 500px;
+	left: 20px;
 }
 
 .eoliana {
-	width: 200px;
+	width: 100px;
 	height: 100px;
 	position: relative;
 }
 
 .eoliana1 {
-	width: 200px;
+	width: 100px;
 	height: 100px;
 	position: relative;
 }
 
 .eoliana2 {
-	width: 200px;
+	width: 100px;
 	height: 100px;
 	position: relative;
-}
-
-.eoliana3 {
-	width: 200px;
-	height: 100px;
-	position: relative;
-}
-
-.eoliana4 {
-	width: 200px;
-	height: 100px;
-	position: relative;
-}
-
-.eoliana5 {
-	width: 200px;
-	height: 100px;
-	position: relative;
-}
-
-.forest {
-	width: 200px;
-	height: 100px;
-	position: relative;
-	bottom: -1050px;
-	right: 0px;
-	height: 1000px;
-}
-
-.forest1 {
-	width: 200px;
-	height: 100px;
-	position: relative;
-	bottom: -1050px;
-	right: 0px;
-	height: 1000px;
-}
-
-.forest2 {
-	width: 200px;
-	height: 100px;
-	position: relative;
-	bottom: -1050px;
-	right: 0px;
-	height: 1000px;
 }
 
 .forest3 {
-	width: 200px;
-	height: 100px;
-	position: relative;
-	bottom: -1050px;
-	right: 0px;
-}
-
-.forest4 {
-	height: 1000px;
-	position: absolute;
-	bottom: -1050px;
-	right: 0px;
+	width: 30%;
+	height: 300px;
 }
 
 .myButton {
@@ -330,16 +206,6 @@
 	background: -moz-linear-gradient(top, #a1aebd 5%, #97a7c4 100%);
 }
 
-.forest-image {
-	height: 100px;
-	width: 100px;
-}
-
-.street-image {
-	height: 100px;
-	width: 100px;
-}
-
 .eoliana-image {
 	height: 200px;
 	width: 300px;
@@ -351,11 +217,6 @@
 }
 
 .eoliana2-image {
-	height: 200px;
-	width: 300px;
-}
-
-.eoliana3-image {
 	height: 200px;
 	width: 300px;
 }
@@ -383,7 +244,9 @@
 	opacity: 0;
 	transition: opacity 1s;
 }
-
+.tooltip .tooltiptext__position{
+	position: static;
+}
 .tooltip:hover .tooltiptext {
 	visibility: visible;
 	opacity: 1;
@@ -418,6 +281,7 @@
 html {
 	background: url('../resources/img/cr.png'),
 		url('../resources/img/images.jpg');
+		overflow-x:hidden;
 }
 
 #map-wrap {
@@ -445,7 +309,7 @@ html {
 	position: relative;
 	padding: 0;
 	outline: 0;
-	width: 800px
+	width: 800px;
 }
 /* The Modal (background) */
 .modal {
@@ -487,11 +351,6 @@ html {
 	cursor: pointer;
 }
 
-.building-image1 {
-	height: 180px;
-	width: 300px;
-}
-
 .close:hover, .close:focus {
 	color: #000;
 	text-decoration: none;
@@ -508,22 +367,7 @@ html {
 	width: 300px;
 }
 
-.building-image4 {
-	height: 70px;
-	width: 150px;
-}
-
-.building-image5 {
-	height: 200px;
-	width: 300px;
-}
-
 .tankfactory-image {
-	height: 200px;
-	width: 300px;
-}
-
-.building-image6 {
 	height: 200px;
 	width: 300px;
 }
@@ -531,6 +375,7 @@ html {
 .bank-image {
 	height: 270px;
 	width: 200px;
+	left: -1000px;
 }
 
 .planfactory-image {
@@ -539,7 +384,7 @@ html {
 }
 
 .stone-image {
-	height: 80px;
+	height: 130px;
 	width: 150px;
 }
 
@@ -548,68 +393,200 @@ html {
 	width: 200px;
 }
 
-.forest-image {
-	height: 100px;
-	width: 100px;
-}
-
-.forest1-image {
-	height: 100px;
-	width: 100px;
-}
-
-.forest2-image {
-	height: 100px;
-	width: 100px;
-}
-
 .forest3-image {
-	height: 100px;
-	width: 100px;
+	height: 210px;
+	width: 500px;
 }
 
 @media only screen and (max-width: 900px) {
-	.building-image1 {
-		height: 50px;
-		width: 55px;
-	}
-	.building-image2 {
-		height: 30px;
-		width: 30px;
-	}
-	.building-image3 {
-		height: 80px;
-		width: 80px;
-	}
-	.building-image4 {
-		height: 80px;
-		width: 80px;
-	}
-	.building-image5 {
-		height: 80px;
-		width: 80px;
-	}
-	.building-image6 {
-		height: 80px;
-		width: 80px;
-	}
-	.building-image7 {
-		height: 80px;
-		width: 80px;
-	}
-	.building-image8 {
-		height: 80px;
-		width: 80px;
-	}
-	.street-image {
-		height: 80px;
-		width: 80px;
-	}
 	.eoliana-image {
 		height: 30px;
 		width: 30px;
 	}
+	.barracks-image {
+		height: 30px;
+		width: 30px;
+	}
+	.ironmine-image {
+		height: 30px;
+		width: 30px;
+	}
+	.tankfactory-image {
+		height: 30px;
+		width: 30px;
+	}
+	.bank-image {
+		height: 30px;
+		width: 30px;
+	}
+	.planfactory-image {
+		height: 30px;
+		width: 30px;
+	}
+	.stone-image {
+		height: 30px;
+		width: 30px;
+	}
+	.farm-image {
+		height: 30px;
+		width: 30px;
+	}
+	.forest3-image {
+		height: 30px;
+		width: 30px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.myButton {
+	background-color: #97a7c4;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #9da3b8;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 15px;
+	padding: 10px 27px;
+	text-decoration: none;
+	margin: 8px;
+	outline: none;
+}
+
+	.barracks-image {
+		height: 100px;
+		width: 100px;
+	}
+	.ironmine-image {
+		height: 100px;
+		width: 100px;
+	}
+
+	.tankfactory-image {
+		height: 100px;
+		width: 100px;
+	}
+	.bank-image {
+		height: 100px;
+		width: 100px;
+	}
+	.planfactory-image {
+		height: 100px;
+		width: 100px;
+	}
+	.stone-image {
+		height: 100px;
+		width: 100px;
+	}
+	.farm-image {
+		height: 100px;
+		width: 100px;
+		buttom: -500px;
+	}
+	.forest3-image {
+		height: 100px;
+		width: 300px;
+	}
+		.app__header {
+	display: flex;
+	justify-content:space-around;
+	background-color: gray;
+	align-items: center;
+	width:900px;
+}
+.body-wrapper {
+	display: flex;
+	justify-content: space-between;
+	width:900px;
+}
+}
+
+@media only screen and (max-width: 320px) {
+	.menu {
+	display:flex;
+}
+
+	.w3-dropdown-content {
+	cursor: auto;
+	color: #000;
+	background-color: #fff;
+	display: none;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+}
+		.myButton {
+	background-color: #97a7c4;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #9da3b8;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 15px;
+	padding: 1px 7px;
+	text-decoration: none;
+	margin: 8px;
+	outline: none;
+}
+	
+	.barracks-image {
+		height: 50px;
+		width: 50px;
+	}
+	.ironmine-image {
+		height: 50px;
+		width: 50px;
+	}
+	.tankfactory-image {
+		height: 50px;
+		width: 50px;
+	}
+	.bank-image {
+		height: 50px;
+		width: 50px;
+	}
+	.planfactory-image {
+		height: 50px;
+		width: 50px;
+	}
+	.stone-image {
+		height: 30px;
+		width: 30px;
+	}
+<<<<<<< HEAD
 }
 .red{
 	background-color:red;
 }
+=======
+	.farm-image {
+		height: 50px;
+		width: 50px;
+	}
+	.forest3-image {
+		height: 50px;
+		width: 50px;
+	}
+
+}
+}
+/* @media  screen and (min-width: 1441px) {
+	.app__header {
+	display: flex;
+	justify-content: space-around;
+	background-color: gray;
+	align-items: center;
+	width:
+}
+.body-wrapper {
+	display: flex;
+	justify-content: space-between;
+	width:
+}
+	} */
+>>>>>>> 671c15d90fe544c42d8ee6c2fd624962c76c5d77

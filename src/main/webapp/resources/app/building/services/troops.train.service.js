@@ -11,9 +11,11 @@ function TroopsTrainService(unitId,placeId,quantity) {
 		},
 		
 		success : function(data, textStatus, request) {
-			alert('train');
-		
+			location.reload();
 			
+		},
+		error: function(data, textStatus, request) {
+			$('.response').text("Not enough resources");
 		}
 	});
 

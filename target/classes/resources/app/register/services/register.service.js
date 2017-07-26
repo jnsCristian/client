@@ -15,7 +15,12 @@ function RegisterService(params) {
 		},
 		success : function(data, textStatus, request) {
 			atlantis.eventManger.fire('registered.user');
+			location.reload();
+		},
+		error: function(data, textStatus, request) {
+			$('.response').text("Failure");
 		}
+		
 		
 	});
 	

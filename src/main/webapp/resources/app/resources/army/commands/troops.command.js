@@ -4,7 +4,7 @@ function TroopsCommand () {
 	
 	if(army.length){
 		for(var i=0 ; i < army.length; i++){
-			$('.resource-item [data-resourceName="' + army[i].name + '"]')
+			$('.resource-item [data-troopId="' + army[i].id + '"]')
 				.find('.army-quantity').text(army[i].quantity);
 		}
 	}

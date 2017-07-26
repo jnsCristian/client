@@ -25,7 +25,14 @@
 </head>
 <!--  data-userId="3" -->
 <body data-ID=<c:out value="${ userId}" ></c:out>>
-<jsp:include page="header.jsp" />
+	<c:choose>
+		 <c:when test="${role=='ROLE_ADMIN'}">
+		 <jsp:include page="headerAdmin.jsp" />
+   		 </c:when> 
+   		     <c:otherwise>
+   		     <jsp:include page="header.jsp" />
+    </c:otherwise>
+	</c:choose>
 	<div class="body-wrapper">
 		
 	

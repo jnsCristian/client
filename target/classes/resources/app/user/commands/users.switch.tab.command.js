@@ -6,7 +6,6 @@ function UsersSwitchTabCommand() {
 		var tabTarget=$(this).attr("data-tab"),
 		tabToDisplay="#"+tabTarget;
 		$(".tabContent").removeClass("tab-active");
-		
 		$(tabToDisplay).addClass("tab-active");
 		
 

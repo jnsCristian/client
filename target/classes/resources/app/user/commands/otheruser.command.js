@@ -8,12 +8,16 @@ function OtherUserCommand () {
 		
 			$('.nickname').html('<span>Nickname </span> '+user.nickName);	
 			$('.userAlliance').html('<span>Alliance </span> '+user.alliance);	
-			
-			
+			$('.exitbutton').html('<button class="button exit" id="'+atlantis.entity.activeTab+'"data-tab="'+atlantis.entity.activeTab+'">Exit</button>');
+			atlantis.eventManger.fire('got.user.success');
 			if(user.avatar){
 				 $("#userphoto").html('<img src="'+user.avatar+'" >');
 			}
-		})
+			
+			
+		});
+		
 	});
+	
 };
 
