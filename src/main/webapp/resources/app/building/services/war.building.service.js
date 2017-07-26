@@ -10,7 +10,6 @@ function WarBuildingService(buildingId) {
 		},
 	success : function(data, textStatus, request) {
 			atlantis.entity.troop = data;
-			console.log(data);
 			atlantis.eventManger.fire('get.war.building.success');
 
 		}

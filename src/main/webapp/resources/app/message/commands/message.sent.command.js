@@ -23,7 +23,7 @@ function MessageSentCommand() {
 		}
 
 	} else {
-		messageMarkup = '<tr><td>'
+		messageMarkup += '<tr><td>'
 				+ message.recieverNickName
 				+ '</td><td>'
 				+ message.subject

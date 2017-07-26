@@ -558,12 +558,7 @@ html {
 		height: 30px;
 		width: 30px;
 	}
-<<<<<<< HEAD
-}
-.red{
-	background-color:red;
-}
-=======
+
 	.farm-image {
 		height: 50px;
 		width: 50px;
@@ -574,6 +569,8 @@ html {
 	}
 
 }
+.red{
+	background-color:red;
 }
 /* @media  screen and (min-width: 1441px) {
 	.app__header {
@@ -589,4 +586,3 @@ html {
 	width:
 }
 	} */
->>>>>>> 671c15d90fe544c42d8ee6c2fd624962c76c5d77

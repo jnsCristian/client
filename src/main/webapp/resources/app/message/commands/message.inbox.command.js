@@ -26,7 +26,7 @@ function MessageInboxCommand() {
 		}
 
 	} else {
-		messageInboxMarkup = '<tr><td>'
+		messageInboxMarkup += '<tr><td>'
 				+ message.recieverNickName
 				+ '</td><td>'
 				+ message.subject

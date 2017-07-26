@@ -19,7 +19,7 @@ function RaportCommand() {
 					+ raport[i].id + ' ">Open</button></td></tr>';
 		}
 	} else {
-		raportMarkup = '<tr><td>'
+		raportMarkup += '<tr><td>'
 			+ String(raport.message)
 			+ '</td><td><button class="button raport-delete" data-raport-id="'
 			+ raport.id + '">Delete</button><button class="button raport-view" data-raport-id="'
@@ -27,7 +27,6 @@ function RaportCommand() {
 
 	}
 	$('.testtable-r').html(raportMarkup);
-	console.log(raportMarkup);
 	atlantis.eventManger.fire('written.all.reports');
 
 };

@@ -9,7 +9,6 @@ function ConstructionBuildingService(params) {
 
 		success : function(data, textStatus, request) {
 			atlantis.entity.building = data;
-			console.log(data);
 			atlantis.eventManger.fire('get.construction.building.success');
 
 		}

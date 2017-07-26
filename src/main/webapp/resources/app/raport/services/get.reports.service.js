@@ -10,7 +10,6 @@ function GetReportsService(){
 		},
 		success : function(data, textStatus, request) {
 				var reportsETag;
-				console.log(data);
 				atlantis.entity.reportsETag = request
 						.getResponseHeader('userId');
 				atlantis.entity.reports = data;

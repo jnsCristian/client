@@ -1,6 +1,5 @@
 function OpenConstructionBuildingCommand() {
 	'use strict';
-	console.log(atlantis.entity.userId);
 	ConstructionBuildingService($('body').attr('data-building-id'));
 	
 	atlantis.eventManger.addListener('get.construction.building.success',function() {

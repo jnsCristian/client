@@ -5,7 +5,6 @@ function DeleteMessageSentCommand() {
 
 	
 	$(".message-sent-delete").on("click", function(event) {
-		console.log($(this));
 		event.preventDefault();
 		
 		$(this).parents('tr').remove();

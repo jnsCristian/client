@@ -2,7 +2,6 @@ function MessageSwitchTabCommand() {
 	"use strict";
 	
 	$(".messsage-switch-tab").on("click", function(event) { 
-		console.log($(this))
 		event.preventDefault();
 		var tabTarget=$(this).attr("data-tab"),
 		tabToDisplay="#"+tabTarget;
