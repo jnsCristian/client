@@ -3,7 +3,7 @@ function RegisterCommand () {
 
 	$(".register-button").click(function(event){
 		event.preventDefault();
-		
+		$(".y").attr('id', 'loader');
 		var user={
 				
 		};

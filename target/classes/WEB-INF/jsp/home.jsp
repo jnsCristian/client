@@ -23,6 +23,8 @@
 <link href="<c:url value="/resources/message.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/raport.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/constructionBuilding.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/loader.css" />"
+	rel="stylesheet">
 </head>
 <!--  data-userId="3" -->
 <body data-ID=<c:out value="${ userId}" ></c:out>  data-plId=<c:out value="${ placeId}" ></c:out>>

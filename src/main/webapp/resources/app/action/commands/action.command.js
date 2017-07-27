@@ -3,7 +3,7 @@ function CreateActionCommand () {
 
 	$(".action-form").on("submit",function(event){
 		event.preventDefault();
-		
+		$(".x").attr('id', 'loader');
 		var troops={
 				
 		};
@@ -19,7 +19,6 @@ function CreateActionCommand () {
 		
 		troops.nickName=$('.nick').find('input').val();
 		
-		console.log(troops);
 		CreateActionService(troops);
 		
 		

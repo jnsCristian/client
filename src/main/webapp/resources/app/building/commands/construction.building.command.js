@@ -25,7 +25,7 @@ function OpenConstructionBuildingCommand() {
 		$('.productionResource').html('<span>Production resource </span> <input id="productionResource" value="'+ building.productionResource+ '" readonly></input>');
 		
 	
-		
+		atlantis.eventManger.fire('written.construction.building');
 	});
 };  
 

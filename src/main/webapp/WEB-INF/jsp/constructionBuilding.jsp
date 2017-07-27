@@ -24,6 +24,8 @@
 <link href="<c:url value="/resources/raport.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/constructionBuilding.css" />"
 	rel="stylesheet">
+<link href="<c:url value="/resources/loader.css" />"
+	rel="stylesheet">
 </head>
 <body  data-ID=<c:out value="${ userId}" ></c:out>  data-building-id=<c:out value="${ buildingId}"> </c:out> >
 		<c:choose>
@@ -36,6 +38,7 @@
 	</c:choose>
 	<div class="body-wrapper">
 	<jsp:include page="troops.jsp" />
+	<div id="loader"></div>
 	<div id="w" class="white">
 		
 		<div class="white"> 

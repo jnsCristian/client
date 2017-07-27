@@ -20,6 +20,8 @@
 <link href="<c:url value="/resources/common.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/newCss.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/cristi.temporary.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/loader.css" />"
+	rel="stylesheet">
 <%-- <link href="<c:url value="/resources/register.modifier.css" />" rel="stylesheet"> --%>
 <meta name="csrf-token" content="${_csrf.token}">
 <meta name="_csrf_header" content="${_csrf.headerName}" />
@@ -46,7 +48,8 @@
 	</form>
 	</section>
 	</div>
-            <div  class="register">
+	<div id="" class="y"></div>
+          <div id="register" class="register">
       <h1 class="add-margin">Register</h1> 
       <section  class="user-data">
         

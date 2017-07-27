@@ -76,6 +76,13 @@ html {
 	background: url('../resources/img/cr.png'),
 		url('../resources/img/images.jpg');
 }
+.block{
+	display: block;
+}
+.none{
+	display: none;
+}
+
 
 
 

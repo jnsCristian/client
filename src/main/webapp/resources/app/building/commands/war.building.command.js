@@ -42,9 +42,6 @@ function OpenWarBuildingCommand() {
 		$('.troops').html(troopMarkup);
 		atlantis.eventManger.fire('written.all.troops');
 		});
+	
 };
 
-
-
-/*ConstructionBuildingService($('body').attr('data-building-id'));
-WarBuildingService($('body').attr('data-building-id'),1);*/

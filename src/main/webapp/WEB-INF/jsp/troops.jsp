@@ -3,7 +3,8 @@
 				<li class="resource-item">
 					<button onclick="document.getElementById('id03').style.display='block'" class="transparent "><img src="resources/img/attack.png" class="img"></button><br/>
 			<div id="id03" class="w3-modal">
-			<div class="w3-modal-content">
+			<div id="" class="x"></div>
+			<div id="actions" class="w3-modal-content">
 			 <span onclick="document.getElementById('id03').style.display='none'" class="button">&times;</span>
   				<form class="action-form">
 			<div class="center nick">

@@ -18,7 +18,9 @@ function RegisterService(params) {
 			location.reload();
 		},
 		error: function(data, textStatus, request) {
+			atlantis.eventManger.fire('error.register');
 			$('.response').text("Failure");
+			
 		}
 		
 		
