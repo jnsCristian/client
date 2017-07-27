@@ -29,6 +29,9 @@
 	});
 	atlantis.eventManger.addListener('written.all.inbox.messages', function() {
 		OpenMessageInboxCommand();
+		if(atlantis.entity.messages.messageDto.isRead){
+			 $(".open").addClass("bold");
+		}
 	});
 	atlantis.eventManger.addListener('written.all.sent.messages', function() {
 		OpenMessageSentCommand();

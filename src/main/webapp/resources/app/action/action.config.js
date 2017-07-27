@@ -34,6 +34,11 @@
 			document.getElementById("actions").style.display = "block";
 			
 		});
+		atlantis.eventManger.addListener('error.action', function() {
+			document.getElementById("loader").style.display = "none";
+			document.getElementById("actions").style.display = "block";
+			
+		});
 		return;
 	}
 })();

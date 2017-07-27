@@ -11,19 +11,34 @@ function RaportCommand() {
 		
 	} else if (raport.length) {
 		for (var i = 0; i < raport.length; i++) {
-			
-			raportMarkup += '<tr><td>'
+			if(!raport[i].isRead)
+				raportMarkup += '<tr><td class="bold">'
 					+ String(raport[i].message)
 					+ '</td><td><button class="button raport-delete" data-raport-id="'
 					+ raport[i].id + '">Delete</button><button class="button raport-view" data-raport-id="'
 					+ raport[i].id + ' ">Open</button></td></tr>';
+			else{
+				raportMarkup += '<tr><td>'
+					+ String(raport[i].message)
+					+ '</td><td><button class="button raport-delete" data-raport-id="'
+					+ raport[i].id + '">Delete</button><button class="button raport-view" data-raport-id="'
+					+ raport[i].id + ' ">Open</button></td></tr>';
+			}
 		}
 	} else {
-		raportMarkup += '<tr><td>'
+		if(!raport.isRead)
+			raportMarkup += '<tr><td class="bold">'
 			+ String(raport.message)
 			+ '</td><td><button class="button raport-delete" data-raport-id="'
 			+ raport.id + '">Delete</button><button class="button raport-view" data-raport-id="'
 			+ raport.id + '" >Open</button></td></tr>';
+		else{
+			raportMarkup += '<tr><td>'
+				+ String(raport.message)
+				+ '</td><td><button class="button raport-delete" data-raport-id="'
+				+ raport.id + '">Delete</button><button class="button raport-view" data-raport-id="'
+				+ raport.id + '" >Open</button></td></tr>';
+		}
 
 	}
 	$('.testtable-r').html(raportMarkup);

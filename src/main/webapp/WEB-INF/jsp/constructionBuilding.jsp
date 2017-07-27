@@ -42,7 +42,7 @@
 	<div id="w" class="white">
 		
 		<div class="white"> 
-			<img src="resources/avatar.png">
+			<img class="image" src="resources/img/buildingsInt/building${ buildingId}.jpg">
 			<p class="setting buildingName building"></p>
 		</div>
 

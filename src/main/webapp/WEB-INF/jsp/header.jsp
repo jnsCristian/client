@@ -16,7 +16,7 @@
 			<li><button onclick="document.getElementById('id05').style.display='block'" class="myButton report-button raport" >Reports</button>
 			<div id="id05" class="w3-modal">
 			<div class="w3-modal-content">
-			 <span onclick="document.getElementById('id05').style.display='none'" class="button white">&times;</span>
+			 <span onclick="document.getElementById('id05').style.display='none';location.reload()" class="button white">&times;</span>
 					
 		<table class="w3-table__full white testtable-r">
 
@@ -28,7 +28,7 @@
 			<li><button onclick="document.getElementById('id04').style.display='block'" class="myButton message" >Messages</button>
 			<div id="id04" class="w3-modal">
 			<div class="w3-modal-content">
-			 <span onclick="document.getElementById('id04').style.display='none'" class="button white">&times;</span>
+			 <span onclick="document.getElementById('id04').style.display='none';location.reload()" class="button white">&times;</span>
 				<button class="button white messsage-switch-tab" data-tab="inbox">Inbox</button>
 	<button class="button white messsage-switch-tab" data-tab="sent">Sent</button>
 	<button class="button white messsage-switch-tab" data-tab="create">Create</button>

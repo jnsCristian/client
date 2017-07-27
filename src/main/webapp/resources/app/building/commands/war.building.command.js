@@ -35,7 +35,7 @@ function OpenWarBuildingCommand() {
 		}else{
 			var cost=troops.troopsDto.cost;
 			troopMarkup += '<br><div class="troop'+ troops.troopsDto.id + '"><td>'+ String(troops.troopsDto.name)+ '  </td><td><input type="text" data-troop-id="'+ troops.troopsDto.id + '"><button class="button troops-train " data-troop-id="'+ troops.troopsDto.id + '">Train</button></td></div>'
-			for (var j = 0; j <cost.length; j++) {
+			for (var j = 0; j < cost.length; j++) {
 				troopMarkup += '<td>'+ String(cost[j].cost)+ '  </td><td>'+ String(cost[j].resourceName)+ '  </td>'
 			}
 		}
