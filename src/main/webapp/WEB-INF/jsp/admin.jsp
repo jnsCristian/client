@@ -201,6 +201,7 @@
 			<section class="alliance-data">
 				<p>Edit Alliance name:</p>
 				<p class="setting alliance-name"></p>
+				<p class="setting alliance-description"></p>
 				<button class="button "  onclick="document.getElementById('editalliancename').style.display='block'">Submit name</button>
 <div id="editalliancename" class="w3-modal  " >
 							

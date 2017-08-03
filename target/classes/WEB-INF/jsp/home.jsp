@@ -70,7 +70,7 @@
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<!-- Plugins -->
-	<script src="<c:url value="/resources/app/common/eventmanager.js"/>" /></script>
+	<script type="hidden" src="<c:url value="/resources/app/common/eventmanager.js"/>" /></script>
 	<script src="<c:url value="/resources/app/common/ajax.command.js"/>" /></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.9.1/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
