@@ -83,30 +83,35 @@ tr {
 	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 }
+
 .white {
 	background-color: white;
 }
-.login-wrapper{
-	
-	display:flex;
-	justify-content:space-around;
+
+.login-wrapper {
+	display: flex;
+	justify-content: space-around;
 }
-.login{
-	margin-top:40px;
+
+.login {
+	margin-top: 40px;
 	background: rgb(229, 234, 217);
-	width:35%;
+	width: 35%;
 	border-radius: 25px;
-	display:block;
+	display: block;
 }
-.register{
-	margin-top:40px;
+
+.register {
+	margin-top: 40px;
 	background: rgb(229, 234, 217);
-	width:35%;
+	width: 35%;
 	border-radius: 25px;
 }
-.add-margin{
-	margin-left:45%;
+
+.add-margin {
+	margin-left: 45%;
 }
+
 #userphoto {
 	display: block;
 	float: right;
@@ -116,7 +121,7 @@ tr {
 
 #userphoto img {
 	display: block;
-	margin:-10px;
+	margin: -10px;
 	background: #fff;
 	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
@@ -144,67 +149,77 @@ input {
 	width: 35%;
 }
 
-
-
 a {
 	text-decoration: none;
 }
+
 .tabContent {
 	display: none;
 	padding: 0.5em;
 	background-color: #f1f0ee;
-	
 }
-.tab-active{
+
+.tab-active {
 	display: block;
 }
-.alliances{
-	width:70%;
-	display:flex;
-	justify-content:space-around;
-	background-color:white;
-	margin-left:15%;
-	margin-top:3em;
+
+.alliances {
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
+	background-color: white;
+	margin-left: 15%;
+	margin-top: 3em;
 }
+
 @media only screen and (max-width: 320px) {
-.login-wrapper{
-	
-	display:flex;
-	flex-direction:column;
-	
-}
-.login{
-	margin-top:40px;
-	background: #fff;
-	width:150%;
-	border-radius: 25px;
-	display:block;
-}
-.register{
-	margin-top:40px;
-	background: #fff;
-	width:150%;
-	border-radius: 25px;
-}
-.register-button{
-	margin-left:45%;
-}
-.login-button{
-	margin-left:45%;
-}
-}
-.red{
-	background-color:rgba(254, 0, 0, 0.53);
-}
-.green{
-	background-color:green;
-}
-.pop-up-wrapper{
-	padding:30px;
-	border-radius:15%;
-}
-.add-padding{
-	padding-left:3%;
+	.login-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	.login {
+		margin-top: 40px;
+		background: #fff;
+		width: 150%;
+		border-radius: 25px;
+		display: block;
+	}
+	.register {
+		margin-top: 40px;
+		background: #fff;
+		width: 150%;
+		border-radius: 25px;
+	}
+	.register-button {
+		margin-left: 45%;
+	}
+	.login-button {
+		margin-left: 45%;
+	}
 }
 
+.red {
+	background-color: rgba(254, 0, 0, 0.53);
+}
 
+.green {
+	background-color: green;
+}
+
+.pop-up-wrapper {
+	padding: 30px;
+	border-radius: 15%;
+}
+
+.add-padding {
+	padding-left: 3%;
+}
+
+.black-color {
+	color: black;
+}
+
+.actions-modal-wrapper {
+	background-color: rgba(255, 255, 255, 0.68);
+	border-radius: 25px;
+}
