@@ -19,7 +19,7 @@ public class UserService {
 
 	public User findByEmail(String arg0) throws ClientProtocolException, IOException, ParseException, JSONException {
 		HttpClient httpclient = HttpClientBuilder.create().build();
-		HttpGet httpget = new HttpGet("http://10.224.15.195:9080/atlantis/users?email=" + arg0);
+		HttpGet httpget = new HttpGet("http://localhost:8085/atlantis/users?email=" + arg0);
 		httpget.setHeader("pass-key", "1234567890qwerty");
 		HttpResponse response = httpclient.execute(httpget);
 		HttpEntity resEntity = response.getEntity();
