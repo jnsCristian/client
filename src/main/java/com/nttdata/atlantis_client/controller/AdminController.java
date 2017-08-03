@@ -24,8 +24,11 @@ public class AdminController {
 	public ModelAndView getAdmin(Authentication authentication)
 			throws ClientProtocolException, ParseException, IOException, JSONException {
 		if ((authentication != null) && authentication.isAuthenticated()) {
-			ModelAndView m = new ModelAndView("admin");
 			User user=userService.findByEmail(authentication.getName());
+			ModelAndView m = new ModelAndView("admin");
+			if(!user.getRole().equals("ROLE_ADMIN")){
+				m.setViewName("home");
+			}
 			m.addObject("userId", user.getId());
 			m.addObject("role", user.getRole());
 			return m;
