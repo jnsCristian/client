@@ -57,14 +57,6 @@
 		<jsp:include page="resources.jsp" />
 	</div>
 	
-	<!--START app main
-	<footer class="app__footer">
-		
-			&copy; 2017 NttData Romania <br> Design by Atlantis | Atlantis
-			Portal
-		
-	</footer>
-	END app main content-->
 
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
