@@ -9,6 +9,8 @@
 <meta http-equiv="Content-Type"
 	content="text/html; text/html;charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="csrf-token" content="${_csrf.token}">
+<meta name="_csrf_header" content="${_csrf.headerName}" />
 <!--Load the common stuff first-->
 <link
 	href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
@@ -47,10 +49,11 @@
         <p class="setting firstname "></p>
 		
 		 <p class="setting lastname" ></p>
+
 		 
 		 <button class="button " onclick="document.getElementById('edituser').style.display='block'">Submit changes</button>
 		 												<div id="edituser" class="w3-modal  ">
-							
+									
 			<div class="w3-modal-content center">	
 			<div class="white pop-up-wrapper">
 			<div>
@@ -62,7 +65,17 @@
 			</div>
 			</div>
 </div>
+
 </div>
+		 <form method="POST" action="upload?${_csrf.parameterName}=${_csrf.token}&&id=${ userId}" enctype="multipart/form-data">
+			<input type="file" name="file" id="file" class="button"></input>
+			<input type="submit" value="Submit" class="button" />
+			<input
+			type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+	</form>
+	
+<input
+			type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
       </section>
     </div>
 </div>
