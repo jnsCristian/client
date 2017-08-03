@@ -17,7 +17,7 @@
 			<div id="id05" class="w3-modal">
 			<div class="w3-modal-content">
 			 <span onclick="document.getElementById('id05').style.display='none';location.reload()" class="button white">&times;</span>
-					
+					<button class="button white report-button">Inbox</button>
 		<table class="w3-table__full white testtable-r">
 
 		</table>
@@ -25,7 +25,7 @@
 </div>
 </div>
 			</li>
-			<li><button onclick="document.getElementById('id04').style.display='block'" class="myButton message" >Messages</button>
+			<li><button onclick="document.getElementById('id04').style.display='block'" class="myButton message  messsage-switch-tab"  data-tab="inbox">Messages</button>
 			<div id="id04" class="w3-modal">
 			<div class="w3-modal-content">
 			 <span onclick="document.getElementById('id04').style.display='none';location.reload()" class="button white">&times;</span>
@@ -47,9 +47,9 @@
 	
 	<div class="tabContent" id="create">
 		<form class="create-message">
-			NickName : <input type="text" class="message-field message-nickname" data-type="nick_name" /><br />
-			Subject : <input type="text" class="message-field message-subject"  data-type="subject"/><br />
-			Message : <input type="text" class="message-field message-message" data-type="message"/><br /> 
+			<input placeholder="Nickname" type="text" class="message-field message-nickname input-border" data-type="nick_name" /><br/>
+			<input placeholder="Subject" type="text" class="message-field message-subject input-border"  data-type="subject"/><br/>
+			<textarea placeholder="Message" class="message-field message-message inp-res" data-type="message"></textarea><br/> 
 						<input type="submit" class="button" value="Send" /> <br />
 		</form>
 
