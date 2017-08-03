@@ -3,9 +3,11 @@ function EditAllianceCommand () {
 	$(".editalliancename").click(function(event) {
 		event.preventDefault();
 		var alliance = {		};
+		console.log(alliances);
 		alliance.id = $('.alliance-data').find('input').attr('data-allianceid');
 		alliance.name = $(".alliance-name").find('input').val();
-		console.log(alliance);
+		alliance.description = $(".alliance-description").find('input').val();
+		console.log(alliance.description);
 		EditAllianceNameService(alliance,alliance.id);
 	});
 };
