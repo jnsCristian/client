@@ -1,10 +1,10 @@
 (function () {
 	'use strict';
 	if (atlantis.entity.userId) {
-		GetUserService();
+		GetHeaderService();
 		
 		atlantis.eventManger.addListener('get.user.success', function() {
-			UserCommand();
+			HeaderCommand();
 			
 		});
 		

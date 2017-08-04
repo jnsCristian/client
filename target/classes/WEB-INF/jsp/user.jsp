@@ -92,12 +92,12 @@
 	<script src="<c:url value="/resources/app/config/app.entity.js"/>" /></script>
 	<script src="<c:url value="/resources/app/config/app.endpoints.js"/>" /></script>
 	
-<%-- 			<script
+			<script
 		src="<c:url value="/resources/app/header/services/get.user.service.js"/>" /></script>
 	<script
 		src="<c:url value="/resources/app/header/commands/user.command.js"/>" /></script>
 	<script
-		src="<c:url value="/resources/app/header/user.config.js"/>" /></script> --%>
+		src="<c:url value="/resources/app/header/user.config.js"/>" /></script>
 	
 	<!-- User dependencies -->
 	<script src="<c:url value="/resources/app/user/services/get.user.service.js"/>" /></script>

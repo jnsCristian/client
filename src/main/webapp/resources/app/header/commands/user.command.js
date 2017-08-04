@@ -1,4 +1,4 @@
-function UserCommand () {
+function HeaderCommand () {
 	'use strict';
 	var user = atlantis.entity.user;
 	if(user.avatar){
