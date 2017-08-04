@@ -85,9 +85,9 @@
 	
 	<div class="tabContent message-tab-active" id="create">
 		<form class="create-message">
-			NickName : <input type="text" class="message-field message-nickname" data-type="reciever_id" /><br />
-			Subject : <input type="text" class="message-field message-subject"  data-type="subject"/><br />
-			Message : <input type="text" class="message-field message-message" data-type="message"/><br /> 
+			<input placeholder="Nickname" type="text" class="message-field message-nickname input-border" data-type="nick_name" /><br/>
+			<input placeholder="Subject" type="text" class="message-field message-subject input-border"  data-type="subject"/><br/>
+			<textarea placeholder="Message" class="message-field message-message inp-res" data-type="message"></textarea><br/> 
 						<input type="submit" class="button" value="Send" /> <br />
 		</form>
 
@@ -97,8 +97,8 @@
 		 
 		 <button onclick="document.getElementById('sendtroops').style.display='block'" class="button sendtroops">Send troops</button>
 		 			<div id="sendtroops" class="w3-modal">
-			<div class="w3-modal-content">
-			 <span onclick="document.getElementById('sendtroops').style.display='none'" class="button">&times;</span>
+			<div class="w3-modal-content actions-modal-wrapper">
+			 <span onclick="document.getElementById('sendtroops').style.display='none'" class="button">Close</span>
   				<form class="action-form">
 			<div class="center nick">
 				<input id="nick" type="text" placeholder="Nickname">
