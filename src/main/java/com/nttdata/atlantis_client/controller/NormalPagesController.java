@@ -96,7 +96,7 @@ public class NormalPagesController {
 				File file = convert(files);
 
 				HttpClient httpclient = HttpClientBuilder.create().build();
-				HttpPut httpput = new HttpPut("http://localhost:8085/atlantis/users/" + id + "/avatar");
+				HttpPut httpput = new HttpPut("http://10.224.15.195:9080/atlantis/users/" + id + "/avatar");
 
 				FileBody fileBody = new FileBody(file);
 				MultipartEntityBuilder multipartEntityBuilder = MultipartEntityBuilder.create();
