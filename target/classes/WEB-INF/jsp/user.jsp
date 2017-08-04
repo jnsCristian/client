@@ -69,7 +69,7 @@
 </div>
 		 <form method="POST" action="upload?${_csrf.parameterName}=${_csrf.token}&&id=${ userId}" enctype="multipart/form-data">
 			<input type="file" name="file" id="file" class="button"></input>
-			<input type="submit" value="Submit" class="button" />
+			<input type="submit" value="Upload avatar" class="button" />
 			<input
 			type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 	</form>

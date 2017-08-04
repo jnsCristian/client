@@ -33,14 +33,12 @@ public class NormalPagesController {
 	@Autowired
 	UserService userService;
 
-
-
 	@RequestMapping(method = RequestMethod.GET, path = "/home")
 	public ModelAndView getHome(Authentication authentication)
 			throws ClientProtocolException, ParseException, IOException, JSONException {
 		if ((authentication != null) && authentication.isAuthenticated()) {
 			ModelAndView m = new ModelAndView("home");
-			User user=userService.findByEmail(authentication.getName());
+			User user = userService.findByEmail(authentication.getName());
 			m.addObject("userId", user.getId());
 			m.addObject("placeId", user.getPlaceId());
 			m.addObject("role", user.getRole());
@@ -54,7 +52,7 @@ public class NormalPagesController {
 			throws ClientProtocolException, ParseException, IOException, JSONException {
 		if ((authentication != null) && authentication.isAuthenticated()) {
 			ModelAndView m = new ModelAndView("allUsers");
-			User user=userService.findByEmail(authentication.getName());
+			User user = userService.findByEmail(authentication.getName());
 			m.addObject("userId", user.getId());
 			m.addObject("role", user.getRole());
 			return m;
@@ -67,7 +65,7 @@ public class NormalPagesController {
 			throws ClientProtocolException, ParseException, IOException, JSONException {
 		if ((authentication != null) && authentication.isAuthenticated()) {
 			ModelAndView m = new ModelAndView("map");
-			User user=userService.findByEmail(authentication.getName());
+			User user = userService.findByEmail(authentication.getName());
 			m.addObject("userId", user.getId());
 			m.addObject("role", user.getRole());
 			return m;
@@ -80,42 +78,47 @@ public class NormalPagesController {
 			throws ClientProtocolException, ParseException, IOException, JSONException {
 		if ((authentication != null) && authentication.isAuthenticated()) {
 			ModelAndView m = new ModelAndView("user");
-			User user=userService.findByEmail(authentication.getName());
+			User user = userService.findByEmail(authentication.getName());
 			m.addObject("userId", user.getId());
 			m.addObject("role", user.getRole());
 			return m;
 		} else
 			return new ModelAndView("redirect:/");
 	}
+
 	@RequestMapping(method = RequestMethod.POST, path = "/upload")
-	public ModelAndView addAvatar(Authentication authentication,@RequestParam(name="file",required=true)MultipartFile  files,
-			@QueryParam("id")String id) throws IOException {
-		if(files!= null){
-			
-		File file = convert(files);
-		
-		HttpClient httpclient = HttpClientBuilder.create().build();
-		HttpPut httpput = new HttpPut("http://localhost:8085/atlantis/users/"+id+"/avatar");
-		
-		FileBody fileBody = new FileBody(file);
-		MultipartEntityBuilder multipartEntityBuilder = MultipartEntityBuilder.create();
-		multipartEntityBuilder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
-		multipartEntityBuilder.addPart("file", fileBody);
-		HttpEntity httpEntity = multipartEntityBuilder.build();
-		httpput.setEntity(httpEntity);
-		httpclient.execute(httpput);
+	public ModelAndView addAvatar(Authentication authentication,
+			@RequestParam(name = "file", required = true) MultipartFile files, @QueryParam("id") String id)
+			throws IOException {
+		try {
+			if (files != null) {
+
+				File file = convert(files);
+
+				HttpClient httpclient = HttpClientBuilder.create().build();
+				HttpPut httpput = new HttpPut("http://localhost:8085/atlantis/users/" + id + "/avatar");
+
+				FileBody fileBody = new FileBody(file);
+				MultipartEntityBuilder multipartEntityBuilder = MultipartEntityBuilder.create();
+				multipartEntityBuilder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
+				multipartEntityBuilder.addPart("file", fileBody);
+				HttpEntity httpEntity = multipartEntityBuilder.build();
+				httpput.setEntity(httpEntity);
+				httpclient.execute(httpput);
+			}
+
+			return new ModelAndView("redirect:/profile");
+		} catch (Exception e) {
+			throw new IOException();
 		}
-		
-		return new ModelAndView("redirect:/profile");
 	}
 
-	public File convert(MultipartFile file) throws IOException
-	{    
-	    File convFile = new File(file.getOriginalFilename());
-	    convFile.createNewFile(); 
-	    FileOutputStream fos = new FileOutputStream(convFile); 
-	    fos.write(file.getBytes());
-	    fos.close(); 
-	    return convFile;
+	public File convert(MultipartFile file) throws IOException {
+		File convFile = new File(file.getOriginalFilename());
+		convFile.createNewFile();
+		FileOutputStream fos = new FileOutputStream(convFile);
+		fos.write(file.getBytes());
+		fos.close();
+		return convFile;
 	}
 }
