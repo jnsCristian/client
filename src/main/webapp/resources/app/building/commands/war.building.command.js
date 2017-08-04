@@ -37,7 +37,6 @@ function OpenWarBuildingCommand() {
 			}
 		}else{
 			var cost=troops.troopsDto.cost;
-			console.log(cost);
 			var skills=troops.troopsDto.skills;
 			troopMarkup += '<br><div class="troop'+ troops.troopsDto.id + '"><td><img src="resources/img/troopsBuilding/'+ troops.troopsDto.id + '.png"class="troop">  '+ String(troops.troopsDto.name)+ '  </td><td><input type="text" data-troop-id="'+ troops.troopsDto.id + '"><button class="button troops-train " data-troop-id="'+ troops.troopsDto.id + '">Train</button></td></div>  Cost:'
 			for (var j = 0; j < cost.length; j++) {
