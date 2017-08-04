@@ -60,9 +60,7 @@ var mapSetupHelpers = {
 
 
 }
-
 var updatedData = mapSetupHelpers.splitArrays(atlantis.entity.map.places, mapEntity.numberOfRows);
-
 mapSetupHelpers.buildHorizontalRows(mapEntity.numberOfRows, mapContainer);
 
 mapSetupHelpers.translateHorizontalRows(mapEntity.tileSize, mapContainer);
@@ -71,11 +69,17 @@ mapSetupHelpers.translateHorizontalRows(mapEntity.tileSize, mapContainer);
 
   buildTileItems();
 
-
+  
   function buildTileItems (dataItem, selection) {
-
     if (typeof mapSetupHelpers.splitArrays !== 'function') return;
-
+/*    var ns = 'http://www.w3.org/2000/svg';
+    var foreignObject = document.createElementNS( ns, 'foreignObject');
+    foreignObject.setAttribute('height', 50);
+    foreignObject.setAttribute('width', 50)
+    
+    var div = document.createElement('div');
+    div.innerHTML = 'Hello World';
+    foreignObject.appendChild( div ); */
     d3.selectAll('.map-row')
       .each(function(d, i) {
         d3.select(this)
@@ -85,7 +89,6 @@ mapSetupHelpers.translateHorizontalRows(mapEntity.tileSize, mapContainer);
           .append('rect')
           .attr('data-place-id', function (d, i) {
             console.log(d, i);
-
             return d.placeId;
           })
           .attr('width', function(d, i) {
@@ -99,13 +102,21 @@ mapSetupHelpers.translateHorizontalRows(mapEntity.tileSize, mapContainer);
           })
           .attr("fill", function() { return "hsl(" + Math.random() * 360 + ", 100%, 75%)" })
           .attr('y', function(d, i) {
-            return 0
+            return d.y
           })
+          .attr('y1', function(d, i) {
+            return d.x
+          })
+          .attr('class','x')
+          /*.insert(div);*/
+          
+          
+        
       });
-
+    /*d3.select('rect').appendChild(foreignObject);*/
+    atlantis.eventManger.fire('render.map.success');
     
   }
 
-  atlantis.eventManger.fire('render.map.success');
  
 }
