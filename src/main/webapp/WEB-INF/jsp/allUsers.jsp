@@ -250,6 +250,12 @@
 			<script
 		src="<c:url value="/resources/app/action/services/show.outgoing.actions.service.js"/>" /></script>
 	<script src="<c:url value="/resources/app/action/action.config.js"/>" /></script>	
+		<script
+		src="<c:url value="/resources/app/header/services/get.user.service.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/header/commands/user.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/header/user.config.js"/>" /></script>
 </div>
 </body>
 </html>

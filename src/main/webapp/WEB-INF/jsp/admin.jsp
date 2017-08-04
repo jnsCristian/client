@@ -329,6 +329,13 @@
 			src="<c:url value="/resources/app/editResource/alliance/services/edit.alliance.name.service.js"/>" /></script>
 		<script
 			src="<c:url value="/resources/app/editResource/alliance/alliance.config.js"/>" /></script>
+			
+				<script
+		src="<c:url value="/resources/app/header/services/get.user.service.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/header/commands/user.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/header/user.config.js"/>" /></script>
 
 </body>
 </html>

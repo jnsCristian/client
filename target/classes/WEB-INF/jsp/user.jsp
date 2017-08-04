@@ -91,6 +91,14 @@
 	<script src="<c:url value="/resources/app/config/app.config.js"/>" /></script>
 	<script src="<c:url value="/resources/app/config/app.entity.js"/>" /></script>
 	<script src="<c:url value="/resources/app/config/app.endpoints.js"/>" /></script>
+	
+<%-- 			<script
+		src="<c:url value="/resources/app/header/services/get.user.service.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/header/commands/user.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/header/user.config.js"/>" /></script> --%>
+	
 	<!-- User dependencies -->
 	<script src="<c:url value="/resources/app/user/services/get.user.service.js"/>" /></script>
 	<script src="<c:url value="/resources/app/user/commands/user.command.js"/>" /></script>
@@ -144,5 +152,7 @@
 		src="<c:url value="/resources/app/raport/commands/raport.view.command.js"/>" /></script>
 
 	<script src="<c:url value="/resources/app/raport/raport.config.js"/>" /></script>
+	
+
 </body>
 </html>

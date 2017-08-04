@@ -4,10 +4,10 @@
 	window.atlantis = window.atlantis || {};
 	
 	atlantis.config = {
-		host : "http://10.224.15.195:",
-		port : "9080/",
+		host : "http://localhost:",
+		port : "8085/",
 	}
-	
+
 	/* global event manager for custom listeners */
 	atlantis.eventManger = new EventManager();
 
