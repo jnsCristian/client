@@ -172,6 +172,9 @@
 		
 
 	<script src="<c:url value="/resources/app/raport/raport.config.js"/>" /></script>
-
+	<!-- Timer dependencies -->
+	<script src="<c:url value="/resources/app/timer/get.time.remaining.js"/>" /></script>
+	<script src="<c:url value="/resources/app/timer/initialize.clock.js"/>" /></script>
+	<script src="<c:url value="/resources/app/timer/start.clock.js"/>" /></script>
 </body>
 </html>

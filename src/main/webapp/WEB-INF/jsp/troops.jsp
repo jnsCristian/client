@@ -60,7 +60,13 @@
 			
 				<li class="resource-item">
 					<button onclick="document.getElementById('id01').style.display='block'" class="transparent incomming-actions"><img src="resources/img/arrowLeft.png" class="img"></button><br/>
-					<span class="incoming"></span>
+					<div id="clockdiv-incoming">
+					    <span class="days"></span>
+					    <span class="hours"></span>
+					    <span class="minutes"></span>
+					    <span class="seconds"></span>
+					</div>
+
 			<div id="id01" class="w3-modal">
 			<div class="w3-modal-content actions-modal-wrapper">
 			 <span onclick="document.getElementById('id01').style.display='none'" class="button">Close</span>
@@ -73,7 +79,12 @@
 				
 				<li class="resource-item">
 					<button onclick="document.getElementById('id02').style.display='block'" class="transparent outgoing-actions"><img src="resources/img/arrowRight.png" class="img"></button><br/>
-					<span class="outgoing"></span>
+					<div id="clockdiv-outgoing">
+					    <span class="days"></span>
+					    <span class="hours"></span>
+					    <span class="minutes"></span>
+					    <span class="seconds"></span>
+					</div>
 					<div id="id02" class="w3-modal">
 					<div class="w3-modal-content actions-modal-wrapper">
 					 <span onclick="document.getElementById('id02').style.display='none'" class="button">Close</span>

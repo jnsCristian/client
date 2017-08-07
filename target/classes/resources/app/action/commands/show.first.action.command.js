@@ -12,10 +12,12 @@ function GetFirstActionCommand () {
 		}
 	}*/
 	if(incoming){
-		$('.resource-item').find('.incoming').text(incoming.time);
+		/*$('.resource-item').find('.incoming').text(incoming.time);*/
+		startClock('clockdiv-incoming',incoming.time*1000);
 	}
 	if(outgoing){
-		$('.resource-item').find('.outgoing').text(outgoing.time);
+		/*$('.resource-item').find('.outgoing').text(outgoing.time);*/
+		startClock('clockdiv-outgoing',outgoing.time*1000);
 	}
 
 };
