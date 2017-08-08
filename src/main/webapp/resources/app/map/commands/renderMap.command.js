@@ -76,7 +76,7 @@ mapSetupHelpers.translateHorizontalRows(mapEntity.tileSize, mapContainer);
 
     if (typeof mapSetupHelpers.splitArrays !== 'function') return;
 
-    d3.selectAll('.map-row')
+/*    d3.selectAll('.map-row')
       .each(function(d, i) {
         d3.select(this)
           .selectAll('rect')
@@ -98,14 +98,43 @@ mapSetupHelpers.translateHorizontalRows(mapEntity.tileSize, mapContainer);
             return i * mapEntity.tileSize;
           })
           .attr("fill", function() { return "hsl(" + Math.random() * 360 + ", 100%, 75%)" })
-          .attr('y', function(d, i) {
-            return 0
-          })
+        
       });
-
     
-  }
+    $('rect').each(function(){
+    	$(this).after(' <ellipse cx="200" cy="80" rx="100" ry="50"><foreignObject width="10" height="1">'
+    			+'<div>'+$(this).attr('data-place-id')+'</div> </foreignObject></ellipse>');
+        
+    })*/
+    
+ /*   var ns = 'http://www.w3.org/2000/svg';
+    var svg = document.querySelector( 'svg' );
+        d3.selectAll('.map-row')
+    .each(function(d, i) {
+    	var rect = document.createElementNS( ns, 'rect');
+    	rect.setAttribute('height', 100);
+    	rect.setAttribute('width', 100);
+    	
+    	rect.setAttribute('data-place-id',function(d, i) {
+            return 0;
+        }());
+    	var foreignObject = document.createElementNS( ns, 'foreignObject');
+    	foreignObject.setAttribute('height', 100);
+    	foreignObject.setAttribute('width', 100);
+    	var div = document.createElement('div');
+    	div.innerHTML = function(d, i) {
+            return 0;
+        }();
+    	foreignObject.appendChild(div); 
+    	svg.appendChild(rect); 
+    	svg.appendChild(foreignObject); 
+    });
+  */
 
+  }
+  
+ 
   atlantis.eventManger.fire('render.map.success');
+  
  
 }
