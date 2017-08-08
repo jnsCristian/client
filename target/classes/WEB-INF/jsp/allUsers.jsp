@@ -68,7 +68,7 @@
 			</table>
 		</div>
 		<div class="tabContent " id="user">
-      <div id="userphoto"><img src="resources/avatar.png" ></div>
+      <div id="userphoto"></div>
       <div class="exitbutton"></div>
       <h1>Profile</h1> 
       <section  class="user-data">

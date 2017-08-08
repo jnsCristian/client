@@ -72,14 +72,14 @@ mapSetupHelpers.translateHorizontalRows(mapEntity.tileSize, mapContainer);
   
   function buildTileItems (dataItem, selection) {
     if (typeof mapSetupHelpers.splitArrays !== 'function') return;
-/*    var ns = 'http://www.w3.org/2000/svg';
+    var ns = 'http://www.w3.org/2000/svg';
     var foreignObject = document.createElementNS( ns, 'foreignObject');
     foreignObject.setAttribute('height', 50);
     foreignObject.setAttribute('width', 50)
     
     var div = document.createElement('div');
     div.innerHTML = 'Hello World';
-    foreignObject.appendChild( div ); */
+    foreignObject.appendChild( div ); 
     d3.selectAll('.map-row')
       .each(function(d, i) {
         d3.select(this)
@@ -108,7 +108,9 @@ mapSetupHelpers.translateHorizontalRows(mapEntity.tileSize, mapContainer);
             return d.x
           })
           .attr('class','x')
-          /*.insert(div);*/
+          .append('foreignobject')
+          .append('div')
+          .html('<p>A</p>');
           
           
         
