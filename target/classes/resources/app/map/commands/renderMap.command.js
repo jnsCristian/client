@@ -60,9 +60,7 @@ var mapSetupHelpers = {
 
 
 }
-
 var updatedData = mapSetupHelpers.splitArrays(atlantis.entity.map.places, mapEntity.numberOfRows);
-
 mapSetupHelpers.buildHorizontalRows(mapEntity.numberOfRows, mapContainer);
 
 mapSetupHelpers.translateHorizontalRows(mapEntity.tileSize, mapContainer);
@@ -71,12 +69,22 @@ mapSetupHelpers.translateHorizontalRows(mapEntity.tileSize, mapContainer);
 
   buildTileItems();
 
-
+  
   function buildTileItems (dataItem, selection) {
-
     if (typeof mapSetupHelpers.splitArrays !== 'function') return;
 
+
 /*    d3.selectAll('.map-row')
+
+    var ns = 'http://www.w3.org/2000/svg';
+    var foreignObject = document.createElementNS( ns, 'foreignObject');
+    foreignObject.setAttribute('height', 50);
+    foreignObject.setAttribute('width', 50)
+    
+    var div = document.createElement('div');
+    div.innerHTML = 'Hello World';
+    foreignObject.appendChild( div ); 
+    d3.selectAll('.map-row')
       .each(function(d, i) {
         d3.select(this)
           .selectAll('rect')
@@ -85,7 +93,6 @@ mapSetupHelpers.translateHorizontalRows(mapEntity.tileSize, mapContainer);
           .append('rect')
           .attr('data-place-id', function (d, i) {
             console.log(d, i);
-
             return d.placeId;
           })
           .attr('width', function(d, i) {
@@ -98,14 +105,25 @@ mapSetupHelpers.translateHorizontalRows(mapEntity.tileSize, mapContainer);
             return i * mapEntity.tileSize;
           })
           .attr("fill", function() { return "hsl(" + Math.random() * 360 + ", 100%, 75%)" })
+
+      });
+
+          .attr('y', function(d, i) {
+            return d.y
+          })
+          .attr('y1', function(d, i) {
+            return d.x
+          })
+          .attr('class','x')
+          .append('foreignobject')
+          .append('div')
+          .html('<p>A</p>');
+          
+          
         
       });
-    
-    $('rect').each(function(){
-    	$(this).after(' <ellipse cx="200" cy="80" rx="100" ry="50"><foreignObject width="10" height="1">'
-    			+'<div>'+$(this).attr('data-place-id')+'</div> </foreignObject></ellipse>');
-        
-    })*/
+    /*d3.select('rect').appendChild(foreignObject);*/
+   
     
  /*   var ns = 'http://www.w3.org/2000/svg';
     var svg = document.querySelector( 'svg' );
@@ -136,5 +154,7 @@ mapSetupHelpers.translateHorizontalRows(mapEntity.tileSize, mapContainer);
  
   atlantis.eventManger.fire('render.map.success');
   
+
+
  
 }

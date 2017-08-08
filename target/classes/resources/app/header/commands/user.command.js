@@ -6,6 +6,7 @@ function HeaderCommand () {
 		 
 		
 	}
+
 	if(user.messagesUnread){
 		 $(".message").addClass("red");
 	}

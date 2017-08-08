@@ -10,6 +10,6 @@ function ViewUsersSwitchTabCommand() {
 		
 
 		atlantis.eventManger.fire(tabTarget+'.users.active.tab' );
-			
+		
 	});
 }

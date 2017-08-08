@@ -118,6 +118,10 @@
 		src="<c:url value="/resources/app/home/commands/setMarkup.command.js"/>" /></script>
 	<script src="<c:url value="/resources/app/home/home.config.js"/>" /></script>
 	<script src="<c:url value="/resources/app/home/home.entity.js"/>" /></script>
+			<!-- Timer dependencies -->
+	<script src="<c:url value="/resources/app/timer/get.time.remaining.js"/>" /></script>
+	<script src="<c:url value="/resources/app/timer/initialize.clock.js"/>" /></script>
+	<script src="<c:url value="/resources/app/timer/start.clock.js"/>" /></script>
 	<!-- Action dependencies -->
 		<script
 		src="<c:url value="/resources/app/action/commands/action.command.js"/>" /></script>
@@ -188,5 +192,7 @@
 		src="<c:url value="/resources/app/raport/commands/raport.view.command.js"/>" /></script>
 
 	<script src="<c:url value="/resources/app/raport/raport.config.js"/>" /></script>
+	
+
 </body>
 </html>
