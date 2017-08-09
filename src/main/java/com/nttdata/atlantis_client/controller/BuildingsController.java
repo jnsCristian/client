@@ -41,7 +41,6 @@ public class BuildingsController {
 	public ModelAndView getWarBuilding(@QueryParam("id")String id,Authentication authentication)
 			throws ClientProtocolException, ParseException, IOException, JSONException {
 		if ((authentication != null) && authentication.isAuthenticated()) {
-			System.out.println(id);
 			ModelAndView m = new ModelAndView("warBuilding");
 			User user=userService.findByEmail(authentication.getName());
 			m.addObject("userId", user.getId());

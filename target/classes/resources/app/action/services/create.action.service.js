@@ -13,7 +13,7 @@ function CreateActionService(params) {
 			atlantis.eventManger.fire('created.action');
 		},
 		error: function(data, textStatus, request) {
-			$('.response').text("Not enough troops or invalid player");
+			$('.response-attack').text("Not enough troops or invalid player");
 			atlantis.eventManger.fire('error.action');
 		}
 		

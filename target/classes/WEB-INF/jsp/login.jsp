@@ -55,32 +55,32 @@
         
         <p class="register-data setting user-email" >
         	<span class="add-padding">Email</span>
-        	<input id="email" class="button" placeholder="something@domain.smth">
+        	<input id="email" class="button modified-width" placeholder="something@domain.smth">
         </p>
         
         <p class="register-data setting nickname" >
         	<span class="add-padding">Nickname</span>
-        	<input id="nickName" class="button" placeholder="Between 5 and 10 alphabetical characters">
+        	<input  id="nickName" class="button modified-width" placeholder="Between 5 and 10 alphabetical characters">
         </p>
         
         <p class="register-data setting firstname ">
         	<span class="add-padding">First Name</span>
-        	<input id="firstName" class="button" placeholder="Between 5 and 10 alphabetical characters">
+        	<input id="firstName" class="button modified-width" placeholder="Between 5 and 10 alphabetical characters">
         </p>
 		
 		 <p class="register-data setting lastname" >
         	<span class="add-padding">Last Name</span>
-        	<input id="lastName" class="button" placeholder="Between 5 and 10 alphabetical characters">
+        	<input id="lastName" class="button modified-width" placeholder="Between 5 and 10 alphabetical characters">
         </p>
 		 
 		  <p class="setting password" >
         	<span class="add-padding">Password</span>
-        	<input type="password" class="button" id="password" placeholder="Between 6 and 20 characters">
+        	<input type="password" class="button modified-width" id="password" placeholder="Between 6 and 20 characters">
         </p>
 		  
 		  <p class="setting repassword" >
         	<span class="add-padding">Repeat password</span>
-        	<input type="password" class="button" id="repassword" placeholder="Between 6 and 20 characters">
+        	<input type="password" class="button modified-width" id="repassword" placeholder="Between 6 and 20 characters">
         </p>
 		 
 		 <button class="button add-margin register-button">Register</button>

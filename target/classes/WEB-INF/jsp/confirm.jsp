@@ -25,10 +25,10 @@
 <body data-code=<c:out value="${ code}" ></c:out>>
 	  <jsp:include page="header.jsp" />
 	<div  class="alliances">
-		<div class="alliance1"></div>
-		<div class="alliance2"></div>
-		<div class="alliance3"></div>
-		<div class="alliance4"></div>
+		<div class="alliance1 alliance-style"></div>
+		<div class="alliance2 alliance-style"></div>
+		<div class="alliance3 alliance-style"></div>
+		<div class="alliance4 alliance-style"></div>
 	</div>
 	
 	<!--START app main
