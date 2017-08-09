@@ -87,8 +87,13 @@ html {
 	width: 250px;
   	height: 200px;
 }
+.border{
+	border-style: solid;
+	border-width:1px;
+}
 
-
-
+.red-color{
+	color:red;
+}
 
 

@@ -9,9 +9,9 @@ function OpenMessageSentCommand() {
 		atlantis.eventManger.addListener('get.specific.message.success', function() {
 		var temp= atlantis.entity.mess,messageMarkup ='<tr><th>Message</th></tr>';
 		
-		messageMarkup += '<tr><td>'
+		messageMarkup += '<tr><td><textarea readonly class="width">'
 			+ temp.message
-			+ '</td>';
+			+ '</textarea></td>';
 		
 		$(' .testtable').html(messageMarkup);
 		
