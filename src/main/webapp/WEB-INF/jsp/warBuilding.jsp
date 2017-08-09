@@ -29,7 +29,14 @@
 </head>
 
 <body data-ID=<c:out value="${ userId}" ></c:out>  data-plId=<c:out value="${ placeId}" ></c:out> data-building-id=<c:out value="${ buildingId}" > </c:out> >
-	<jsp:include page="header.jsp" />
+			<c:choose>
+		 <c:when test="${role=='ROLE_ADMIN'}">
+		 <jsp:include page="headerAdmin.jsp" />
+   		 </c:when> 
+   		     <c:otherwise>
+   		     <jsp:include page="header.jsp" />
+    </c:otherwise>
+	</c:choose>
 	<div class="body-wrapper">
 	<jsp:include page="troops.jsp" />
 	 <div id="loader"></div> 
@@ -111,6 +118,10 @@
 		src="<c:url value="/resources/app/home/commands/setMarkup.command.js"/>" /></script>
 	<script src="<c:url value="/resources/app/home/home.config.js"/>" /></script>
 	<script src="<c:url value="/resources/app/home/home.entity.js"/>" /></script>
+			<!-- Timer dependencies -->
+	<script src="<c:url value="/resources/app/timer/get.time.remaining.js"/>" /></script>
+	<script src="<c:url value="/resources/app/timer/initialize.clock.js"/>" /></script>
+	<script src="<c:url value="/resources/app/timer/start.clock.js"/>" /></script>
 	<!-- Action dependencies -->
 		<script
 		src="<c:url value="/resources/app/action/commands/action.command.js"/>" /></script>
@@ -181,5 +192,7 @@
 		src="<c:url value="/resources/app/raport/commands/raport.view.command.js"/>" /></script>
 
 	<script src="<c:url value="/resources/app/raport/raport.config.js"/>" /></script>
+	
+
 </body>
 </html>

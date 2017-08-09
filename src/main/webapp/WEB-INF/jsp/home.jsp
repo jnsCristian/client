@@ -57,14 +57,6 @@
 		<jsp:include page="resources.jsp" />
 	</div>
 	
-	<!--START app main
-	<footer class="app__footer">
-		
-			&copy; 2017 NttData Romania <br> Design by Atlantis | Atlantis
-			Portal
-		
-	</footer>
-	END app main content-->
 
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -104,6 +96,10 @@
 		src="<c:url value="/resources/app/home/commands/setMarkup.command.js"/>" /></script>
 	<script src="<c:url value="/resources/app/home/home.config.js"/>" /></script>
 	<script src="<c:url value="/resources/app/home/home.entity.js"/>" /></script>
+		<!-- Timer dependencies -->
+	<script src="<c:url value="/resources/app/timer/get.time.remaining.js"/>" /></script>
+	<script src="<c:url value="/resources/app/timer/initialize.clock.js"/>" /></script>
+	<script src="<c:url value="/resources/app/timer/start.clock.js"/>" /></script>
 	<!-- Action dependencies -->
 		<script
 		src="<c:url value="/resources/app/action/commands/action.command.js"/>" /></script>

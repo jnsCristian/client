@@ -4,8 +4,8 @@
 					<button onclick="document.getElementById('id03').style.display='block'" class="transparent "><img src="resources/img/attack.png" class="img"></button><br/>
 			<div id="id03" class="w3-modal">
 			<div id="" class="x"></div>
-			<div id="actions" class="w3-modal-content">
-			 <span onclick="document.getElementById('id03').style.display='none'" class="button">&times;</span>
+			<div id="actions" class="w3-modal-content actions-modal-wrapper">
+			 <span onclick="document.getElementById('id03').style.display='none'" class="button">Close</span>
   				<form class="action-form">
 			<div class="center nick">
 				<input id="nick" type="text" placeholder="Nickname">
@@ -60,11 +60,17 @@
 			
 				<li class="resource-item">
 					<button onclick="document.getElementById('id01').style.display='block'" class="transparent incomming-actions"><img src="resources/img/arrowLeft.png" class="img"></button><br/>
-					<span class="incoming"></span>
+					<div id="clockdiv-incoming">
+					    <span class="days"></span>
+					    <span class="hours"></span>
+					    <span class="minutes"></span>
+					    <span class="seconds"></span>
+					</div>
+
 			<div id="id01" class="w3-modal">
-			<div class="w3-modal-content">
-			 <span onclick="document.getElementById('id01').style.display='none'" class="button">&times;</span>
-  				<table class="w3-table__full incoming-actions-table">
+			<div class="w3-modal-content actions-modal-wrapper">
+			 <span onclick="document.getElementById('id01').style.display='none'" class="button">Close</span>
+  				<table class="w3-table__full incoming-actions-table black-color">
 
 				</table>
 			</div>
@@ -73,11 +79,16 @@
 				
 				<li class="resource-item">
 					<button onclick="document.getElementById('id02').style.display='block'" class="transparent outgoing-actions"><img src="resources/img/arrowRight.png" class="img"></button><br/>
-					<span class="outgoing"></span>
+					<div id="clockdiv-outgoing">
+					    <span class="days"></span>
+					    <span class="hours"></span>
+					    <span class="minutes"></span>
+					    <span class="seconds"></span>
+					</div>
 					<div id="id02" class="w3-modal">
-					<div class="w3-modal-content">
-					 <span onclick="document.getElementById('id02').style.display='none'" class="button">&times;</span>
-		  				<table class="w3-table__full outgoing-actions-table">
+					<div class="w3-modal-content actions-modal-wrapper">
+					 <span onclick="document.getElementById('id02').style.display='none'" class="button">Close</span>
+		  				<table class="w3-table__full outgoing-actions-table black-color">
 		
 						</table>
 					</div>

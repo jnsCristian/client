@@ -48,11 +48,29 @@ td, th {
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: rgb(229, 234, 217);
     
 } 
 .bold {
     font-weight: bold;
+}
+.input-border{
+	width: 60%;
+	box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+}
+textarea {
+    width: 60%;
+    height: 250px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
 }
    
     

@@ -4,7 +4,6 @@ function CreateMessageService(params) {
 	params["source_id"]=atlantis.entity.userId;
 	
 	var test=JSON.stringify(params);
-	console.log(test);
 	$.ajax({
 		url : atlantis.endpoints.messages ,
 		type : "POST",
@@ -12,8 +11,11 @@ function CreateMessageService(params) {
         contentType: "application/json",
 		success : function(data, textStatus, request) {
 			alert('Message created successfully');
-			console.log('merge');
-		}
+			
+		},
+		error: function(data, textStatus, request) {
+			alert('Failure');
+	}
 		
 	});
 

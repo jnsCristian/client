@@ -1,4 +1,4 @@
-function GetUserService () {
+function GetHeaderService () {
 	'use strict';
 	$.ajax({
 		url : atlantis.endpoints.user + "/"

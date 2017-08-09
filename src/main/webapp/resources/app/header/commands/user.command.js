@@ -1,4 +1,4 @@
-function UserCommand () {
+function HeaderCommand () {
 	'use strict';
 	var user = atlantis.entity.user;
 	if(user.avatar){
@@ -6,6 +6,7 @@ function UserCommand () {
 		 
 		
 	}
+
 	if(user.messagesUnread){
 		 $(".message").addClass("red");
 	}

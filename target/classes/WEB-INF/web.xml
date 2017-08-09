@@ -40,4 +40,5 @@
 		<error-code>404</error-code>
 		<location>/bad-url</location>
 	</error-page>
+
 </web-app>
