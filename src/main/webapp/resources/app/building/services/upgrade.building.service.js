@@ -10,11 +10,14 @@ function UpgradeBuildingService(params) {
 		},
 		
 		success : function(data, textStatus, request) {
-			
+
+			location.reload();
 		
 			
+		},		
+			error: function(data, textStatus, request) {
+			$('.response').text("Not enough resources");
 		}
-		
 	});
 
 };

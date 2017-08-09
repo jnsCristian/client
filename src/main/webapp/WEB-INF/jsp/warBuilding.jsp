@@ -59,7 +59,7 @@
 			<p class="setting troops"></p>
 
 
-			 <p class="response"></p>
+			 <p class="response red-color"></p>
 			<button class="button upgrade-building ">Upgrade</button>
 			<a href="home" class="button transparent ">Exit building</a>
 		</section>

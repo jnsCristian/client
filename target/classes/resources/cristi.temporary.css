@@ -167,7 +167,6 @@ a {
 	width: 70%;
 	display: flex;
 	justify-content: space-around;
-	background-color: white;
 	margin-left: 15%;
 	margin-top: 3em;
 }
@@ -222,9 +221,29 @@ a {
 .actions-modal-wrapper {
 	background-color: rgba(255, 255, 255, 0.68);
 	border-radius: 25px;
+	color:black;
 }
 
 .troop {
 	height: 40px;
 	width: 30px;
+}
+.modified-width{
+	width:50%;
+}
+.alliance-style{
+	margin:1%;
+	background-color:#42454a;
+	color:white;
+	border-radius:10px;
+}
+.alliance-button{
+	background-color:#79953e;
+	margin-bottom:5px;
+	margin-left:5px;
+	border-radius:10px;
+}
+.troop-name{
+	margin-top:-10px;
+	margin-bottom:-10px;
 }

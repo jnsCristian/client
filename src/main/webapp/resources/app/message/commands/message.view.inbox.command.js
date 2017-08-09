@@ -8,9 +8,9 @@ function OpenMessageInboxCommand() {
 			ReadMessagesService($(this).attr("data-message-id"));
 			atlantis.eventManger.addListener('get.specific.message.success', function() {
 			var temp= atlantis.entity.message,messageMarkup ='<tr><th>Message</th></tr>';
-			messageMarkup += '<tr><td>'
+			messageMarkup += '<tr><td><textarea readonly class="width">'
 				+ temp.message
-				+ '</td>';
+				+ '</textarea></td>';
 			
 			
 			$('.testtable').html(messageMarkup);
