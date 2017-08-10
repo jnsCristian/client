@@ -1,6 +1,5 @@
 function OpenMessagesService(params) {
 	'use strict';
-	
 	 return $.ajax({
 		url : atlantis.endpoints.messages + '/' + params,
 		type : "GET",
