@@ -60,17 +60,17 @@
         
         <p class="register-data setting nickname" >
         	<span class="add-padding">Nickname</span>
-        	<input  id="nickName" class="button modified-width" placeholder="Between 5 and 10 alphabetical characters">
+        	<input  id="nickName" class="button modified-width" placeholder="Between 3 and 15 alphabetical characters">
         </p>
         
         <p class="register-data setting firstname ">
         	<span class="add-padding">First Name</span>
-        	<input id="firstName" class="button modified-width" placeholder="Between 5 and 10 alphabetical characters">
+        	<input id="firstName" class="button modified-width" placeholder="Between 3 and 15 alphabetical characters">
         </p>
 		
 		 <p class="register-data setting lastname" >
         	<span class="add-padding">Last Name</span>
-        	<input id="lastName" class="button modified-width" placeholder="Between 5 and 10 alphabetical characters">
+        	<input id="lastName" class="button modified-width" placeholder="Between 3 and 15 alphabetical characters">
         </p>
 		 
 		  <p class="setting password" >

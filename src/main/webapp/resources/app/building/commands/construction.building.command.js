@@ -18,7 +18,7 @@ function OpenConstructionBuildingCommand() {
 			$("#buildingphoto").html('<img src="'+building.inside+'" >');
 		}*/
 		$('.buildingName').html('<input id="buildingName" value="'+ building.buildingName+ '"  readonly></input>');
-		$('.description').html('<span>Description </span> <input id="description" value="'+ building.description+ '" readonly ></input>');
+		$('.description').html('<span>Description </span> <textarea id="description" class="textarea__description" readonly >'+ building.description+ '</textarea>');
 		
 		$('.level').html('<span>Level </span> <input id="level" value="'+ building.level+ '" readonly></input>');
 		$('.production').html('<span>Production per hour </span> <input id="production" value="'+ building.production+ '" readonly></input>');

@@ -95,5 +95,11 @@ html {
 .red-color{
 	color:red;
 }
-
+.textarea__description{
+	width:100%;
+	height:65px;
+	color:black;
+	border:none;
+	background-color: inherit;
+}
 

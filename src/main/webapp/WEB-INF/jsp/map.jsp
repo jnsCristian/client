@@ -87,6 +87,8 @@
 		src="<c:url value="/resources/app/message/services/view.message.inbox.service.js"/>" /></script>
 				<script
 		src="<c:url value="/resources/app/message/services/view.message.sent.service.js"/>" /></script>
+		<script
+		src="<c:url value="/resources/app/message/services/read.message.inbox.service.js"/>" /></script>
 	<script
 		src="<c:url value="/resources/app/message/commands/message.inbox.command.js"/>" /></script>
 	<script
@@ -106,11 +108,21 @@
 		<script
 		src="<c:url value="/resources/app/message/commands/message.view.sent.command.js"/>" /></script>
 		<script src="<c:url value="/resources/app/message/message.config.js"/>" /></script>
-		<!-- Reports dependencies -->
+
+		<script
+		src="<c:url value="/resources/app/header/services/get.user.service.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/header/commands/user.command.js"/>" /></script>
+	<script
+		src="<c:url value="/resources/app/header/user.config.js"/>" /></script>
+		
+				<!-- Reports dependencies -->
 			<script
 		src="<c:url value="/resources/app/raport/services/get.reports.service.js"/>" /></script>
 	<script
 		src="<c:url value="/resources/app/raport/services/delete.raport.service.js"/>" /></script>
+					<script
+		src="<c:url value="/resources/app/raport/services/raport.read.service.js"/>" /></script>
 	<script
 		src="<c:url value="/resources/app/raport/services/view.raport.service.js"/>" /></script>
 	<script
@@ -121,11 +133,5 @@
 		src="<c:url value="/resources/app/raport/commands/raport.view.command.js"/>" /></script>
 
 	<script src="<c:url value="/resources/app/raport/raport.config.js"/>" /></script>
-		<script
-		src="<c:url value="/resources/app/header/services/get.user.service.js"/>" /></script>
-	<script
-		src="<c:url value="/resources/app/header/commands/user.command.js"/>" /></script>
-	<script
-		src="<c:url value="/resources/app/header/user.config.js"/>" /></script>
 </body>
 </html>
